@@ -1,7 +1,8 @@
 ---
-title: "Quarto Academic, PhD"
+title: "Lasare Samartzidis"
+subtitle: "PhD Researcher in Economics at [IOER](https://www.ioer.de/) | Data Science • Data Visualization • Machine Learning • Large Language Models"
 description-meta: "Quarto Academic Website Template adapted by Dr. Gang He"
-image: "files/images/placeholder4.JPG"
+image: "files/images/me.JPG"
 page-navigation: false
 toc: false
 #sidebar: false
@@ -12,36 +13,18 @@ about:
   template: trestles
   image-width: 70%
   links:
-    - icon: sun
-      text: Lab
-      href: https://www.github.com
-      target: _blank
-    - icon: globe
-      text: Uprofile
-      href: https://baruch.cuny.edu
-      target: _blank
     - icon: envelope
       text: E-mail
       href: mailto:email@gmail.com    
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com
+    - icon: bsky
+      text: Blue.Sky
+      href: https://bsky.app/profile/lsmantiz.bsky.social
       target: _blank
-    - icon: youtube
-      text: YouTube
-      href: https://www.youtube.com     
-      target: _blank 
-    - text: "{{< ai orcid >}} ORCID"   # use academic icons, "" are needed, you also need to install the fontawesome extension
-      href: https://orcid.org
-      target: _blank
-    - text: "{{< ai clarivate >}} Web of Science"
-      href: https://www.webofscience.com  
-      target: _blank
-    - text: "{{< ai scopus >}} Scopus"
-      href: https://www.scopus.com
+    - text: "{{< ai orcid >}} 0000-0001-5685-8485"   # use academic icons, "" are needed, you also need to install the fontawesome extension
+      href: https://orcid.org/0000-0001-5685-8485
       target: _blank
     - text: "{{< ai google-scholar >}} Google Scholar"
-      href: https://scholar.google.com
+      href: https://scholar.google.com/citations?user=yYTJkbcAAAAJ&hl=de&oi=sra
       target: _blank
 #    - text: "{{< ai researchgate >}} Research Gate"
 #      href: https://www.researchgate.net
@@ -67,31 +50,43 @@ listing:   # Comment the listing section and delete corresponding lines in the i
 
 :::{#hero-heading}
 
-I'm a [Quarto Academeic Website Template](https://github.com/drganghe/quarto-academic-website-template) adapted by [Dr. Gang He](http://drganghe.github.io).
 
-I'm a template that you can fork to build your own website with easy adaptation and deployment.
+Hi, I’m Lasare — a researcher in Complexity and Ecological Economics, currently finishing my PhD, with a passion for working with data and turning it into clear, meaningful, and reproducible insights. Also eager to try out new things, my work brings together data science, visualization, machine learning, and large language models (LLMs) to economic questions.
 
-1. **Star** this repository to bookmark it for future reference.  
-1. **Fork** this repository and rename it to `YourGitHubUserName.github.io`.  
-1. **Update** the `_quarto.yml` file to configure your site’s basic settings.  
-1. **Add or edit content** in the following files and folders:
-   - `/posts/` – posts about publications, news, events  
-   - `teaching.qmd` – teaching information  
-   - `projects.yml` – research or other projects  
-   - `people.qmd` and `/people/` – team or collaborators  
-   - `/files/` - profiles, images, pdfs, and includes 
-1. [**Render and preview**](https://quarto.org/docs/websites/) your site locally.  
-1. [**Publish**](https://quarto.org/docs/publishing/github-pages.html) your site using GitHub Pages (make sure [configuring](https://quarto.org/docs/publishing/images/gh-pages-docs-dir.png) your GitHub repository to publish from the `docs` directory, not the `root` folder). 
-1. **Refine and polish** your content and design as needed.  
-1. ✅ Enjoy your new website!
+I enjoy tackling complex questions with code, but what excites me most is making the results easy to understand and useful for others. Whether it’s through interactive dashboards, geospatial analysis, a insightful chart, or simply a well documented code, I aim to create tools and visuals that speak to both technical and non-technical audiences.
+
+Most of my day-to-day work happens in R (tidyverse, ggplot2, Shiny), though I also use Python when it fits the task. Over time, I’ve built automated pipelines, developed reproducible workflows, and experimented with new methods — always curious about what the latest tools can bring to research.
+
+Beyond the technical side, I love sharing ideas, collaborating across disciplines, and presenting my work. I’ve spoken at 18 international and national conferences and workshops and the  with teams at Leibniz, WIG2, and Fraunhofer. These experiences have shown me how important clear communication and openness are in making research impactful. Have a look into my [research](publications.qmd) and drop me an [email](mailto:l.samartzidis@ioer.de). I'm always happy to collaborate.
 
 ## Experience
 
-- Researcher, Univerisity
+- **Leibniz Institute of Ecological Urban & Regional Development, Dresden**  
+Doctoral Researcher, since 2020  
+Scientific Coordinator – Leibniz Lab Systemic Sustainability, since 2024  
+Scientific Coordinator – Leibniz Research Network Earth & Societies, 2023–2024 
+
+- **WIG2 – Scientific Institute for Health Economics and Health System Research, Leipzig**  
+Researcher, 2022–2023  
+
+- **Fraunhofer Center for International Management and Knowledge Economy IMW – Center for Economics of Materials (CEM), Halle (Saale)**  
+Researcher, 2019–2021 
 
 ## Education
 
-- PhD, Univerisity
+- **PhD, Economics, expected submission end of 2025**   
+TU Dresden & Leibniz Institute of Ecological Urban & Regional Development, Dresden
+
+- **Master of Science, Economics, 2019**   
+Kiel University
+
+- **Erasmus Semester, 2017**   
+Lisbon School of Economics & Management    
+ 
+
+- Bachelor of Science, Business & Economics, 2014   
+**Friedrich Schiller University Jena**  
+  
 
 :::
 

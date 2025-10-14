@@ -1,0 +1,38 @@
+---
+title: "Synchronisation of regional development - the role of clusters in the regional production network"
+description: "Do we need to adjust our understanding of regional development?"
+subtitle: "*Spatial Economic Analysis*"
+author: 
+  - name: Lasare Samartzidis
+date: "2025-08-08"
+categories: [paper]
+image: "overview.png"
+citation:
+  type: article-journal
+  container-title: "Spatial Economic Analysis"
+  doi: "10.1080/17421772.2025.2532609"
+  available-date: "2025-08-08"
+  issued: "2025-01-01"
+  volume: 0
+  issue: 0
+  page: 1-24
+  url: https://doi.org/10.1080/17421772.2025.2532609
+google-scholar: true
+---
+
+<!--Include academic icons or bottons-->
+
+{{< include /files/includes/_academic.qmd >}}
+
+![](overview.png)
+
+## Abstract
+
+This study examines the impact of production network clusters (PNCs), derived through network science methods, on German counties’ economic development using a complex systems approach, conceptualising trade as information flows that guide economic agents’ decisions. Employing spatial econometrics, it finds that PNC trade flows predict regional economic synchronisation, though effects are not always positive. While results indicate that PNCs synchronise agents’ decisions within the same cluster, they may desynchronise their decisions with agents in spatially linked areas. These findings contribute to advancing a complexity economics framework for understanding regional development dynamics and disparities in Germany.
+
+
+## Links
+
+Published [paper](https://www.tandfonline.com/doi/full/10.1080/17421772.2025.2532609)
+
+Available [data & code](https://zenodo.org/records/15547542) 

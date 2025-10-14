@@ -5,94 +5,21 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Quarto Academic</title>
-<link>https://drganghe.github.io/quarto-academic-website-template/posts.html</link>
-<atom:link href="https://drganghe.github.io/quarto-academic-website-template/posts.xml" rel="self" type="application/rss+xml"/>
+<title>Lasare Samartzidis</title>
+<link>https://lsmantiz.github.io/posts.html</link>
+<atom:link href="https://lsmantiz.github.io/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Quarto Academic Website Template adapted by Dr. Gang He</description>
 <image>
-<url>https://quarto.org/quarto.png</url>
-<title>Quarto Academic</title>
-<link>https://drganghe.github.io/quarto-academic-website-template/posts.html</link>
+<url>https://lsmantiz.github.io/files/images/me.jpg</url>
+<title>Lasare Samartzidis</title>
+<link>https://lsmantiz.github.io/posts.html</link>
 </image>
-<generator>quarto-1.7.22</generator>
-<lastBuildDate>Tue, 15 Oct 2024 04:00:00 GMT</lastBuildDate>
+<generator>quarto-1.7.33</generator>
+<lastBuildDate>Mon, 13 Oct 2025 22:00:00 GMT</lastBuildDate>
 <item>
-  <title>Quarto Academic Website Examples and Tips</title>
-  <link>https://drganghe.github.io/quarto-academic-website-template/</link>
-  <description>Examples and tips for Quarto Academic Website</description>
-  <category>news</category>
-  <guid>https://drganghe.github.io/quarto-academic-website-template/</guid>
-  <pubDate>Tue, 15 Oct 2024 04:00:00 GMT</pubDate>
-  <media:content url="https://drganghe.github.io/quarto-academic-website-template/files/images/placeholder1.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Event item</title>
-  <dc:creator>Event </dc:creator>
-  <link>https://drganghe.github.io/quarto-academic-website-template/posts/event-title/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p><a href="https://drganghe.github.io/quarto-academic-website-template/"><img src="https://drganghe.github.io/quarto-academic-website-template/files/images/placeholder2.JPG" class="img-fluid" style="width:90.0%"></a></p>
-<!--Include social share buttons-->
-<!-- 
-AddToAny check more: https://www.addtoany.com/buttons/for/website 
-Using includes will make edits easier, will only need to add or remove button here if needed.
-https://quarto.org/docs/authoring/includes.html
--->
-<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-<p><a class="a2a_dd" href="https://www.addtoany.com/share"></a> <a class="a2a_button_linkedin"></a> <a class="a2a_button_bluesky"></a> <a class="a2a_button_facebook"></a> <a class="a2a_button_copy_link"></a> <a class="a2a_button_email"></a></p>
-</div>
-<script async="" src="https://static.addtoany.com/menu/page.js"></script>
-
-
-
- ]]></description>
-  <category>event</category>
-  <category>presentation</category>
-  <guid>https://drganghe.github.io/quarto-academic-website-template/posts/event-title/</guid>
-  <pubDate>Tue, 03 Sep 2024 04:00:00 GMT</pubDate>
-  <media:content url="https://drganghe.github.io/quarto-academic-website-template/files/images/placeholder2.JPG" medium="image"/>
-</item>
-<item>
-  <title>News item</title>
-  <dc:creator>News </dc:creator>
-  <link>https://drganghe.github.io/quarto-academic-website-template/posts/news-title/</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>About the news</p>
-<!--Include social share buttons-->
-<!-- 
-AddToAny check more: https://www.addtoany.com/buttons/for/website 
-Using includes will make edits easier, will only need to add or remove button here if needed.
-https://quarto.org/docs/authoring/includes.html
--->
-<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-<p><a class="a2a_dd" href="https://www.addtoany.com/share"></a> <a class="a2a_button_linkedin"></a> <a class="a2a_button_bluesky"></a> <a class="a2a_button_facebook"></a> <a class="a2a_button_copy_link"></a> <a class="a2a_button_email"></a></p>
-</div>
-<script async="" src="https://static.addtoany.com/menu/page.js"></script>
-
-
-</section>
-
- ]]></description>
-  <category>news</category>
-  <guid>https://drganghe.github.io/quarto-academic-website-template/posts/news-title/</guid>
-  <pubDate>Mon, 24 Jun 2024 04:00:00 GMT</pubDate>
-  <media:content url="https://drganghe.github.io/quarto-academic-website-template/files/images/placeholder3.JPG" medium="image"/>
-</item>
-<item>
-  <title>Can quantum-mechanical description of physical reality be considered complete?</title>
-  <dc:creator>Albert Einstein</dc:creator>
-  <dc:creator>Boris Podolsky</dc:creator>
-  <dc:creator>Nathan Rosen</dc:creator>
-  <link>https://drganghe.github.io/quarto-academic-website-template/posts/paper-title/</link>
+  <title>Sustainable regional development - A complexity economics analysis</title>
+  <dc:creator>Lasare Samartzidis</dc:creator>
+  <link>https://lsmantiz.github.io/posts/Sustainable regional development - A complexity economics analysis/</link>
   <description><![CDATA[ 
 
 
@@ -112,42 +39,296 @@ https://badge.dimensions.ai/
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 <script async="" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
 <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+<p><img src="https://lsmantiz.github.io/posts/Sustainable regional development - A complexity economics analysis/overview.png" class="img-fluid"></p>
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.</p>
+<p>The modern world is a complex, interconnected system where traditional mono-causal explanations often fall short. This thesis explores how complexity economics can contribute to understanding and guiding sustainability transformations, focusing on the interconnected nature of social, economic, and ecological systems. The 21st-century sustainability crisis, characterized by breached planetary boundaries and persistent inequalities, underscores the urgency of adopting a complexity-based perspective.</p>
+<p>The thesis is structured around three knowledge spheres of sustainability transformation research: system, target, and transformation knowledge. It employs complexity economics as a conceptual and methodological lens, treating the economy as a complex adaptive system. The research addresses regional development and inequality, income distribution, subjective well-being, and the modelling of post-growth policies using agent-based models.</p>
+<p>Articles 1 and 2 examine how production networks structure regional outcomes, highlighting the role of interregional connections and input specificity in shaping development trajectories and wage shares. Article 3 uses machine learning to explore the multidimensional nature of subjective well-being, demonstrating the importance of complex interactions among regional factors. Article 4 systematically reviews ecological macroeconomic agent-based models using large language models, assessing their capacity to represent post-growth policies and identifying areas for future development.</p>
+<p>Collectively, these studies show that complexity economics provides original insights across all three sustainability knowledge spheres, emphasizing the centrality of interdependencies in understanding the economy as a complex system. The thesis opens promising avenues for future research at the intersection of regional development, well-being, and complexity economics, and underscores the need for modelling and empirical approaches that capture the interactions and interdependencies characteristic of socio-economic systems.</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@book{samartzidis2025,
+  author = {Samartzidis, Lasare},
+  title = {Sustainable Regional Development - {A} Complexity Economics
+    Analysis},
+  date = {2025-10-14},
+  url = {https://lsmantiz.github.io/posts/Sustainable regional development - A complexity economics analysis/},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-samartzidis2025" class="csl-entry quarto-appendix-citeas">
+Samartzidis, Lasare. 2025. <em>Sustainable Regional Development - A
+Complexity Economics Analysis</em>. <em>PhD Thesis</em>. <a href="https://lsmantiz.github.io/posts/Sustainable regional development - A complexity economics analysis/">https://lsmantiz.github.io/posts/Sustainable
+regional development - A complexity economics analysis/</a>.
+</div></div></section></div> ]]></description>
+  <category>paper</category>
+  <guid>https://lsmantiz.github.io/posts/Sustainable regional development - A complexity economics analysis/</guid>
+  <pubDate>Mon, 13 Oct 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://lsmantiz.github.io/posts/Sustainable regional development - A complexity economics analysis/overview.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models</title>
+  <dc:creator>Lasare Samartzidis</dc:creator>
+  <dc:creator>Rob van Eynde</dc:creator>
+  <link>https://lsmantiz.github.io/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/</link>
+  <description><![CDATA[ 
+
+
+
+
+<!--Include academic icons or bottons-->
+<!-- 
+Load Academicons v1: https://jpswalsh.github.io/academicons/
+-->
+<p><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"></p>
+<p><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"></p>
+<!---
+The following code are needed to show dimension citation and altmetrics.
+https://api.altmetric.com/embeds.html
+https://badge.dimensions.ai/
+--->
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+<script async="" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+<p><img src="https://lsmantiz.github.io/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/llm_workflow.png" class="img-fluid"></p>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>The intertwined crises of climate change, biodiversity loss, and unmet social needs have intensified calls to shift economic priorities from growth to well-being within planetary boundaries. Post-growth scholarship has developed a range of transformative policy proposals, but quantitative modeling of such structural changes remains limited. This study provides the first systematic review of ecological macroeconomic agent-based models (ABMs) and their capacity to represent post-growth scenarios. We identify 62 publications forming this emerging landscape, which is growing rapidly but remains heavily concentrated in Europe, particularly Italy. Using a novel workflow that leverages large language models (LLMs) for automated text analysis, we assess the presence of post-growth-relevant model elements. Our findings reveal uneven coverage: while traditional actors such as firms, households, and the financial sector are well represented, critical elements for post-growth analysis—including not-for-profit organizations, non-institutional provisioning, time use, international interactions, and needs satisfaction—are largely absent. Although some elements show increasing uptake, others remain persistently underrepresented. We conclude that ecological macroeconomic ABMs are not yet fully equipped to model post-growth transformations. Strengthening this modeling landscape requires both extending existing models with underrepresented elements and introducing entirely new thematic groups. Beyond the substantive contributions, our automated review workflow demonstrates how LLMs can streamline systematic reviews in fast-moving fields, offering a scalable and adaptable monitoring tool.</p>
+</section>
+<section id="large-language-model-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="large-language-model-workflow">Large Language Model Workflow</h2>
+<p>In this paper, we automate most of the labour intensive steps from a typical systematic literature review using LLMs:</p>
+<ol type="1">
+<li>inclusion/exclusion of the literature received from the SCOPUS search string, based on scanning the abstracts,</li>
+<li>marking each part of each article’s text if it describes the model,</li>
+<li>scanning the marked texts and rate the inclusion of a wide range of post-growth model elements.</li>
+</ol>
+<p>We employ the <a href="https://gwdg.de/services/application-services/ai-services/">API offered by GWDG</a> for using different LLMs.</p>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p>We find a fast evolving, geographically concentrated modelling landscape that spans a wide range of academic journals, shown in Figure&nbsp;1.</p>
+<div id="fig-overview" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://lsmantiz.github.io/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/landscape_overview.png" id="fig-overview" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
+</figure>
+</div>
+<p>We receive scores on a wide variety of post-growth model elements from an LLM. Results are shown in Figure&nbsp;2.</p>
+<div id="fig-results" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-results-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://lsmantiz.github.io/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/results.png" id="fig-results" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-results-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2
+</figcaption>
+</figure>
+</div>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{samartzidis2025,
+  author = {Samartzidis, Lasare and van Eynde, Rob},
+  title = {Are {Macroeconomic} {Agent-Based} {Models} Ready for
+    Post-Growth Policies? - {A} Systematic Review with Large Language
+    Models},
+  journal = {In preparation},
+  date = {2025-10-08},
+  url = {https://drganghe.github.io/quarto-academic-website-template/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-samartzidis2025" class="csl-entry quarto-appendix-citeas">
+Samartzidis, Lasare, and Rob van Eynde. 2025. <span>“Are Macroeconomic
+Agent-Based Models Ready for Post-Growth Policies? - A Systematic Review
+with Large Language Models.”</span> <em>In Preparation</em>, October. <a href="https://drganghe.github.io/quarto-academic-website-template/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/">https://drganghe.github.io/quarto-academic-website-template/posts/Are
+Macroeconomic Agent-Based Models ready for post-growth policies - A
+systematic review with large language models/</a>.
+</div></div></section></div> ]]></description>
+  <category>paper</category>
+  <guid>https://lsmantiz.github.io/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/</guid>
+  <pubDate>Tue, 07 Oct 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://lsmantiz.github.io/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/llm_workflow.png" medium="image" type="image/png" height="62" width="144"/>
+</item>
+<item>
+  <title>Input specificity and labour’s bargaining power: A production tree approach to functional income distribution</title>
+  <dc:creator>Lasare Samartzidis</dc:creator>
+  <link>https://lsmantiz.github.io/posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/</link>
+  <description><![CDATA[ 
+
+
+
+
+<!--Include academic icons or bottons-->
+<!-- 
+Load Academicons v1: https://jpswalsh.github.io/academicons/
+-->
+<p><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"></p>
+<p><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"></p>
+<!---
+The following code are needed to show dimension citation and altmetrics.
+https://api.altmetric.com/embeds.html
+https://badge.dimensions.ai/
+--->
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+<script async="" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+<p><img src="https://lsmantiz.github.io/posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/overview.png" class="img-fluid"></p>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>This article examines how input relationships in fragmented production systems shape functional income inequality. We argue that input specificity — reflecting the degree of specialization in intermediate goods production — affects workers’ bargaining power and, consequently, the labor share through skill premia and the disruptive potential of strikes. Using regional input-output data for European economies and a novel methodology for constructing sectoral production trees, we measure input specificity and analyze its impact on the functional income distribution. Our results suggest significant regional and sectoral differences in input specificity and reveal a robust positive association between input specificity and labor share, offering new insights into regional economic inequality.</p>
 </section>
 <section id="links" class="level2">
 <h2 class="anchored" data-anchor-id="links">Links</h2>
-<p>Published <a href="https://journals.aps.org/pr/pdf/10.1103/PhysRev.47.777">paper</a></p>
-<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script><div class="altmetric-embed" data-badge-popover="right" data-badge-type="donut" data-doi="10.1103/PhysRev.47.777"></div>
-
-<span class="__dimensions_badge_embed__" data-doi="10.1103/PhysRev.47.777" data-hide-zero-citations="true" data-style="small_circle"></span><script async="" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+<p>A preprint is available at <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5349214">SRRN</a></p>
+<p>Available <a href="https://zenodo.org/records/14134659">data &amp; code</a></p>
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{einstein1935,
-  author = {Einstein, Albert and Podolsky, Boris and Rosen, Nathan},
-  title = {Can Quantum-Mechanical Description of Physical Reality Be
-    Considered Complete?},
-  journal = {Physical Review},
-  volume = {47},
-  number = {7938},
-  pages = {777-80},
-  date = {1935-05-15},
-  url = {https://journals.aps.org/pr/pdf/10.1103/PhysRev.47.777},
-  doi = {10.1103/PhysRev.47.777},
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{samartzidis2025,
+  author = {Samartzidis, Lasare},
+  title = {Input Specificity and Labour’s Bargaining Power: {A}
+    Production Tree Approach to Functional Income Distribution},
+  journal = {Under Review at Economic Modelling},
+  date = {2025-01-01},
+  url = {https://drganghe.github.io/quarto-academic-website-template/posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/},
+  doi = {10.2139/ssrn.5349214},
   langid = {en}
 }
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-einstein1935" class="csl-entry quarto-appendix-citeas">
-Einstein, Albert, Boris Podolsky, and Nathan Rosen. 1935. <span>“Can
-Quantum-Mechanical Description of Physical Reality Be Considered
-Complete?”</span> <em>Physical Review</em> 47 (7938): 777–80. <a href="https://doi.org/10.1103/PhysRev.47.777">https://doi.org/10.1103/PhysRev.47.777</a>.
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-samartzidis2025" class="csl-entry quarto-appendix-citeas">
+Samartzidis, Lasare. 2025. <span>“Input Specificity and Labour’s
+Bargaining Power: A Production Tree Approach to Functional Income
+Distribution.”</span> <em>Under Review at Economic Modelling</em>,
+January. <a href="https://doi.org/10.2139/ssrn.5349214">https://doi.org/10.2139/ssrn.5349214</a>.
 </div></div></section></div> ]]></description>
   <category>paper</category>
-  <guid>https://drganghe.github.io/quarto-academic-website-template/posts/paper-title/</guid>
-  <pubDate>Wed, 15 May 1935 04:00:00 GMT</pubDate>
-  <media:content url="https://drganghe.github.io/quarto-academic-website-template/posts/paper-title/featured.jpg" medium="image" type="image/jpeg"/>
+  <guid>https://lsmantiz.github.io/posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/</guid>
+  <pubDate>Thu, 07 Aug 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://lsmantiz.github.io/posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/overview.png" medium="image" type="image/png" height="148" width="144"/>
+</item>
+<item>
+  <title>Synchronisation of regional development - the role of clusters in the regional production network</title>
+  <dc:creator>Lasare Samartzidis</dc:creator>
+  <link>https://lsmantiz.github.io/posts/Synchronisation of regional development - the role of clusters in the regional production network/</link>
+  <description><![CDATA[ 
+
+
+
+
+<!--Include academic icons or bottons-->
+<!-- 
+Load Academicons v1: https://jpswalsh.github.io/academicons/
+-->
+<p><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"></p>
+<p><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"></p>
+<!---
+The following code are needed to show dimension citation and altmetrics.
+https://api.altmetric.com/embeds.html
+https://badge.dimensions.ai/
+--->
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+<script async="" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+<p><img src="https://lsmantiz.github.io/posts/Synchronisation of regional development - the role of clusters in the regional production network/overview.png" class="img-fluid"></p>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>This study examines the impact of production network clusters (PNCs), derived through network science methods, on German counties’ economic development using a complex systems approach, conceptualising trade as information flows that guide economic agents’ decisions. Employing spatial econometrics, it finds that PNC trade flows predict regional economic synchronisation, though effects are not always positive. While results indicate that PNCs synchronise agents’ decisions within the same cluster, they may desynchronise their decisions with agents in spatially linked areas. These findings contribute to advancing a complexity economics framework for understanding regional development dynamics and disparities in Germany.</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p>Published <a href="https://www.tandfonline.com/doi/full/10.1080/17421772.2025.2532609">paper</a></p>
+<p>Available <a href="https://zenodo.org/records/15547542">data &amp; code</a></p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{samartzidis2025,
+  author = {Samartzidis, Lasare},
+  title = {Synchronisation of Regional Development - the Role of
+    Clusters in the Regional Production Network},
+  journal = {Spatial Economic Analysis},
+  pages = {1-24},
+  date = {2025-01-01},
+  url = {https://doi.org/10.1080/17421772.2025.2532609},
+  doi = {10.1080/17421772.2025.2532609},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-samartzidis2025" class="csl-entry quarto-appendix-citeas">
+Samartzidis, Lasare. 2025. <span>“Synchronisation of Regional
+Development - the Role of Clusters in the Regional Production
+Network.”</span> <em>Spatial Economic Analysis</em>, January, 1–24. <a href="https://doi.org/10.1080/17421772.2025.2532609">https://doi.org/10.1080/17421772.2025.2532609</a>.
+</div></div></section></div> ]]></description>
+  <category>paper</category>
+  <guid>https://lsmantiz.github.io/posts/Synchronisation of regional development - the role of clusters in the regional production network/</guid>
+  <pubDate>Thu, 07 Aug 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://lsmantiz.github.io/posts/Synchronisation of regional development - the role of clusters in the regional production network/overview.png" medium="image" type="image/png" height="112" width="144"/>
+</item>
+<item>
+  <title>Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods</title>
+  <dc:creator>Lasare Samartzidis</dc:creator>
+  <link>https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/</link>
+  <description><![CDATA[ 
+
+
+
+
+<!--Include academic icons or bottons-->
+<!-- 
+Load Academicons v1: https://jpswalsh.github.io/academicons/
+-->
+<p><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"></p>
+<p><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"></p>
+<!---
+The following code are needed to show dimension citation and altmetrics.
+https://api.altmetric.com/embeds.html
+https://badge.dimensions.ai/
+--->
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+<script async="" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+<p><img src="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/overview.png" class="img-fluid"></p>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>Subjective Well-Being (SWB) has emerged as a key measure in assessing societal progress beyond traditional economic indicators like GDP. While SWB is shaped by diverse socio-economic factors, most quantitative studies use limited variables and overlook non-linearities and interactions. We address these gaps by applying random forests to predict regional SWB averages across 388 OECD regions using 2016 data. Our model identifies 16 key predictors of regional SWB, revealing significant non-linearities and interactions among variables. Notably, the sex ratio among the elderly, a factor underexplored in existing literature, emerges as a predictor comparable in importance to average disposable income. Interestingly, regions with below-average employment and elderly sex ratios show higher SWB than average, but this trend reverses at higher levels. This study highlights the potential of machine learning to explore complex socio-economic systems, connecting data-driven insights with theory-building. By incorporating multidimensionality and non-linear interactions, our approach offers a robust framework for analyzing SWB and informing policy design.</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p>Published <a href="https://doi.org/10.1007/s11205-025-03643-5">paper</a></p>
+<p>Available <a href="https://zenodo.org/records/15535818">data &amp; code</a></p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{samartzidis2025,
+  author = {Samartzidis, Lasare},
+  title = {Gender and Age Matter! {Identifying} Important Predictors for
+    Subjective Well-Being Using Machine Learning Methods},
+  journal = {Social Indicators Research},
+  volume = {179},
+  number = {2},
+  pages = {955-978},
+  date = {2025-09-01},
+  url = {https://doi.org/10.1007/s11205-025-03643-5},
+  doi = {10.1007/s11205-025-03643-5},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-samartzidis2025" class="csl-entry quarto-appendix-citeas">
+Samartzidis, Lasare. 2025. <span>“Gender and Age Matter! Identifying
+Important Predictors for Subjective Well-Being Using Machine Learning
+Methods.”</span> <em>Social Indicators Research</em> 179 (2): 955–78. <a href="https://doi.org/10.1007/s11205-025-03643-5">https://doi.org/10.1007/s11205-025-03643-5</a>.
+</div></div></section></div> ]]></description>
+  <category>paper</category>
+  <guid>https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/</guid>
+  <pubDate>Mon, 16 Jun 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/overview.png" medium="image" type="image/png" height="187" width="144"/>
 </item>
 </channel>
 </rss>

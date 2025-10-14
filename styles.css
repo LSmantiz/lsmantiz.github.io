@@ -1,1 +1,25 @@
 /* css styles */
+
+/* Make hero-heading content scrollable */
+#hero-heading {
+  max-height: 500px;          /* adjust height as desired */
+  overflow-y: auto;           /* vertical scroll */
+  padding-right: 1rem;        /* avoid scrollbar overlap */
+  scrollbar-width: thin;      /* Firefox */
+  scrollbar-color: #999 transparent; /* Firefox */
+}
+
+/* Optional: make the scrollbar look nice in Chrome/Safari */
+#hero-heading::-webkit-scrollbar {
+  width: 8px;
+}
+#hero-heading::-webkit-scrollbar-track {
+  background: transparent;
+}
+#hero-heading::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 4px;
+}
+#hero-heading::-webkit-scrollbar-thumb:hover {
+  background-color: #666;
+}
