@@ -35,18 +35,53 @@
     "text": "Order By\n      Default\n      \n      \n      \n        Title\n      \n      \n        Team\n      \n      \n        Funder\n      \n      \n        Description\n      \n      \n        Start\n      \n      \n        End\n      \n      \n        Funding\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n \n\n\n\nTitle\n\n\n\nTeam\n\n\n\nFunder\n\n\n\nDescription\n\n\n\nFunding\n\n\n\nStart\n\n\n\nEnd\n\n\n\n\n\n\n\n\n\n\n\nExploring \n\n\nAcademic Website\n\n\nFunder\n\n\nThe goal of this project is to investigate .\n\n\n$0\n\n\n2024\n\n\n2025\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/paper-title/index.html#abstract",
-    "href": "posts/paper-title/index.html#abstract",
-    "title": "Can quantum-mechanical description of physical reality be considered complete?",
+    "objectID": "posts/Synchronisation of regional development - the role of clusters in the regional production network/index.html#abstract",
+    "href": "posts/Synchronisation of regional development - the role of clusters in the regional production network/index.html#abstract",
+    "title": "Synchronisation of regional development - the role of clusters in the regional production network",
     "section": "Abstract",
-    "text": "Abstract\nIn a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete."
+    "text": "Abstract\nThis study examines the impact of production network clusters (PNCs), derived through network science methods, on German counties’ economic development using a complex systems approach, conceptualising trade as information flows that guide economic agents’ decisions. Employing spatial econometrics, it finds that PNC trade flows predict regional economic synchronisation, though effects are not always positive. While results indicate that PNCs synchronise agents’ decisions within the same cluster, they may desynchronise their decisions with agents in spatially linked areas. These findings contribute to advancing a complexity economics framework for understanding regional development dynamics and disparities in Germany."
   },
   {
-    "objectID": "posts/paper-title/index.html#links",
-    "href": "posts/paper-title/index.html#links",
-    "title": "Can quantum-mechanical description of physical reality be considered complete?",
+    "objectID": "posts/Synchronisation of regional development - the role of clusters in the regional production network/index.html#links",
+    "href": "posts/Synchronisation of regional development - the role of clusters in the regional production network/index.html#links",
+    "title": "Synchronisation of regional development - the role of clusters in the regional production network",
     "section": "Links",
-    "text": "Links\nPublished paper"
+    "text": "Links\nPublished paper\nAvailable data & code"
+  },
+  {
+    "objectID": "posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/index.html#abstract",
+    "href": "posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/index.html#abstract",
+    "title": "Input specificity and labour’s bargaining power: A production tree approach to functional income distribution",
+    "section": "Abstract",
+    "text": "Abstract\nThis article examines how input relationships in fragmented production systems shape functional income inequality. We argue that input specificity — reflecting the degree of specialization in intermediate goods production — affects workers’ bargaining power and, consequently, the labor share through skill premia and the disruptive potential of strikes. Using regional input-output data for European economies and a novel methodology for constructing sectoral production trees, we measure input specificity and analyze its impact on the functional income distribution. Our results suggest significant regional and sectoral differences in input specificity and reveal a robust positive association between input specificity and labor share, offering new insights into regional economic inequality."
+  },
+  {
+    "objectID": "posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/index.html#links",
+    "href": "posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/index.html#links",
+    "title": "Input specificity and labour’s bargaining power: A production tree approach to functional income distribution",
+    "section": "Links",
+    "text": "Links\nA preprint is available at SRRN\nAvailable data & code"
+  },
+  {
+    "objectID": "posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html#abstract",
+    "href": "posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html#abstract",
+    "title": "Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models",
+    "section": "Abstract",
+    "text": "Abstract\nThe intertwined crises of climate change, biodiversity loss, and unmet social needs have intensified calls to shift economic priorities from growth to well-being within planetary boundaries. Post-growth scholarship has developed a range of transformative policy proposals, but quantitative modeling of such structural changes remains limited. This study provides the first systematic review of ecological macroeconomic agent-based models (ABMs) and their capacity to represent post-growth scenarios. We identify 62 publications forming this emerging landscape, which is growing rapidly but remains heavily concentrated in Europe, particularly Italy. Using a novel workflow that leverages large language models (LLMs) for automated text analysis, we assess the presence of post-growth-relevant model elements. Our findings reveal uneven coverage: while traditional actors such as firms, households, and the financial sector are well represented, critical elements for post-growth analysis—including not-for-profit organizations, non-institutional provisioning, time use, international interactions, and needs satisfaction—are largely absent. Although some elements show increasing uptake, others remain persistently underrepresented. We conclude that ecological macroeconomic ABMs are not yet fully equipped to model post-growth transformations. Strengthening this modeling landscape requires both extending existing models with underrepresented elements and introducing entirely new thematic groups. Beyond the substantive contributions, our automated review workflow demonstrates how LLMs can streamline systematic reviews in fast-moving fields, offering a scalable and adaptable monitoring tool."
+  },
+  {
+    "objectID": "posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html#large-language-model-workflow",
+    "href": "posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html#large-language-model-workflow",
+    "title": "Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models",
+    "section": "Large Language Model Workflow",
+    "text": "Large Language Model Workflow\nIn this paper, we automate most of the labour intensive steps from a typical systematic literature review using LLMs:\n\ninclusion/exclusion of the literature received from the SCOPUS search string, based on scanning the abstracts,\nmarking each part of each article’s text if it describes the model,\nscanning the marked texts and rate the inclusion of a wide range of post-growth model elements.\n\nWe employ the API offered by GWDG for using different LLMs."
+  },
+  {
+    "objectID": "posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html#results",
+    "href": "posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html#results",
+    "title": "Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models",
+    "section": "Results",
+    "text": "Results\nWe find a fast evolving, geographically concentrated modelling landscape that spans a wide range of academic journals, shown in Figure 1.\n\n\n\n\n\n\nFigure 1\n\n\n\nWe receive scores on a wide variety of post-growth model elements from an LLM. Results are shown in Figure 2.\n\n\n\n\n\n\nFigure 2"
   },
   {
     "objectID": "index.html",
@@ -105,69 +140,6 @@
     "text": "Alumni\n\n\n   \n    \n    \n      Order By\n      Default\n      \n      \n      \n        Name\n      \n      \n        Role\n      \n      \n        Started\n      \n      \n        Ended\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n \n\n\n\nName\n\n\n\nRole\n\n\n\nStarted\n\n\n\nEnded\n\n\n\n\n\n\n\n\n\n\n\nAlumni A\n\n\nPhD Alumni\n\n\n2024\n\n\n2025\n\n\n\n\n\n\n\n\n\nAlumni B\n\n\nMasters Alumni\n\n\n2024\n\n\n2025\n\n\n\n\n\n\n\n\n\nAlumni C\n\n\nUndergraduate Alumni\n\n\n2024\n\n\n2025\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/news-title/index.html",
-    "href": "posts/news-title/index.html",
-    "title": "News item",
-    "section": "",
-    "text": "About the news"
-  },
-  {
-    "objectID": "posts/news-title/index.html#summary",
-    "href": "posts/news-title/index.html#summary",
-    "title": "News item",
-    "section": "",
-    "text": "About the news"
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "What’s New & Updated",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nSustainable regional development - A complexity economics analysis\n\n\nPhD overview article\n\n\n\npaper\n\n\n\nHow to address sustainability transformation research with complexity economics?\n\n\n\n\n\nOct 14, 2025\n\n\nLasare Samartzidis\n\n\n\n\n\n\n\n\n\n\n\n\nAre Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models\n\n\nManuscript currently prepared\n\n\n\npaper\n\n\n\nHow can we leverage LLMs for systematic model reviews?\n\n\n\n\n\nOct 8, 2025\n\n\nLasare Samartzidis, Rob van Eynde\n\n\n\n\n\n\n\n\n\n\n\n\nInput specificity and labour’s bargaining power: A production tree approach to functional income distribution\n\n\nUnder Review\n\n\n\npaper\n\n\n\nWhat can we learn from production networks for regional inequality?\n\n\n\n\n\nAug 8, 2025\n\n\nLasare Samartzidis\n\n\n\n\n\n\n\n\n\n\n\n\nSynchronisation of regional development - the role of clusters in the regional production network\n\n\nSpatial Economic Analysis\n\n\n\npaper\n\n\n\nDo we need to adjust our understanding of regional development?\n\n\n\n\n\nAug 8, 2025\n\n\nLasare Samartzidis\n\n\n\n\n\n\n\n\n\n\n\n\nGender and age matter! Identifying important predictors for subjective well-being using machine learning methods\n\n\nSocial Indicators Research\n\n\n\npaper\n\n\n\nHow can we derive hypothesis for complex adaptive systems?\n\n\n\n\n\nJun 17, 2025\n\n\nLasare Samartzidis\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
-    "section": "",
-    "text": "Notes: * corresponding author; GS graduate student advisee; VS visiting scholar;  ESI Highly Cited Paper (top 1%);  ESI Hot Paper (top 0.1%)\nTotal citations as of January 2025:"
-  },
-  {
-    "objectID": "publications.html#selected-work",
-    "href": "publications.html#selected-work",
-    "title": "Publications",
-    "section": "Selected Work",
-    "text": "Selected Work\nEinstein, A., Podolsky, B., & Rosen, N. (1935). Can quantum-mechanical description of physical reality be considered complete?. Physical review, 47(10), 777. [pdf] [code and data]   \n\n\n\n\n\n\nEinstein, A. (1965). Concerning an heuristic point of view toward the emission and transformation of light. American Journal of Physics, 33(5), 367. [pdf]"
-  },
-  {
-    "objectID": "posts/Synchronisation of regional development - the role of clusters in the regional production network/index.html#abstract",
-    "href": "posts/Synchronisation of regional development - the role of clusters in the regional production network/index.html#abstract",
-    "title": "Synchronisation of regional development - the role of clusters in the regional production network",
-    "section": "Abstract",
-    "text": "Abstract\nThis study examines the impact of production network clusters (PNCs), derived through network science methods, on German counties’ economic development using a complex systems approach, conceptualising trade as information flows that guide economic agents’ decisions. Employing spatial econometrics, it finds that PNC trade flows predict regional economic synchronisation, though effects are not always positive. While results indicate that PNCs synchronise agents’ decisions within the same cluster, they may desynchronise their decisions with agents in spatially linked areas. These findings contribute to advancing a complexity economics framework for understanding regional development dynamics and disparities in Germany."
-  },
-  {
-    "objectID": "posts/Synchronisation of regional development - the role of clusters in the regional production network/index.html#links",
-    "href": "posts/Synchronisation of regional development - the role of clusters in the regional production network/index.html#links",
-    "title": "Synchronisation of regional development - the role of clusters in the regional production network",
-    "section": "Links",
-    "text": "Links\nPublished paper\nAvailable data & code"
-  },
-  {
-    "objectID": "posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/index.html#abstract",
-    "href": "posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/index.html#abstract",
-    "title": "Input specificity and labour’s bargaining power: A production tree approach to functional income distribution",
-    "section": "Abstract",
-    "text": "Abstract\nThis article examines how input relationships in fragmented production systems shape functional income inequality. We argue that input specificity — reflecting the degree of specialization in intermediate goods production — affects workers’ bargaining power and, consequently, the labor share through skill premia and the disruptive potential of strikes. Using regional input-output data for European economies and a novel methodology for constructing sectoral production trees, we measure input specificity and analyze its impact on the functional income distribution. Our results suggest significant regional and sectoral differences in input specificity and reveal a robust positive association between input specificity and labor share, offering new insights into regional economic inequality."
-  },
-  {
-    "objectID": "posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/index.html#links",
-    "href": "posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/index.html#links",
-    "title": "Input specificity and labour’s bargaining power: A production tree approach to functional income distribution",
-    "section": "Links",
-    "text": "Links\nA preprint is available at SRRN\nAvailable data & code"
-  },
-  {
     "objectID": "posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index.html#abstract",
     "href": "posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index.html#abstract",
     "title": "Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods",
@@ -182,32 +154,18 @@
     "text": "Links\nPublished paper\nAvailable data & code"
   },
   {
-    "objectID": "posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html#abstract",
-    "href": "posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html#abstract",
-    "title": "Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models",
+    "objectID": "posts/Sustainable regional development - A complexity economics analysis/index.html#abstract",
+    "href": "posts/Sustainable regional development - A complexity economics analysis/index.html#abstract",
+    "title": "Sustainable regional development - A complexity economics analysis",
     "section": "Abstract",
-    "text": "Abstract\nThe intertwined crises of climate change, biodiversity loss, and unmet social needs have intensified calls to shift economic priorities from growth to well-being within planetary boundaries. Post-growth scholarship has developed a range of transformative policy proposals, but quantitative modeling of such structural changes remains limited. This study provides the first systematic review of ecological macroeconomic agent-based models (ABMs) and their capacity to represent post-growth scenarios. We identify 62 publications forming this emerging landscape, which is growing rapidly but remains heavily concentrated in Europe, particularly Italy. Using a novel workflow that leverages large language models (LLMs) for automated text analysis, we assess the presence of post-growth-relevant model elements. Our findings reveal uneven coverage: while traditional actors such as firms, households, and the financial sector are well represented, critical elements for post-growth analysis—including not-for-profit organizations, non-institutional provisioning, time use, international interactions, and needs satisfaction—are largely absent. Although some elements show increasing uptake, others remain persistently underrepresented. We conclude that ecological macroeconomic ABMs are not yet fully equipped to model post-growth transformations. Strengthening this modeling landscape requires both extending existing models with underrepresented elements and introducing entirely new thematic groups. Beyond the substantive contributions, our automated review workflow demonstrates how LLMs can streamline systematic reviews in fast-moving fields, offering a scalable and adaptable monitoring tool."
+    "text": "Abstract\nThe modern world is a complex, interconnected system where traditional mono-causal explanations often fall short. This thesis explores how complexity economics can contribute to understanding and guiding sustainability transformations, focusing on the interconnected nature of social, economic, and ecological systems. The 21st-century sustainability crisis, characterized by breached planetary boundaries and persistent inequalities, underscores the urgency of adopting a complexity-based perspective.\nThe thesis is structured around three knowledge spheres of sustainability transformation research: system, target, and transformation knowledge. It employs complexity economics as a conceptual and methodological lens, treating the economy as a complex adaptive system. The research addresses regional development and inequality, income distribution, subjective well-being, and the modelling of post-growth policies using agent-based models.\nArticles 1 and 2 examine how production networks structure regional outcomes, highlighting the role of interregional connections and input specificity in shaping development trajectories and wage shares. Article 3 uses machine learning to explore the multidimensional nature of subjective well-being, demonstrating the importance of complex interactions among regional factors. Article 4 systematically reviews ecological macroeconomic agent-based models using large language models, assessing their capacity to represent post-growth policies and identifying areas for future development.\nCollectively, these studies show that complexity economics provides original insights across all three sustainability knowledge spheres, emphasizing the centrality of interdependencies in understanding the economy as a complex system. The thesis opens promising avenues for future research at the intersection of regional development, well-being, and complexity economics, and underscores the need for modelling and empirical approaches that capture the interactions and interdependencies characteristic of socio-economic systems."
   },
   {
-    "objectID": "posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html#results",
-    "href": "posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html#results",
-    "title": "Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models",
-    "section": "Results",
-    "text": "Results\nWe find a fast evolving, geographically concentrated modelling landscape that spans a wide range of academic journals, shown in Figure 1.\n\n\n\n\n\n\nFigure 1\n\n\n\nWe receive scores on a wide variety of post-growth model elements from an LLM. Results are shown in Figure 2.\n\n\n\n\n\n\nFigure 2"
-  },
-  {
-    "objectID": "posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html#links",
-    "href": "posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html#links",
-    "title": "Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models",
-    "section": "Links",
-    "text": "Links\nPublished paper\nAvailable data & code"
-  },
-  {
-    "objectID": "posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html#large-language-model-workflow",
-    "href": "posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html#large-language-model-workflow",
-    "title": "Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models",
-    "section": "Large Language Model Workflow",
-    "text": "Large Language Model Workflow\nIn this paper, we automate most of the labour intensive steps from a typical systematic literature review using LLMs:\n\ninclusion/exclusion of the literature received from the SCOPUS search string, based on scanning the abstracts,\nmarking each part of each article’s text if it describes the model,\nscanning the marked texts and rate the inclusion of a wide range of post-growth model elements.\n\nWe employ the API offered by GWDG for using different LLMs."
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "What’s New & Updated",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nSustainable regional development - A complexity economics analysis\n\n\nPhD overview article\n\n\n\npaper\n\n\n\nHow to address sustainability transformation research with complexity economics?\n\n\n\n\n\nOct 14, 2025\n\n\nLasare Samartzidis\n\n\n\n\n\n\n\n\n\n\n\n\nAre Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models\n\n\nManuscript currently prepared\n\n\n\npaper\n\n\n\nHow can we leverage LLMs for systematic model reviews?\n\n\n\n\n\nOct 8, 2025\n\n\nLasare Samartzidis, Rob van Eynde\n\n\n\n\n\n\n\n\n\n\n\n\nInput specificity and labour’s bargaining power: A production tree approach to functional income distribution\n\n\nUnder Review\n\n\n\npaper\n\n\n\nWhat can we learn from production networks for regional inequality?\n\n\n\n\n\nAug 8, 2025\n\n\nLasare Samartzidis\n\n\n\n\n\n\n\n\n\n\n\n\nSynchronisation of regional development - the role of clusters in the regional production network\n\n\nSpatial Economic Analysis\n\n\n\npaper\n\n\n\nDo we need to adjust our understanding of regional development?\n\n\n\n\n\nAug 8, 2025\n\n\nLasare Samartzidis\n\n\n\n\n\n\n\n\n\n\n\n\nGender and age matter! Identifying important predictors for subjective well-being using machine learning methods\n\n\nSocial Indicators Research\n\n\n\npaper\n\n\n\nHow can we derive hypothesis for complex adaptive systems?\n\n\n\n\n\nJun 17, 2025\n\n\nLasare Samartzidis\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts_history/news-title/index.html",
@@ -224,10 +182,17 @@
     "text": "About the news"
   },
   {
-    "objectID": "posts/Sustainable regional development - A complexity economics analysis/index.html#abstract",
-    "href": "posts/Sustainable regional development - A complexity economics analysis/index.html#abstract",
-    "title": "Sustainable regional development - A complexity economics analysis",
-    "section": "Abstract",
-    "text": "Abstract\nThe modern world is a complex, interconnected system where traditional mono-causal explanations often fall short. This thesis explores how complexity economics can contribute to understanding and guiding sustainability transformations, focusing on the interconnected nature of social, economic, and ecological systems. The 21st-century sustainability crisis, characterized by breached planetary boundaries and persistent inequalities, underscores the urgency of adopting a complexity-based perspective.\nThe thesis is structured around three knowledge spheres of sustainability transformation research: system, target, and transformation knowledge. It employs complexity economics as a conceptual and methodological lens, treating the economy as a complex adaptive system. The research addresses regional development and inequality, income distribution, subjective well-being, and the modelling of post-growth policies using agent-based models.\nArticles 1 and 2 examine how production networks structure regional outcomes, highlighting the role of interregional connections and input specificity in shaping development trajectories and wage shares. Article 3 uses machine learning to explore the multidimensional nature of subjective well-being, demonstrating the importance of complex interactions among regional factors. Article 4 systematically reviews ecological macroeconomic agent-based models using large language models, assessing their capacity to represent post-growth policies and identifying areas for future development.\nCollectively, these studies show that complexity economics provides original insights across all three sustainability knowledge spheres, emphasizing the centrality of interdependencies in understanding the economy as a complex system. The thesis opens promising avenues for future research at the intersection of regional development, well-being, and complexity economics, and underscores the need for modelling and empirical approaches that capture the interactions and interdependencies characteristic of socio-economic systems."
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Notes: * corresponding author; GS graduate student advisee; VS visiting scholar;  ESI Highly Cited Paper (top 1%);  ESI Hot Paper (top 0.1%)\nTotal citations as of January 2025:"
+  },
+  {
+    "objectID": "publications.html#selected-work",
+    "href": "publications.html#selected-work",
+    "title": "Publications",
+    "section": "Selected Work",
+    "text": "Selected Work\nEinstein, A., Podolsky, B., & Rosen, N. (1935). Can quantum-mechanical description of physical reality be considered complete?. Physical review, 47(10), 777. [pdf] [code and data]   \n\n\n\n\n\n\nEinstein, A. (1965). Concerning an heuristic point of view toward the emission and transformation of light. American Journal of Physics, 33(5), 367. [pdf]"
   }
 ]

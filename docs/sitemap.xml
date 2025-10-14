@@ -1,72 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/teaching.html</loc>
+    <loc>https://lsmantiz.github.io/teaching.html</loc>
     <lastmod>2025-09-30T07:21:20.619Z</lastmod>
   </url>
   <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/projects.html</loc>
+    <loc>https://lsmantiz.github.io/projects.html</loc>
     <lastmod>2025-09-30T07:21:20.616Z</lastmod>
   </url>
   <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/posts/paper-title/index.html</loc>
-    <lastmod>2025-09-30T07:21:20.616Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/posts/event-title/index.html</loc>
+    <loc>https://lsmantiz.github.io/posts_history/event-title/index.html</loc>
     <lastmod>2025-09-30T07:21:20.603Z</lastmod>
   </url>
   <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/index.html</loc>
-    <lastmod>2025-10-13T13:57:11.627Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/contact.html</loc>
-    <lastmod>2025-09-30T07:21:20.392Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/people.html</loc>
-    <lastmod>2025-09-30T07:21:20.603Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/posts/news-title/index.html</loc>
-    <lastmod>2025-09-30T07:21:20.603Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/posts.html</loc>
-    <lastmod>2025-09-30T07:21:20.603Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/publications.html</loc>
-    <lastmod>2025-09-30T07:21:20.616Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/posts/Synchronisation of regional development - the role of clusters in the regional production network/index.html</loc>
+    <loc>https://lsmantiz.github.io/posts/Synchronisation of regional development - the role of clusters in the regional production network/index.html</loc>
     <lastmod>2025-09-30T09:46:05.027Z</lastmod>
   </url>
   <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/index.html</loc>
+    <loc>https://lsmantiz.github.io/posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/index.html</loc>
     <lastmod>2025-09-30T13:26:21.379Z</lastmod>
   </url>
   <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index.html</loc>
-    <lastmod>2025-09-30T13:32:26.400Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html</loc>
+    <loc>https://lsmantiz.github.io/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html</loc>
     <lastmod>2025-10-08T13:46:32.562Z</lastmod>
   </url>
   <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/posts_history/news-title/index.html</loc>
+    <loc>https://lsmantiz.github.io/index.html</loc>
+    <lastmod>2025-10-13T13:57:11.627Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lsmantiz.github.io/contact.html</loc>
+    <lastmod>2025-09-30T07:21:20.392Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lsmantiz.github.io/people.html</loc>
     <lastmod>2025-09-30T07:21:20.603Z</lastmod>
   </url>
   <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/posts_history/event-title/index.html</loc>
-    <lastmod>2025-09-30T07:21:20.603Z</lastmod>
-  </url>
-  <url>
-    <loc>https://drganghe.github.io/quarto-academic-website-template/posts/Sustainable regional development - A complexity economics analysis/index.html</loc>
-    <lastmod>2025-10-14T11:33:54.125Z</lastmod>
+    <loc>https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index.html</loc>
+    <lastmod>2025-09-30T13:32:26.400Z</lastmod>
   </url>
   <url>
     <loc>https://lsmantiz.github.io/posts/Sustainable regional development - A complexity economics analysis/index.html</loc>
@@ -77,11 +49,11 @@
     <lastmod>2025-09-30T07:21:20.603Z</lastmod>
   </url>
   <url>
-    <loc>https://lsmantiz.github.io/contact.html</loc>
-    <lastmod>2025-09-30T07:21:20.392Z</lastmod>
+    <loc>https://lsmantiz.github.io/posts_history/news-title/index.html</loc>
+    <lastmod>2025-09-30T07:21:20.603Z</lastmod>
   </url>
   <url>
-    <loc>https://lsmantiz.github.io/index.html</loc>
-    <lastmod>2025-10-13T13:57:11.627Z</lastmod>
+    <loc>https://lsmantiz.github.io/publications.html</loc>
+    <lastmod>2025-09-30T07:21:20.616Z</lastmod>
   </url>
 </urlset>
