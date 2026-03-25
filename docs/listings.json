@@ -1,6 +1,6 @@
 [
   {
-    "listing": "/projects.html",
+    "listing": "/people.html",
     "items": []
   },
   {
@@ -8,13 +8,13 @@
     "items": [
       "/posts/Sustainable regional development - A complexity economics analysis/index.html",
       "/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html",
-      "/posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/index.html",
+      "/posts/Production networks, input specificity, and the labor share/index.html",
       "/posts/Synchronisation of regional development - the role of clusters in the regional production network/index.html",
       "/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index.html"
     ]
   },
   {
-    "listing": "/people.html",
+    "listing": "/projects.html",
     "items": []
   },
   {
@@ -22,8 +22,8 @@
     "items": [
       "/posts/Sustainable regional development - A complexity economics analysis/index.html",
       "/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/index.html",
-      "/posts/Input specificity and labour’s bargaining power - A production tree approach to functional income distribution/index.html",
       "/posts/Synchronisation of regional development - the role of clusters in the regional production network/index.html",
+      "/posts/Production networks, input specificity, and the labor share/index.html",
       "/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index.html"
     ]
   }

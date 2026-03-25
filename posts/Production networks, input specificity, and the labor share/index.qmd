@@ -1,0 +1,33 @@
+---
+title: "Production networks, input specificity, and the labor share"
+description: "What can we learn from production networks for regional inequality?"
+subtitle: "*Under Review*"
+author: 
+  - name: Lasare Samartzidis
+date: "2025-08-08"
+categories: [paper]
+image: "overview.png"
+citation:
+  type: article-journal
+  container-title: "Under Review at Economic Modelling"
+  doi:  "10.2139/ssrn.5349214"
+  issued: "2025-01-01"
+google-scholar: false
+---
+
+<!--Include academic icons or bottons-->
+
+{{< include /files/includes/_academic.qmd >}}
+
+![](overview.png)
+
+## Abstract
+
+Bargaining power is a key determinant of workers' share of aggregate income, yet difficult to measure empirically. This study proposes input specificity as an important determinant of bargaining power, arguing that the production of harder-to-substitute intermediates strengthens workers’ bargaining position. We develop a network-based measure of input specificity and apply it to regional input–output data for European economies. Our results suggest that input specificity varies systematically across regions and is positively associated with the labor share. We find evidence that the relationship between input specificity and the labor share is stronger under coordinated wage bargaining, indicating that institutional settings condition how structural positions in production networks translate into income for workers. From a policy perspective, upgrading strategies that increase input specificity may support higher labor shares, particularly in contexts where institutions enable workers to capture the associated rents.
+
+
+## Links
+
+A preprint is available at [SRRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5349214)
+
+Available [data & code](https://zenodo.org/records/14134659) 
