@@ -44,7 +44,7 @@ website:
 
     right: 
       - text: CV
-        # href: files/cv.pdf
+        href: files/cv.pdf
       - icon: github
         href: https://github.com/LSmantiz
         target: _blank
