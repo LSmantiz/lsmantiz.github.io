@@ -13,9 +13,9 @@ about:
   template: trestles
   image-width: 70%
   links:
-    - icon: envelope
-      text: E-mail
-      href: mailto:email@gmail.com    
+    # - icon: envelope
+    #   text: E-mail
+    #   href: mailto:email@gmail.com    
     - icon: bsky
       text: Blue.Sky
       href: https://bsky.app/profile/lsmantiz.bsky.social
