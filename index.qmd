@@ -1,6 +1,6 @@
 ---
 title: "Lasare Samartzidis"
-subtitle: "PhD Researcher in Economics at [IOER](https://www.ioer.de/) | Data Science • Data Visualization • Machine Learning • Large Language Models"
+subtitle: "PhD Researcher in Economics, previously [IOER](https://www.ioer.de/) | Data Science • Data Visualization • Machine Learning • Large Language Models"
 description-meta: "Quarto Academic Website Template adapted by Dr. Gang He"
 image: "files/images/me.JPG"
 page-navigation: false
