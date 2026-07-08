@@ -180,7 +180,8 @@ https://badge.dimensions.ai/
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#what-i-built" id="toc-what-i-built" class="nav-link active" data-scroll-target="#what-i-built">What I built</a></li>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link" data-scroll-target="#abstract">Abstract</a></li>
   <li><a href="#large-language-model-workflow" id="toc-large-language-model-workflow" class="nav-link" data-scroll-target="#large-language-model-workflow">Large Language Model Workflow</a></li>
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
   </ul>
@@ -244,7 +245,9 @@ https://badge.dimensions.ai/
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 <script async="" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
 <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
-<p><img src="llm_workflow.png" class="img-fluid"> ## What I built</p>
+<p><img src="llm_workflow.png" class="img-fluid"></p>
+<section id="what-i-built" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-built">What I built</h2>
 <p>A four-stage, human-in-the-loop LLM pipeline (R + Python) that turns a raw literature search into a structured, machine-readable database of model features — replacing the manual coding of ~40 features across 60+ full papers (≈2,500 data points) that a classical systematic review would require.</p>
 <ol type="1">
 <li><strong>Retrieval &amp; screening</strong> — Scopus API query (<code>rscopus</code>); an LLM scores each abstract’s relevance (1–10, temperature 0, single-number output); borderline scores are routed to manual review before inclusion.</li>
@@ -253,6 +256,7 @@ https://badge.dimensions.ai/
 <li><strong>Structured extraction</strong> — an LLM extracts 41 predefined model elements per paper as validated JSON (presence score, supporting excerpt, section reference), parsed into tidy data frames for analysis and visualization.</li>
 </ol>
 <p><strong>Tech stack:</strong> R (tidyverse, httr2, reticulate) · Python (PyMuPDF) · open-weight LLMs (Llama 3.1, Mistral Large, GPT-OSS-120B) served via the GWDG Academic Cloud’s OpenAI-compatible API · deterministic settings (temperature 0), automated retries, timeouts and rate limiting, response validation, and human review at defined checkpoints. Fully scripted end to end for reproducibility.</p>
+</section>
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
 <p>The intertwined crises of climate change, biodiversity loss, and unmet social needs have intensified calls to shift economic priorities from growth to well-being within planetary boundaries. Post-growth scholarship has developed a range of transformative policy proposals, but quantitative modeling of such structural changes remains limited. This study provides the first systematic review of ecological macroeconomic agent-based models (ABMs) and their capacity to represent post-growth scenarios. We identify 62 publications forming this emerging landscape, which is growing rapidly but remains heavily concentrated in Europe, particularly Italy. Using a novel workflow that leverages large language models (LLMs) for automated text analysis, we assess the presence of post-growth-relevant model elements. Our findings reveal uneven coverage: while traditional actors such as firms, households, and the financial sector are well represented, critical elements for post-growth analysis—including not-for-profit organizations, non-institutional provisioning, time use, international interactions, and needs satisfaction—are largely absent. Although some elements show increasing uptake, others remain persistently underrepresented. We conclude that ecological macroeconomic ABMs are not yet fully equipped to model post-growth transformations. Strengthening this modeling landscape requires both extending existing models with underrepresented elements and introducing entirely new thematic groups. Beyond the substantive contributions, our automated review workflow demonstrates how LLMs can streamline systematic reviews in fast-moving fields, offering a scalable and adaptable monitoring tool.</p>

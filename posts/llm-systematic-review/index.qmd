@@ -20,6 +20,7 @@ google-scholar: false
 {{< include /files/includes/_academic.qmd >}}
 
 ![](llm_workflow.png)
+
 ## What I built
 
 A four-stage, human-in-the-loop LLM pipeline (R + Python) that turns a raw
