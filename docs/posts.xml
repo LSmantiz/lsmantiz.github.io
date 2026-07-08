@@ -19,7 +19,7 @@
 <item>
   <title>Sustainable regional development - A complexity economics analysis</title>
   <dc:creator>Lasare Samartzidis</dc:creator>
-  <link>https://lsmantiz.github.io/posts/Sustainable regional development - A complexity economics analysis/</link>
+  <link>https://lsmantiz.github.io/posts/phd-overview/</link>
   <description><![CDATA[ 
 
 
@@ -39,7 +39,7 @@ https://badge.dimensions.ai/
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 <script async="" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
 <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
-<p><img src="https://lsmantiz.github.io/posts/Sustainable regional development - A complexity economics analysis/overview.png" class="img-fluid"></p>
+<p><img src="https://lsmantiz.github.io/posts/phd-overview/overview.png" class="img-fluid"></p>
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
 <p>The modern world is a complex, interconnected system where traditional mono-causal explanations often fall short. This thesis explores how complexity economics can contribute to understanding and guiding sustainability transformations, focusing on the interconnected nature of social, economic, and ecological systems. The 21st-century sustainability crisis, characterized by breached planetary boundaries and persistent inequalities, underscores the urgency of adopting a complexity-based perspective.</p>
@@ -55,24 +55,23 @@ https://badge.dimensions.ai/
   title = {Sustainable Regional Development - {A} Complexity Economics
     Analysis},
   date = {2025-10-14},
-  url = {https://lsmantiz.github.io/posts/Sustainable regional development - A complexity economics analysis/},
+  url = {https://lsmantiz.github.io/posts/phd-overview/},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-samartzidis2025" class="csl-entry quarto-appendix-citeas">
 Samartzidis, Lasare. 2025. <em>Sustainable Regional Development - A
-Complexity Economics Analysis</em>. <em>PhD Thesis</em>. <a href="https://lsmantiz.github.io/posts/Sustainable regional development - A complexity economics analysis/">https://lsmantiz.github.io/posts/Sustainable
-regional development - A complexity economics analysis/</a>.
+Complexity Economics Analysis</em>. <em>PhD Thesis</em>. <a href="https://lsmantiz.github.io/posts/phd-overview/">https://lsmantiz.github.io/posts/phd-overview/</a>.
 </div></div></section></div> ]]></description>
   <category>paper</category>
-  <guid>https://lsmantiz.github.io/posts/Sustainable regional development - A complexity economics analysis/</guid>
+  <guid>https://lsmantiz.github.io/posts/phd-overview/</guid>
   <pubDate>Mon, 13 Oct 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://lsmantiz.github.io/posts/Sustainable regional development - A complexity economics analysis/overview.png" medium="image" type="image/png" height="144" width="144"/>
+  <media:content url="https://lsmantiz.github.io/posts/phd-overview/overview.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models</title>
   <dc:creator>Lasare Samartzidis</dc:creator>
   <dc:creator>Rob van Eynde</dc:creator>
-  <link>https://lsmantiz.github.io/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/</link>
+  <link>https://lsmantiz.github.io/posts/llm-systematic-review/</link>
   <description><![CDATA[ 
 
 
@@ -92,7 +91,15 @@ https://badge.dimensions.ai/
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 <script async="" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
 <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
-<p><img src="https://lsmantiz.github.io/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/llm_workflow.png" class="img-fluid"></p>
+<p><img src="https://lsmantiz.github.io/posts/llm-systematic-review/llm_workflow.png" class="img-fluid"> ## What I built</p>
+<p>A four-stage, human-in-the-loop LLM pipeline (R + Python) that turns a raw literature search into a structured, machine-readable database of model features — replacing the manual coding of ~40 features across 60+ full papers (≈2,500 data points) that a classical systematic review would require.</p>
+<ol type="1">
+<li><strong>Retrieval &amp; screening</strong> — Scopus API query (<code>rscopus</code>); an LLM scores each abstract’s relevance (1–10, temperature 0, single-number output); borderline scores are routed to manual review before inclusion.</li>
+<li><strong>Full-text processing</strong> — PDF text extraction with PyMuPDF (Python via <code>reticulate</code>), cleaning, and chunking into 1,000-word segments.</li>
+<li><strong>Chunk classification</strong> — an LLM rates every chunk (1–5) on whether it actually <em>describes</em> the model rather than merely mentioning it; only method-dense chunks pass on, cutting noise and token cost.</li>
+<li><strong>Structured extraction</strong> — an LLM extracts 41 predefined model elements per paper as validated JSON (presence score, supporting excerpt, section reference), parsed into tidy data frames for analysis and visualization.</li>
+</ol>
+<p><strong>Tech stack:</strong> R (tidyverse, httr2, reticulate) · Python (PyMuPDF) · open-weight LLMs (Llama 3.1, Mistral Large, GPT-OSS-120B) served via the GWDG Academic Cloud’s OpenAI-compatible API · deterministic settings (temperature 0), automated retries, timeouts and rate limiting, response validation, and human review at defined checkpoints. Fully scripted end to end for reproducibility.</p>
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
 <p>The intertwined crises of climate change, biodiversity loss, and unmet social needs have intensified calls to shift economic priorities from growth to well-being within planetary boundaries. Post-growth scholarship has developed a range of transformative policy proposals, but quantitative modeling of such structural changes remains limited. This study provides the first systematic review of ecological macroeconomic agent-based models (ABMs) and their capacity to represent post-growth scenarios. We identify 62 publications forming this emerging landscape, which is growing rapidly but remains heavily concentrated in Europe, particularly Italy. Using a novel workflow that leverages large language models (LLMs) for automated text analysis, we assess the presence of post-growth-relevant model elements. Our findings reveal uneven coverage: while traditional actors such as firms, households, and the financial sector are well represented, critical elements for post-growth analysis—including not-for-profit organizations, non-institutional provisioning, time use, international interactions, and needs satisfaction—are largely absent. Although some elements show increasing uptake, others remain persistently underrepresented. We conclude that ecological macroeconomic ABMs are not yet fully equipped to model post-growth transformations. Strengthening this modeling landscape requires both extending existing models with underrepresented elements and introducing entirely new thematic groups. Beyond the substantive contributions, our automated review workflow demonstrates how LLMs can streamline systematic reviews in fast-moving fields, offering a scalable and adaptable monitoring tool.</p>
@@ -113,7 +120,7 @@ https://badge.dimensions.ai/
 <div id="fig-overview" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://lsmantiz.github.io/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/landscape_overview.png" id="fig-overview" class="img-fluid figure-img">
+<img src="https://lsmantiz.github.io/posts/llm-systematic-review/landscape_overview.png" id="fig-overview" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1
@@ -124,7 +131,7 @@ Figure&nbsp;1
 <div id="fig-results" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-results-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://lsmantiz.github.io/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/results.png" id="fig-results" class="img-fluid figure-img">
+<img src="https://lsmantiz.github.io/posts/llm-systematic-review/results.png" id="fig-results" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-results-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2
@@ -142,25 +149,23 @@ Figure&nbsp;2
     Models},
   journal = {In preparation},
   date = {2025-10-08},
-  url = {https://lsmantiz.github.io/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/},
+  url = {https://lsmantiz.github.io/posts/llm-systematic-review/},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-samartzidis2025" class="csl-entry quarto-appendix-citeas">
 Samartzidis, Lasare, and Rob van Eynde. 2025. <span>“Are Macroeconomic
 Agent-Based Models Ready for Post-Growth Policies? - A Systematic Review
-with Large Language Models.”</span> <em>In Preparation</em>, October. <a href="https://lsmantiz.github.io/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/">https://lsmantiz.github.io/posts/Are
-Macroeconomic Agent-Based Models ready for post-growth policies - A
-systematic review with large language models/</a>.
+with Large Language Models.”</span> <em>In Preparation</em>, October. <a href="https://lsmantiz.github.io/posts/llm-systematic-review/">https://lsmantiz.github.io/posts/llm-systematic-review/</a>.
 </div></div></section></div> ]]></description>
   <category>paper</category>
-  <guid>https://lsmantiz.github.io/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/</guid>
+  <guid>https://lsmantiz.github.io/posts/llm-systematic-review/</guid>
   <pubDate>Tue, 07 Oct 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://lsmantiz.github.io/posts/Are Macroeconomic Agent-Based Models ready for post-growth policies - A systematic review with large language models/llm_workflow.png" medium="image" type="image/png" height="62" width="144"/>
+  <media:content url="https://lsmantiz.github.io/posts/llm-systematic-review/llm_workflow.png" medium="image" type="image/png" height="62" width="144"/>
 </item>
 <item>
-  <title>Synchronisation of regional development - the role of clusters in the regional production network</title>
+  <title>Production networks, input specificity, and the labor share</title>
   <dc:creator>Lasare Samartzidis</dc:creator>
-  <link>https://lsmantiz.github.io/posts/Synchronisation of regional development - the role of clusters in the regional production network/</link>
+  <link>https://lsmantiz.github.io/posts/production-networks-labor-share/</link>
   <description><![CDATA[ 
 
 
@@ -180,7 +185,62 @@ https://badge.dimensions.ai/
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 <script async="" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
 <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
-<p><img src="https://lsmantiz.github.io/posts/Synchronisation of regional development - the role of clusters in the regional production network/overview.png" class="img-fluid"></p>
+<p><img src="https://lsmantiz.github.io/posts/production-networks-labor-share/overview.png" class="img-fluid"></p>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>Bargaining power is a key determinant of workers’ share of aggregate income, yet difficult to measure empirically. This study proposes input specificity as an important determinant of bargaining power, arguing that the production of harder-to-substitute intermediates strengthens workers’ bargaining position. We develop a network-based measure of input specificity and apply it to regional input–output data for European economies. Our results suggest that input specificity varies systematically across regions and is positively associated with the labor share. We find evidence that the relationship between input specificity and the labor share is stronger under coordinated wage bargaining, indicating that institutional settings condition how structural positions in production networks translate into income for workers. From a policy perspective, upgrading strategies that increase input specificity may support higher labor shares, particularly in contexts where institutions enable workers to capture the associated rents.</p>
+</section>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links</h2>
+<p>A preprint is available at <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5349214">SRRN</a></p>
+<p>Available <a href="https://zenodo.org/records/14134659">data &amp; code</a></p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{samartzidis2025,
+  author = {Samartzidis, Lasare},
+  title = {Production Networks, Input Specificity, and the Labor Share},
+  journal = {Under Review at Economic Modelling},
+  date = {2025-01-01},
+  url = {https://lsmantiz.github.io/posts/production-networks-labor-share/},
+  doi = {10.2139/ssrn.5349214},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-samartzidis2025" class="csl-entry quarto-appendix-citeas">
+Samartzidis, Lasare. 2025. <span>“Production Networks, Input
+Specificity, and the Labor Share.”</span> <em>Under Review at Economic
+Modelling</em>, January. <a href="https://doi.org/10.2139/ssrn.5349214">https://doi.org/10.2139/ssrn.5349214</a>.
+</div></div></section></div> ]]></description>
+  <category>paper</category>
+  <guid>https://lsmantiz.github.io/posts/production-networks-labor-share/</guid>
+  <pubDate>Thu, 07 Aug 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://lsmantiz.github.io/posts/production-networks-labor-share/overview.png" medium="image" type="image/png" height="164" width="144"/>
+</item>
+<item>
+  <title>Synchronisation of regional development - the role of clusters in the regional production network</title>
+  <dc:creator>Lasare Samartzidis</dc:creator>
+  <link>https://lsmantiz.github.io/posts/regional-synchronisation/</link>
+  <description><![CDATA[ 
+
+
+
+
+<!--Include academic icons or bottons-->
+<!-- 
+Load Academicons v1: https://jpswalsh.github.io/academicons/
+-->
+<p><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"></p>
+<p><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"></p>
+<!---
+The following code are needed to show dimension citation and altmetrics.
+https://api.altmetric.com/embeds.html
+https://badge.dimensions.ai/
+--->
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+<script async="" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+<p><img src="https://lsmantiz.github.io/posts/regional-synchronisation/overview.png" class="img-fluid"></p>
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
 <p>This study examines the impact of production network clusters (PNCs), derived through network science methods, on German counties’ economic development using a complex systems approach, conceptualising trade as information flows that guide economic agents’ decisions. Employing spatial econometrics, it finds that PNC trade flows predict regional economic synchronisation, though effects are not always positive. While results indicate that PNCs synchronise agents’ decisions within the same cluster, they may desynchronise their decisions with agents in spatially linked areas. These findings contribute to advancing a complexity economics framework for understanding regional development dynamics and disparities in Germany.</p>
@@ -210,69 +270,14 @@ Development - the Role of Clusters in the Regional Production
 Network.”</span> <em>Spatial Economic Analysis</em>, January, 1–24. <a href="https://doi.org/10.1080/17421772.2025.2532609">https://doi.org/10.1080/17421772.2025.2532609</a>.
 </div></div></section></div> ]]></description>
   <category>paper</category>
-  <guid>https://lsmantiz.github.io/posts/Synchronisation of regional development - the role of clusters in the regional production network/</guid>
+  <guid>https://lsmantiz.github.io/posts/regional-synchronisation/</guid>
   <pubDate>Thu, 07 Aug 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://lsmantiz.github.io/posts/Synchronisation of regional development - the role of clusters in the regional production network/overview.png" medium="image" type="image/png" height="112" width="144"/>
-</item>
-<item>
-  <title>Production networks, input specificity, and the labor share</title>
-  <dc:creator>Lasare Samartzidis</dc:creator>
-  <link>https://lsmantiz.github.io/posts/Production networks, input specificity, and the labor share/</link>
-  <description><![CDATA[ 
-
-
-
-
-<!--Include academic icons or bottons-->
-<!-- 
-Load Academicons v1: https://jpswalsh.github.io/academicons/
--->
-<p><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"></p>
-<p><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"></p>
-<!---
-The following code are needed to show dimension citation and altmetrics.
-https://api.altmetric.com/embeds.html
-https://badge.dimensions.ai/
---->
-<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
-<script async="" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
-<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
-<p><img src="https://lsmantiz.github.io/posts/Production networks, input specificity, and the labor share/overview.png" class="img-fluid"></p>
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>Bargaining power is a key determinant of workers’ share of aggregate income, yet difficult to measure empirically. This study proposes input specificity as an important determinant of bargaining power, arguing that the production of harder-to-substitute intermediates strengthens workers’ bargaining position. We develop a network-based measure of input specificity and apply it to regional input–output data for European economies. Our results suggest that input specificity varies systematically across regions and is positively associated with the labor share. We find evidence that the relationship between input specificity and the labor share is stronger under coordinated wage bargaining, indicating that institutional settings condition how structural positions in production networks translate into income for workers. From a policy perspective, upgrading strategies that increase input specificity may support higher labor shares, particularly in contexts where institutions enable workers to capture the associated rents.</p>
-</section>
-<section id="links" class="level2">
-<h2 class="anchored" data-anchor-id="links">Links</h2>
-<p>A preprint is available at <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5349214">SRRN</a></p>
-<p>Available <a href="https://zenodo.org/records/14134659">data &amp; code</a></p>
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{samartzidis2025,
-  author = {Samartzidis, Lasare},
-  title = {Production Networks, Input Specificity, and the Labor Share},
-  journal = {Under Review at Economic Modelling},
-  date = {2025-01-01},
-  url = {https://lsmantiz.github.io/posts/Production networks, input specificity, and the labor share/},
-  doi = {10.2139/ssrn.5349214},
-  langid = {en}
-}
-</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-samartzidis2025" class="csl-entry quarto-appendix-citeas">
-Samartzidis, Lasare. 2025. <span>“Production Networks, Input
-Specificity, and the Labor Share.”</span> <em>Under Review at Economic
-Modelling</em>, January. <a href="https://doi.org/10.2139/ssrn.5349214">https://doi.org/10.2139/ssrn.5349214</a>.
-</div></div></section></div> ]]></description>
-  <category>paper</category>
-  <guid>https://lsmantiz.github.io/posts/Production networks, input specificity, and the labor share/</guid>
-  <pubDate>Thu, 07 Aug 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://lsmantiz.github.io/posts/Production networks, input specificity, and the labor share/overview.png" medium="image" type="image/png" height="164" width="144"/>
+  <media:content url="https://lsmantiz.github.io/posts/regional-synchronisation/overview.png" medium="image" type="image/png" height="112" width="144"/>
 </item>
 <item>
   <title>Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods</title>
   <dc:creator>Lasare Samartzidis</dc:creator>
-  <link>https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/</link>
+  <link>https://lsmantiz.github.io/posts/wellbeing-ml/</link>
   <description><![CDATA[ 
 
 
@@ -292,7 +297,18 @@ https://badge.dimensions.ai/
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 <script async="" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
 <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
-<p><img src="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/overview.png" class="img-fluid"></p>
+<p><img src="https://lsmantiz.github.io/posts/wellbeing-ml/overview.png" class="img-fluid"></p>
+<section id="what-i-built" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-built">What I built</h2>
+<p>An end-to-end, interpretable ML workflow in R (tidymodels) that predicts subjective well-being across 388 OECD regions and — more importantly — explores <em>how</em>, turning a black-box model into testable hypotheses.</p>
+<ol type="1">
+<li><strong>Feature selection</strong> — recursive importance-based elimination (<code>ranger</code> random forests) reduced 134 candidate indicators from four OECD databases to 16 final predictors, chosen via out-of-bag error.</li>
+<li><strong>Model training &amp; benchmarking</strong> — random forest and XGBoost tuned with 5-fold cross-validation over space-filling parameter grids (60 configurations each, parallelized via <code>future</code>/<code>doFuture</code>), tested against an OLS baseline on a held-out set: R² 0.78 (RF) vs.&nbsp;0.67 (OLS).</li>
+<li><strong>Interpretability</strong> — model-agnostic diagnostics with the <code>iml</code> package: permutation importance, accumulated local effects (ALE) for functional forms, and interaction strength (Friedman’s H) — surfacing non-linearities and an underexplored predictor (elderly sex ratio) as important as disposable income.</li>
+<li><strong>Robustness &amp; reproducibility</strong> — all findings cross-checked between RF and XGBoost; fully seeded (including parallel RNG), with data and code archived on Zenodo and a rendered code document below that reproduces every figure in the paper.</li>
+</ol>
+<p><strong>Tech stack:</strong> R (tidymodels, ranger, xgboost, iml, future) · permutation importance, ALE, interaction analysis · reproducible research (Zenodo DOI, seeded parallel workflows, literate programming with Quarto).</p>
+</section>
 <section id="abstract" class="level2">
 <h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
 <p>Subjective Well-Being (SWB) has emerged as a key measure in assessing societal progress beyond traditional economic indicators like GDP. While SWB is shaped by diverse socio-economic factors, most quantitative studies use limited variables and overlook non-linearities and interactions. We address these gaps by applying random forests to predict regional SWB averages across 388 OECD regions using 2016 data. Our model identifies 16 key predictors of regional SWB, revealing significant non-linearities and interactions among variables. Notably, the sex ratio among the elderly, a factor underexplored in existing literature, emerges as a predictor comparable in importance to average disposable income. Interestingly, regions with below-average employment and elderly sex ratios show higher SWB than average, but this trend reverses at higher levels. This study highlights the potential of machine learning to explore complex socio-economic systems, connecting data-driven insights with theory-building. By incorporating multidimensionality and non-linear interactions, our approach offers a robust framework for analyzing SWB and informing policy design.</p>
@@ -302,10 +318,9 @@ https://badge.dimensions.ai/
 <p>Published <a href="https://doi.org/10.1007/s11205-025-03643-5">paper</a></p>
 <p>Available <a href="https://zenodo.org/records/15535818">data &amp; code</a></p>
 </section>
-<section id="code-to-reproduce-the-papers-results" class="level2">
-<h2 class="anchored" data-anchor-id="code-to-reproduce-the-papers-results">Code to reproduce the paper’s results</h2>
+<section id="code-to-reproduce-the-papers-results" class="level1">
+<h1>Code to reproduce the paper’s results</h1>
 <p>All the data and code is available from the <a href="https://zenodo.org/records/15535818">data &amp; code</a> link. After the download, you can unzip the files and open the included R-studio project. It also includes the below presented code document to reproduce the paper’s results.</p>
-</section>
 <section id="code-document" class="level2">
 <h2 class="anchored" data-anchor-id="code-document">Code document</h2>
 <p>First, predictors are selected based on random forest importance following several steps to consequently reduce the number of predictors on the dataset. The final predictors are chosen based on the minimal out-of-bag errors (OOB). After the variable selection is done, the final random forest model is determined via hypertuning all the parameters in the model based on reducing the prediction error the models produce. With the final model, model agnostics are run to understand and interpret the model. For this, plots are produced showing the predictor importance, the functional form of the predictors in predicting subjective well-being, their interaction strength, and finally the functional form of one particular interaction.</p>
@@ -996,7 +1011,7 @@ font-style: inherit;">theme_plots</span>()</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="504"></p>
+<p><img src="https://lsmantiz.github.io/posts/wellbeing-ml/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="504"></p>
 </figure>
 </div>
 </div>
@@ -1777,7 +1792,7 @@ font-style: inherit;">"color"</span></span>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="720"></p>
+<p><img src="https://lsmantiz.github.io/posts/wellbeing-ml/index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="720"></p>
 </figure>
 </div>
 </div>
@@ -1881,156 +1896,116 @@ font-style: inherit;">"SUBJ_LIFE_SAT"</span>]</span></code></pre></div></div>
 </div>
 <p>Then, the RF model is trained via a hypertuning process.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+font-style: inherit;"># set.seed(4595)</span></span>
+<span id="cb16-2">rf_model <span class="ot" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">4595</span>)</span>
-<span id="cb16-2"></span>
-<span id="cb16-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">require</span>(tidymodels)</span>
-<span id="cb16-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">require</span>(future)</span>
-<span id="cb16-5"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">require</span>(doFuture)</span>
-<span id="cb16-6"></span>
-<span id="cb16-7"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Set the RNG kind for parallel reproducibility</span></span>
-<span id="cb16-8"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">RNGkind</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"L'Ecuyer-CMRG"</span>)</span>
-<span id="cb16-9"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4595</span>)</span>
-<span id="cb16-10"></span>
-<span id="cb16-11"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Set up future parallel backend</span></span>
-<span id="cb16-12"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">registerDoFuture</span>()</span>
-<span id="cb16-13"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plan</span>(multisession, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">workers =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">availableCores</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)</span>
-<span id="cb16-14"></span>
-<span id="cb16-15"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Rest of your code stays the same...</span></span>
-<span id="cb16-16">rf_model <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span></span>
-<span id="cb16-17">  parsnip<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&lt;-</span> </span>
+<span id="cb16-3">  parsnip<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">rand_forest</span>(</span>
-<span id="cb16-18">    <span class="at" style="color: #657422;
+<span id="cb16-4">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">mode =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"regression"</span>,</span>
-<span id="cb16-19">    <span class="at" style="color: #657422;
+<span id="cb16-5">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">trees =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">tune</span>(),</span>
-<span id="cb16-20">    <span class="at" style="color: #657422;
+<span id="cb16-6">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">mtry =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">tune</span>(),</span>
-<span id="cb16-21">    <span class="at" style="color: #657422;
+font-style: inherit;">tune</span>(),        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Number of predictors randomly selected at each split</span></span>
+<span id="cb16-7">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">min_n =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">tune</span>()</span>
-<span id="cb16-22">  ) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">tune</span>()        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Minimum number of data points in a node</span></span>
+<span id="cb16-8">  ) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb16-23">  <span class="fu" style="color: #4758AB;
+<span id="cb16-9">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">set_engine</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"ranger"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">num.threads =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">seed =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4595</span>)  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Add seed to ranger</span></span>
-<span id="cb16-24"></span>
-<span id="cb16-25">rf_params <span class="ot" style="color: #003B4F;
+font-style: inherit;">"ranger"</span>)</span>
+<span id="cb16-10"></span>
+<span id="cb16-11"></span>
+<span id="cb16-12">rf_params <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> dials<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">parameters</span>(<span class="fu" style="color: #4758AB;
+font-style: inherit;">parameters</span>(</span>
+<span id="cb16-13">  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">trees</span>(), <span class="fu" style="color: #4758AB;
+font-style: inherit;">trees</span>(),</span>
+<span id="cb16-14">  dials<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">finalize</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">mtry</span>(), sample_train), <span class="fu" style="color: #4758AB;
+font-style: inherit;">mtry</span>(), sample_train),</span>
+<span id="cb16-15">  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">min_n</span>())</span>
-<span id="cb16-26">rf_grid <span class="ot" style="color: #003B4F;
+font-style: inherit;">min_n</span>()</span>
+<span id="cb16-16">)</span>
+<span id="cb16-17"></span>
+<span id="cb16-18">rf_grid <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> dials<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">grid_space_filling</span>(rf_params, <span class="at" style="color: #657422;
+font-style: inherit;">grid_space_filling</span>(</span>
+<span id="cb16-19">  rf_params, </span>
+<span id="cb16-20">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">60</span>)</span>
-<span id="cb16-27"></span>
-<span id="cb16-28">rf_wf <span class="ot" style="color: #003B4F;
+font-style: inherit;">60</span></span>
+<span id="cb16-21">)</span>
+<span id="cb16-22"></span>
+<span id="cb16-23">rf_wf <span class="ot" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">&lt;-</span></span>
-<span id="cb16-29">  workflows<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&lt;-</span> </span>
+<span id="cb16-24">  workflows<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">workflow</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb16-30">  <span class="fu" style="color: #4758AB;
+<span id="cb16-25">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">add_model</span>(rf_model) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb16-31">  <span class="fu" style="color: #4758AB;
+<span id="cb16-26">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">add_formula</span>(SUBJ_LIFE_SAT <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">~</span> .)</span>
-<span id="cb16-32"></span>
-<span id="cb16-33">preprocessing_recipe <span class="ot" style="color: #003B4F;
+<span id="cb16-27"></span>
+<span id="cb16-28"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">&lt;-</span></span>
-<span id="cb16-34">  recipes<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"># preprocessing "recipe"</span></span>
+<span id="cb16-29">preprocessing_recipe <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> </span>
+<span id="cb16-30">  recipes<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2041,7 +2016,10 @@ background-color: null;
 font-style: inherit;">data =</span> sample_train) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb16-35">  recipes<span class="sc" style="color: #5E5E5E;
+<span id="cb16-31">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># convert categorical variables to factors</span></span>
+<span id="cb16-32">  recipes<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2050,7 +2028,10 @@ background-color: null;
 font-style: inherit;">all_nominal</span>()) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb16-36">  recipes<span class="sc" style="color: #5E5E5E;
+<span id="cb16-33">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># combine low frequency factor levels</span></span>
+<span id="cb16-34">  recipes<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2063,7 +2044,10 @@ background-color: null;
 font-style: inherit;">0.01</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb16-37">  recipes<span class="sc" style="color: #5E5E5E;
+<span id="cb16-35">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># remove no variance predictors which provide no predictive information </span></span>
+<span id="cb16-36">  recipes<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2072,23 +2056,26 @@ background-color: null;
 font-style: inherit;">all_nominal</span>()) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb16-38">  <span class="fu" style="color: #4758AB;
+<span id="cb16-37">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">prep</span>()</span>
-<span id="cb16-39"></span>
-<span id="cb16-40">wellbeing_cv_folds <span class="ot" style="color: #003B4F;
+<span id="cb16-38"></span>
+<span id="cb16-39">wellbeing_cv_folds <span class="ot" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">&lt;-</span></span>
-<span id="cb16-41">  recipes<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">&lt;-</span> </span>
+<span id="cb16-40">  recipes<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">bake</span>(preprocessing_recipe, <span class="at" style="color: #657422;
+font-style: inherit;">bake</span>(</span>
+<span id="cb16-41">    preprocessing_recipe, </span>
+<span id="cb16-42">    <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">new_data =</span> sample_train) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">new_data =</span> sample_train</span>
+<span id="cb16-43">  ) <span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb16-42">  rsample<span class="sc" style="color: #5E5E5E;
+font-style: inherit;">%&gt;%</span>  </span>
+<span id="cb16-44">  rsample<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2097,31 +2084,37 @@ background-color: null;
 font-style: inherit;">v =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span>)</span>
-<span id="cb16-43"></span>
-<span id="cb16-44">rf_tuned <span class="ot" style="color: #003B4F;
+<span id="cb16-45"></span>
+<span id="cb16-46">rf_tuned <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> tune<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">tune_grid</span>(</span>
-<span id="cb16-45">  <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">object =</span> rf_wf,</span>
-<span id="cb16-46">  <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">resamples =</span> wellbeing_cv_folds,</span>
 <span id="cb16-47">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">grid =</span> rf_grid,</span>
+font-style: inherit;">object =</span> rf_wf,</span>
 <span id="cb16-48">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">resamples =</span> wellbeing_cv_folds,</span>
+<span id="cb16-49">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">grid =</span> rf_grid,</span>
+<span id="cb16-50">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">metrics =</span> yardstick<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">metric_set</span>(rmse, rsq, mae),</span>
-<span id="cb16-49">  <span class="at" style="color: #657422;
+font-style: inherit;">metric_set</span>(yardstick<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span>rmse, yardstick<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span>rsq, yardstick<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span>mae),</span>
+<span id="cb16-51">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">control =</span> tune<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -2129,21 +2122,16 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">control_grid</span>(<span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">verbose =</span> <span class="cn" style="color: #8f5902;
-background-color: null;
-font-style: inherit;">TRUE</span>)</span>
-<span id="cb16-50">)</span>
-<span id="cb16-51"></span>
-<span id="cb16-52"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plan</span>(sequential)</span>
+font-style: inherit;">verbose =</span> F)</span>
+<span id="cb16-52">)</span>
 <span id="cb16-53"></span>
-<span id="cb16-54">rf_best_params <span class="ot" style="color: #003B4F;
+<span id="cb16-54"></span>
+<span id="cb16-55">rf_best_params <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> rf_tuned <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb16-55">  tune<span class="sc" style="color: #5E5E5E;
+<span id="cb16-56">  tune<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2152,22 +2140,22 @@ background-color: null;
 font-style: inherit;">metric =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"rmse"</span>)</span>
-<span id="cb16-56"></span>
-<span id="cb16-57">rf_model_final <span class="ot" style="color: #003B4F;
+<span id="cb16-57"></span>
+<span id="cb16-58">rf_model_final <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> rf_model <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb16-58">  <span class="fu" style="color: #4758AB;
+<span id="cb16-59">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">finalize_model</span>(rf_best_params)</span>
-<span id="cb16-59"></span>
-<span id="cb16-60">rf_best_params</span></code></pre></div></div>
+<span id="cb16-60"></span>
+<span id="cb16-61">rf_best_params</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 4
    mtry trees min_n .config         
   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;           
-1     6  1085     2 pre0_mod22_post0</code></pre>
+1     7   475     3 pre0_mod26_post0</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1">rf_prediction <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -2176,185 +2164,27 @@ background-color: null;
 font-style: inherit;">%&gt;%</span></span>
 <span id="cb18-2">  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">fit</span>(<span class="at" style="color: #657422;
+font-style: inherit;">fit</span>(</span>
+<span id="cb18-3">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">formula =</span> SUBJ_LIFE_SAT <span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">~</span> ., <span class="at" style="color: #657422;
+font-style: inherit;">~</span> .,</span>
+<span id="cb18-4">    <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">data =</span> sample_train)</span></code></pre></div></div>
+font-style: inherit;">data =</span> sample_train</span>
+<span id="cb18-5">  )</span></code></pre></div></div>
 </div>
 </section>
-<section id="model-comparison---xgboost" class="level3">
-<h3 class="anchored" data-anchor-id="model-comparison---xgboost">Model comparison - XGBoost</h3>
+</section>
+<section id="model-comparison---xgboost" class="level2">
+<h2 class="anchored" data-anchor-id="model-comparison---xgboost">Model comparison - XGBoost</h2>
 <p>Here, we train the XGBoost model.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4595</span>)</span>
-<span id="cb19-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">require</span>(xgboost)</span>
-<span id="cb19-3"></span>
-<span id="cb19-4"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Set RNG for parallel reproducibility</span></span>
-<span id="cb19-5"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">RNGkind</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"L'Ecuyer-CMRG"</span>)</span>
-<span id="cb19-6"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4595</span>)</span>
-<span id="cb19-7"></span>
-<span id="cb19-8"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Set up future parallel backend</span></span>
-<span id="cb19-9"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">registerDoFuture</span>()</span>
-<span id="cb19-10"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plan</span>(multisession, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">workers =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">availableCores</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)</span>
-<span id="cb19-11"></span>
-<span id="cb19-12"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">cat</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Number of workers:"</span>, <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">nbrOfWorkers</span>(), <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">\n</span><span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>)</span></code></pre></div></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Number of workers: 7 </code></pre>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: `grid_max_entropy()` was deprecated in dials 1.3.0.
+ℹ Please use `grid_space_filling()` instead.</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># XGBoost model specification</span></span>
-<span id="cb21-2">xgboost_model <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span></span>
-<span id="cb21-3">  parsnip<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">boost_tree</span>(</span>
-<span id="cb21-4">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">mode =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"regression"</span>,</span>
-<span id="cb21-5">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">trees =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1000</span>,</span>
-<span id="cb21-6">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">min_n =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tune</span>(),</span>
-<span id="cb21-7">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">tree_depth =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tune</span>(),</span>
-<span id="cb21-8">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">learn_rate =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tune</span>(),</span>
-<span id="cb21-9">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">loss_reduction =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tune</span>()</span>
-<span id="cb21-10">  ) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb21-11">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">set_engine</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"xgboost"</span>, </span>
-<span id="cb21-12">             <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">objective =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"reg:squarederror"</span>,</span>
-<span id="cb21-13">             <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">nthread =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>,           <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Use 1 thread per model</span></span>
-<span id="cb21-14">             <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">seed =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4595</span>)           <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># XGBoost internal seed</span></span>
-<span id="cb21-15"></span>
-<span id="cb21-16"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># grid specification</span></span>
-<span id="cb21-17">xgboost_params <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span></span>
-<span id="cb21-18">  dials<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">parameters</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">min_n</span>(), <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tree_depth</span>(), <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">learn_rate</span>(), <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">loss_reduction</span>())</span>
-<span id="cb21-19"></span>
-<span id="cb21-20">xgboost_grid <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span></span>
-<span id="cb21-21">  dials<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">grid_max_entropy</span>(xgboost_params, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">60</span>)</span>
-<span id="cb21-22"></span>
-<span id="cb21-23">knitr<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">kable</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">head</span>(xgboost_grid))</span></code></pre></div></div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <thead>
@@ -2367,127 +2197,67 @@ font-style: inherit;">head</span>(xgboost_grid))</span></code></pre></div></div>
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0e+00</td>
+<td style="text-align: right;">0.0000013</td>
+</tr>
+<tr class="even">
 <td style="text-align: right;">19</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">0.0000001</td>
-<td style="text-align: right;">0.0003137</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5e-07</td>
+<td style="text-align: right;">0.7662099</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">0e+00</td>
+<td style="text-align: right;">0.0000010</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">40</td>
-<td style="text-align: right;">11</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0e+00</td>
+<td style="text-align: right;">0.0000531</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0e+00</td>
 <td style="text-align: right;">0.0000000</td>
-<td style="text-align: right;">0.0000003</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">0.0002206</td>
-<td style="text-align: right;">0.0000134</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">25</td>
+<td style="text-align: right;">24</td>
 <td style="text-align: right;">5</td>
-<td style="text-align: right;">0.0000050</td>
-<td style="text-align: right;">3.7195118</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">0.0000141</td>
-<td style="text-align: right;">0.0000035</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">17</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">0.0355548</td>
-<td style="text-align: right;">6.0162432</td>
+<td style="text-align: right;">0e+00</td>
+<td style="text-align: right;">0.0000127</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1">xgboost_wf <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span></span>
-<span id="cb22-2">  workflows<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">workflow</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb22-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">add_model</span>(xgboost_model) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb22-4">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">add_formula</span>(SUBJ_LIFE_SAT <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> .)</span>
-<span id="cb22-5"></span>
-<span id="cb22-6"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># hyperparameter tuning</span></span>
-<span id="cb22-7">xgboost_tuned <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> tune<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">tune_grid</span>(</span>
-<span id="cb22-8">  <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">object =</span> xgboost_wf,</span>
-<span id="cb22-9">  <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">resamples =</span> wellbeing_cv_folds,</span>
-<span id="cb22-10">  <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">grid =</span> xgboost_grid,</span>
-<span id="cb22-11">  <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">metrics =</span> yardstick<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">metric_set</span>(rmse, rsq, mae),</span>
-<span id="cb22-12">  <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">control =</span> tune<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">control_grid</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">verbose =</span> <span class="cn" style="color: #8f5902;
-background-color: null;
-font-style: inherit;">TRUE</span>)</span>
-<span id="cb22-13">)</span>
-<span id="cb22-14"></span>
-<span id="cb22-15"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plan</span>(sequential)</span>
-<span id="cb22-16"></span>
-<span id="cb22-17">xgboost_tuned <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb22-18">  tune<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">show_best</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">metric =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"rmse"</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb22-19">  knitr<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">kable</span>()</span></code></pre></div></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>→ A | warning: A correlation computation is required, but `estimate` is constant and has 0
+               standard deviation, resulting in a divide by 0 error. `NA` will be returned.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>There were issues with some computations   A: x2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>There were issues with some computations   A: x8</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>There were issues with some computations   A: x14</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>There were issues with some computations   A: x21</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>There were issues with some computations   A: x27
+There were issues with some computations   A: x27</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code></code></pre>
+</div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
@@ -2518,84 +2288,72 @@ font-style: inherit;">kable</span>()</span></code></pre></div></div>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">0.0059279</td>
-<td style="text-align: right;">0.0000005</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">0.0953114</td>
+<td style="text-align: right;">0.0000000</td>
 <td style="text-align: left;">rmse</td>
 <td style="text-align: left;">standard</td>
-<td style="text-align: right;">0.4874019</td>
+<td style="text-align: right;">0.5305343</td>
 <td style="text-align: right;">5</td>
-<td style="text-align: right;">0.0265237</td>
+<td style="text-align: right;">0.0198083</td>
 <td style="text-align: left;">pre0_mod28_post0</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">0.0090277</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.0233996</td>
 <td style="text-align: right;">0.0000000</td>
 <td style="text-align: left;">rmse</td>
 <td style="text-align: left;">standard</td>
-<td style="text-align: right;">0.4880999</td>
+<td style="text-align: right;">0.5320298</td>
 <td style="text-align: right;">5</td>
-<td style="text-align: right;">0.0261845</td>
-<td style="text-align: left;">pre0_mod04_post0</td>
+<td style="text-align: right;">0.0131723</td>
+<td style="text-align: left;">pre0_mod11_post0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">17</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">0.0051652</td>
-<td style="text-align: right;">0.0000001</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.0280396</td>
+<td style="text-align: right;">0.0000943</td>
 <td style="text-align: left;">rmse</td>
 <td style="text-align: left;">standard</td>
-<td style="text-align: right;">0.4942764</td>
+<td style="text-align: right;">0.5413779</td>
 <td style="text-align: right;">5</td>
-<td style="text-align: right;">0.0259318</td>
-<td style="text-align: left;">pre0_mod26_post0</td>
+<td style="text-align: right;">0.0217946</td>
+<td style="text-align: left;">pre0_mod19_post0</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">14</td>
-<td style="text-align: right;">14</td>
-<td style="text-align: right;">0.0690032</td>
-<td style="text-align: right;">0.0055577</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.0056673</td>
+<td style="text-align: right;">0.0004664</td>
 <td style="text-align: left;">rmse</td>
 <td style="text-align: left;">standard</td>
-<td style="text-align: right;">0.4958214</td>
+<td style="text-align: right;">0.5446181</td>
 <td style="text-align: right;">5</td>
-<td style="text-align: right;">0.0229386</td>
-<td style="text-align: left;">pre0_mod20_post0</td>
+<td style="text-align: right;">0.0116947</td>
+<td style="text-align: left;">pre0_mod44_post0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">0.0157471</td>
-<td style="text-align: right;">0.0000000</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.0443355</td>
+<td style="text-align: right;">0.0001174</td>
 <td style="text-align: left;">rmse</td>
 <td style="text-align: left;">standard</td>
-<td style="text-align: right;">0.5045736</td>
+<td style="text-align: right;">0.5541192</td>
 <td style="text-align: right;">5</td>
-<td style="text-align: right;">0.0357911</td>
-<td style="text-align: left;">pre0_mod10_post0</td>
+<td style="text-align: right;">0.0134911</td>
+<td style="text-align: left;">pre0_mod52_post0</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1">xgboost_best_params <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> xgboost_tuned <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb23-2">  tune<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">select_best</span>()</span>
-<span id="cb23-3"></span>
-<span id="cb23-4">knitr<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">kable</span>(xgboost_best_params)</span></code></pre></div></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in tune::select_best(.): No value of `metric` was given; "rmse" will be
+used.</code></pre>
+</div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <thead>
@@ -2609,95 +2367,42 @@ font-style: inherit;">kable</span>(xgboost_best_params)</span></code></pre></div
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: right;">0.0059279</td>
-<td style="text-align: right;">5e-07</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">0.0953114</td>
+<td style="text-align: right;">0</td>
 <td style="text-align: left;">pre0_mod28_post0</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1">xgboost_model_final <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> xgboost_model <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb24-2">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">finalize_model</span>(xgboost_best_params)</span>
-<span id="cb24-3"></span>
-<span id="cb24-4"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Final fit with multiple threads</span></span>
-<span id="cb24-5">xgboost_prediction <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> xgboost_model_final <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb24-6">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">set_engine</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"xgboost"</span>, </span>
-<span id="cb24-7">             <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">objective =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"reg:squarederror"</span>,</span>
-<span id="cb24-8">             <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">nthread =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">availableCores</span>() <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>,</span>
-<span id="cb24-9">             <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">seed =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">4595</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span></span>
-<span id="cb24-10">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">fit</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">formula =</span> SUBJ_LIFE_SAT <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> ., <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">data =</span> sample_train)</span></code></pre></div></div>
 </div>
-</section>
 <section id="model-comparison-between-rf-ols-and-xgb" class="level3">
 <h3 class="anchored" data-anchor-id="model-comparison-between-rf-ols-and-xgb">Model comparison between RF, OLS and XGB</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># linear model as comparison</span></span>
-<span id="cb25-2">lm_mod <span class="ot" style="color: #003B4F;
+<span id="cb28-2">lm_mod <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">linear_reg</span>()</span>
-<span id="cb25-3"></span>
-<span id="cb25-4">lm_fit <span class="ot" style="color: #003B4F;
+<span id="cb28-3"></span>
+<span id="cb28-4">lm_fit <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span></span>
-<span id="cb25-5">  lm_mod <span class="sc" style="color: #5E5E5E;
+<span id="cb28-5">  lm_mod <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb25-6">  <span class="fu" style="color: #4758AB;
+<span id="cb28-6">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">fit</span>(SUBJ_LIFE_SAT <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">~</span> ., <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">data =</span> sample_train)</span>
-<span id="cb25-7"><span class="fu" style="color: #4758AB;
+<span id="cb28-7"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">tidy</span>(lm_fit, <span class="at" style="color: #657422;
 background-color: null;
@@ -2724,20 +2429,20 @@ font-style: inherit;">conf.int =</span> T)</span></code></pre></div></div>
 16 BB_ACC           0.0678    0.0727     0.932 0.352        -0.0754   0.211  
 17 SR_TOT_RA_T     -0.139     0.0557    -2.50  0.0129       -0.249   -0.0297 </code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1">test_results <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1">test_results <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span></span>
-<span id="cb27-2">  sample_test <span class="sc" style="color: #5E5E5E;
+<span id="cb30-2">  sample_test <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb27-3">  dplyr<span class="sc" style="color: #5E5E5E;
+<span id="cb30-3">  dplyr<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">select</span>(SUBJ_LIFE_SAT) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb27-4">  <span class="fu" style="color: #4758AB;
+<span id="cb30-4">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">bind_cols</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2746,14 +2451,14 @@ background-color: null;
 font-style: inherit;">new_data =</span> sample_test[, predicted])) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb27-5">  <span class="fu" style="color: #4758AB;
+<span id="cb30-5">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">rename</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">rm_fit =</span> .pred) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb27-6">  <span class="fu" style="color: #4758AB;
+<span id="cb30-6">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">bind_cols</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2762,34 +2467,34 @@ background-color: null;
 font-style: inherit;">new_data =</span> sample_test[, predicted]) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb27-7">              <span class="fu" style="color: #4758AB;
+<span id="cb30-7">              <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">rename</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">lm_fit =</span> .pred)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb27-8">  <span class="fu" style="color: #4758AB;
+<span id="cb30-8">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">bind_cols</span>(</span>
-<span id="cb27-9">    <span class="fu" style="color: #4758AB;
+<span id="cb30-9">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">predict</span>(xgboost_prediction, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">new_data =</span> sample_test[, predicted]) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb27-10">      <span class="fu" style="color: #4758AB;
+<span id="cb30-10">      <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">rename</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">xgboost_prediction =</span> .pred)</span>
-<span id="cb27-11">  )</span>
-<span id="cb27-12"></span>
-<span id="cb27-13">test_results <span class="sc" style="color: #5E5E5E;
+<span id="cb30-11">  )</span>
+<span id="cb30-12"></span>
+<span id="cb30-13">test_results <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb27-14">  <span class="fu" style="color: #4758AB;
+<span id="cb30-14">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">metrics</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -2798,7 +2503,7 @@ background-color: null;
 font-style: inherit;">estimate =</span> rm_fit) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb27-15">  <span class="fu" style="color: #4758AB;
+<span id="cb30-15">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -2807,13 +2512,13 @@ background-color: null;
 font-style: inherit;">"rf"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb27-16">  <span class="fu" style="color: #4758AB;
+<span id="cb30-16">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">rbind</span>(</span>
-<span id="cb27-17">    test_results <span class="sc" style="color: #5E5E5E;
+<span id="cb30-17">    test_results <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb27-18">      <span class="fu" style="color: #4758AB;
+<span id="cb30-18">      <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">metrics</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -2822,17 +2527,17 @@ background-color: null;
 font-style: inherit;">estimate =</span> lm_fit) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb27-19">      <span class="fu" style="color: #4758AB;
+<span id="cb30-19">      <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">model =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"lm"</span>),</span>
-<span id="cb27-20">    test_results <span class="sc" style="color: #5E5E5E;
+<span id="cb30-20">    test_results <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb27-21">      <span class="fu" style="color: #4758AB;
+<span id="cb30-21">      <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">metrics</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -2841,39 +2546,39 @@ background-color: null;
 font-style: inherit;">estimate =</span> xgboost_prediction) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb27-22">      <span class="fu" style="color: #4758AB;
+<span id="cb30-22">      <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">model =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"xgb"</span>)</span>
-<span id="cb27-23">  )</span></code></pre></div></div>
+<span id="cb30-23">  )</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 9 × 4
   .metric .estimator .estimate model
   &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;
-1 rmse    standard       0.523 rf   
-2 rsq     standard       0.778 rf   
-3 mae     standard       0.404 rf   
+1 rmse    standard       0.527 rf   
+2 rsq     standard       0.774 rf   
+3 mae     standard       0.405 rf   
 4 rmse    standard       0.621 lm   
 5 rsq     standard       0.666 lm   
 6 mae     standard       0.493 lm   
-7 rmse    standard       0.532 xgb  
-8 rsq     standard       0.756 xgb  
-9 mae     standard       0.407 xgb  </code></pre>
+7 rmse    standard       0.536 xgb  
+8 rsq     standard       0.744 xgb  
+9 mae     standard       0.406 xgb  </code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1">test_results <span class="sc" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1">test_results <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb29-2">  <span class="fu" style="color: #4758AB;
+<span id="cb32-2">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">gather</span>(model, prediction, <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span>SUBJ_LIFE_SAT) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb29-3">  <span class="fu" style="color: #4758AB;
+<span id="cb32-3">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2884,7 +2589,7 @@ background-color: null;
 font-style: inherit;">y =</span> SUBJ_LIFE_SAT)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb29-4">  <span class="fu" style="color: #4758AB;
+<span id="cb32-4">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_abline</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -2897,7 +2602,7 @@ background-color: null;
 font-style: inherit;">2</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb29-5">  <span class="fu" style="color: #4758AB;
+<span id="cb32-5">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_point</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -2906,20 +2611,20 @@ background-color: null;
 font-style: inherit;">4</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb29-6">  <span class="fu" style="color: #4758AB;
+<span id="cb32-6">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">facet_wrap</span>( <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">~</span> model) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb29-7">  <span class="fu" style="color: #4758AB;
+<span id="cb32-7">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">coord_fixed</span>()</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="504"></p>
+<p><img src="https://lsmantiz.github.io/posts/wellbeing-ml/index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="504"></p>
 </figure>
 </div>
 </div>
@@ -2932,47 +2637,47 @@ font-style: inherit;">coord_fixed</span>()</span></code></pre></div></div>
 <section id="variable-importance" class="level4">
 <h4 class="anchored" data-anchor-id="variable-importance">Variable importance</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><span class="do" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## initialise iml package, as in https://uc-r.github.io/iml-pkg</span></span>
-<span id="cb30-2"></span>
-<span id="cb30-3"><span class="fu" style="color: #4758AB;
+<span id="cb33-2"></span>
+<span id="cb33-3"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">require</span>(iml)</span>
-<span id="cb30-4"></span>
-<span id="cb30-5"></span>
-<span id="cb30-6"><span class="do" style="color: #5E5E5E;
+<span id="cb33-4"></span>
+<span id="cb33-5"></span>
+<span id="cb33-6"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## add parallisation</span></span>
-<span id="cb30-7"></span>
-<span id="cb30-8"><span class="fu" style="color: #4758AB;
+<span id="cb33-7"></span>
+<span id="cb33-8"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">require</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"future"</span>)</span>
-<span id="cb30-9"><span class="fu" style="color: #4758AB;
+<span id="cb33-9"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">require</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"future.callr"</span>)</span>
-<span id="cb30-10"></span>
-<span id="cb30-11"><span class="co" style="color: #5E5E5E;
+<span id="cb33-10"></span>
+<span id="cb33-11"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># pred &lt;- function(X.model, newdata)  {</span></span>
-<span id="cb30-12"><span class="co" style="color: #5E5E5E;
+<span id="cb33-12"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#   predict(X.model, newdata, type = "numeric")$predictions</span></span>
-<span id="cb30-13"><span class="co" style="color: #5E5E5E;
+<span id="cb33-13"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#   #return(results)</span></span>
-<span id="cb30-14"><span class="co" style="color: #5E5E5E;
+<span id="cb33-14"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># }</span></span>
-<span id="cb30-15"></span>
-<span id="cb30-16"><span class="co" style="color: #5E5E5E;
+<span id="cb33-15"></span>
+<span id="cb33-16"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># 1. create a data frame with just the features</span></span>
-<span id="cb30-17">features <span class="ot" style="color: #003B4F;
+<span id="cb33-17">features <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -2985,60 +2690,60 @@ background-color: null;
 font-style: inherit;">select</span>(<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span>SUBJ_LIFE_SAT)</span>
-<span id="cb30-18"></span>
-<span id="cb30-19">predictor.rf <span class="ot" style="color: #003B4F;
+<span id="cb33-18"></span>
+<span id="cb33-19">predictor.rf <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> Predictor<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">new</span>(</span>
-<span id="cb30-20">  <span class="at" style="color: #657422;
+<span id="cb33-20">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">model =</span> rf_prediction,</span>
-<span id="cb30-21">  <span class="at" style="color: #657422;
+<span id="cb33-21">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">data =</span> features,</span>
-<span id="cb30-22">  <span class="at" style="color: #657422;
+<span id="cb33-22">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">y =</span> regression_data<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"SUBJ_LIFE_SAT"</span></span>
-<span id="cb30-23">  <span class="co" style="color: #5E5E5E;
+<span id="cb33-23">  <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># predict.fun = pred</span></span>
-<span id="cb30-24">)</span>
-<span id="cb30-25"></span>
-<span id="cb30-26"></span>
-<span id="cb30-27">predictor.xgb <span class="ot" style="color: #003B4F;
+<span id="cb33-24">)</span>
+<span id="cb33-25"></span>
+<span id="cb33-26"></span>
+<span id="cb33-27">predictor.xgb <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> Predictor<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">new</span>(</span>
-<span id="cb30-28">  <span class="at" style="color: #657422;
+<span id="cb33-28">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">model =</span> xgboost_prediction,</span>
-<span id="cb30-29">  <span class="at" style="color: #657422;
+<span id="cb33-29">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">data =</span> features,</span>
-<span id="cb30-30">  <span class="at" style="color: #657422;
+<span id="cb33-30">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">y =</span> regression_data<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"SUBJ_LIFE_SAT"</span></span>
-<span id="cb30-31">  <span class="co" style="color: #5E5E5E;
+<span id="cb33-31">  <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># predict.fun = pred</span></span>
-<span id="cb30-32">)</span>
-<span id="cb30-33"></span>
-<span id="cb30-34"></span>
-<span id="cb30-35">imp.rf <span class="ot" style="color: #003B4F;
+<span id="cb33-32">)</span>
+<span id="cb33-33"></span>
+<span id="cb33-34"></span>
+<span id="cb33-35">imp.rf <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> FeatureImp<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -3053,7 +2758,7 @@ background-color: null;
 font-style: inherit;">n.repetitions =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">100</span>)</span>
-<span id="cb30-36">imp.xgb <span class="ot" style="color: #003B4F;
+<span id="cb33-36">imp.xgb <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> FeatureImp<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -3068,25 +2773,25 @@ background-color: null;
 font-style: inherit;">n.repetitions =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">100</span>)</span>
-<span id="cb30-37"></span>
-<span id="cb30-38"><span class="co" style="color: #5E5E5E;
+<span id="cb33-37"></span>
+<span id="cb33-38"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># bold for indicators from demographic database</span></span>
-<span id="cb30-39">pretty_names_dat<span class="sc" style="color: #5E5E5E;
+<span id="cb33-39">pretty_names_dat<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>pretty_short <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ifelse</span>(</span>
-<span id="cb30-40">  pretty_names_dat<span class="sc" style="color: #5E5E5E;
+<span id="cb33-40">  pretty_names_dat<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>database <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">==</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Demographic"</span>,</span>
-<span id="cb30-41">  <span class="fu" style="color: #4758AB;
+<span id="cb33-41">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">paste0</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -3095,12 +2800,12 @@ background-color: null;
 font-style: inherit;">$</span>pretty_short, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"**"</span>),</span>
-<span id="cb30-42">  pretty_names_dat<span class="sc" style="color: #5E5E5E;
+<span id="cb33-42">  pretty_names_dat<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>pretty_short</span>
-<span id="cb30-43">)</span>
-<span id="cb30-44"></span>
-<span id="cb30-45">pretty_sorted_rf <span class="ot" style="color: #003B4F;
+<span id="cb33-43">)</span>
+<span id="cb33-44"></span>
+<span id="cb33-45">pretty_sorted_rf <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span>  <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3115,8 +2820,8 @@ background-color: null;
 font-style: inherit;">$</span>feature, pretty_names_dat<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>var)])</span>
-<span id="cb30-46"></span>
-<span id="cb30-47">pretty_sorted_xgb <span class="ot" style="color: #003B4F;
+<span id="cb33-46"></span>
+<span id="cb33-47">pretty_sorted_xgb <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span>  <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3131,19 +2836,19 @@ background-color: null;
 font-style: inherit;">$</span>feature, pretty_names_dat<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>var)])</span>
-<span id="cb30-48"></span>
-<span id="cb30-49"><span class="co" style="color: #5E5E5E;
+<span id="cb33-48"></span>
+<span id="cb33-49"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#pretty_sorted</span></span>
-<span id="cb30-50"></span>
-<span id="cb30-51"><span class="co" style="color: #5E5E5E;
+<span id="cb33-50"></span>
+<span id="cb33-51"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># to adjust the variable text</span></span>
-<span id="cb30-52"><span class="fu" style="color: #4758AB;
+<span id="cb33-52"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(ggtext)</span>
-<span id="cb30-53"></span>
-<span id="cb30-54">importance_plot_rf <span class="ot" style="color: #003B4F;
+<span id="cb33-53"></span>
+<span id="cb33-54">importance_plot_rf <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3162,27 +2867,27 @@ background-color: null;
 font-style: inherit;">""</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb30-55">  <span class="fu" style="color: #4758AB;
+<span id="cb33-55">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">scale_x_continuous</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Predictor importance (loss: MSE)"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb30-56">  <span class="fu" style="color: #4758AB;
+<span id="cb33-56">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_plots</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb30-57">  <span class="fu" style="color: #4758AB;
+<span id="cb33-57">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.text.y =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_markdown</span>())</span>
-<span id="cb30-58"></span>
-<span id="cb30-59">importance_plot_xgb <span class="ot" style="color: #003B4F;
+<span id="cb33-58"></span>
+<span id="cb33-59">importance_plot_xgb <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3201,137 +2906,143 @@ background-color: null;
 font-style: inherit;">""</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb30-60">  <span class="fu" style="color: #4758AB;
+<span id="cb33-60">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">scale_x_continuous</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Predictor importance (loss: MSE)"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb30-61">  <span class="fu" style="color: #4758AB;
+<span id="cb33-61">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggtitle</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"XGBoost"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb30-62">  <span class="fu" style="color: #4758AB;
+<span id="cb33-62">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_plots</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb30-63">  <span class="fu" style="color: #4758AB;
+<span id="cb33-63">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.text.y =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_markdown</span>())</span>
-<span id="cb30-64"></span>
-<span id="cb30-65">importance_plot_rf</span></code></pre></div></div>
+<span id="cb33-64"></span>
+<span id="cb33-65">importance_plot_rf</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="648"></p>
+<p><img src="https://lsmantiz.github.io/posts/wellbeing-ml/index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="648"></p>
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggsave</span>(</span>
-<span id="cb31-2">  <span class="st" style="color: #20794D;
+<span id="cb34-2">  <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"plots/importance_plot.pdf"</span>,</span>
-<span id="cb31-3">  importance_plot_rf,</span>
-<span id="cb31-4">  <span class="at" style="color: #657422;
+<span id="cb34-3">  importance_plot_rf,</span>
+<span id="cb34-4">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">scale =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1.7</span>,</span>
-<span id="cb31-5">  <span class="at" style="color: #657422;
+<span id="cb34-5">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">13</span>,</span>
-<span id="cb31-6">  <span class="at" style="color: #657422;
+<span id="cb34-6">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">height =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">11</span>,</span>
-<span id="cb31-7">  <span class="at" style="color: #657422;
+<span id="cb34-7">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">units =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"cm"</span></span>
-<span id="cb31-8">)</span>
-<span id="cb31-9"></span>
-<span id="cb31-10"></span>
-<span id="cb31-11"><span class="fu" style="color: #4758AB;
+<span id="cb34-8">)</span>
+<span id="cb34-9"></span>
+<span id="cb34-10"></span>
+<span id="cb34-11"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(patchwork)</span>
-<span id="cb31-12"></span>
-<span id="cb31-13">robustness_importance <span class="ot" style="color: #003B4F;
+<span id="cb34-12"></span>
+<span id="cb34-13">robustness_importance <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> importance_plot_rf <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb31-14">  <span class="fu" style="color: #4758AB;
+<span id="cb34-14">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggtitle</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Random Forest"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> importance_plot_xgb</span>
-<span id="cb31-15"></span>
-<span id="cb31-16">robustness_importance</span></code></pre></div></div>
+<span id="cb34-15"></span>
+<span id="cb34-16">robustness_importance</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index_files/figure-html/unnamed-chunk-8-2.png" class="img-fluid figure-img" width="648"></p>
+<p><img src="https://lsmantiz.github.io/posts/wellbeing-ml/index_files/figure-html/unnamed-chunk-8-2.png" class="img-fluid figure-img" width="648"></p>
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggsave</span>(</span>
-<span id="cb32-2">  <span class="st" style="color: #20794D;
+<span id="cb35-2">  <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"plots/robustness/importance_plot_comparison.pdf"</span>,</span>
-<span id="cb32-3">  robustness_importance,</span>
-<span id="cb32-4">  <span class="at" style="color: #657422;
+<span id="cb35-3">  robustness_importance,</span>
+<span id="cb35-4">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">scale =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1.7</span>,</span>
-<span id="cb32-5">  <span class="at" style="color: #657422;
+<span id="cb35-5">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">18</span>,</span>
-<span id="cb32-6">  <span class="at" style="color: #657422;
+<span id="cb35-6">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">height =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">11</span>,</span>
-<span id="cb32-7">  <span class="at" style="color: #657422;
+<span id="cb35-7">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">units =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"cm"</span></span>
-<span id="cb32-8">)</span></code></pre></div></div>
+<span id="cb35-8">)</span></code></pre></div></div>
 </div>
 </section>
 <section id="ale-plots" class="level4">
 <h4 class="anchored" data-anchor-id="ale-plots">ALE plots</h4>
 <p>Accumulated Local Effect (ALE) plots are computed and plotted to investigate the functional form of predictors when predicting subjective well-being.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1">ale_plotting <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">require</span>(iml)</span>
+<span id="cb36-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">require</span>(ggtext)</span>
+<span id="cb36-3">ale_plotting <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span>(predictor, importance, model) {</span>
-<span id="cb33-2">  ale <span class="ot" style="color: #003B4F;
+<span id="cb36-4">  ale <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> FeatureEffects<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -3342,30 +3053,30 @@ background-color: null;
 font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"ale"</span>)</span>
-<span id="cb33-3">  </span>
-<span id="cb33-4">  <span class="co" style="color: #5E5E5E;
+<span id="cb36-5">  </span>
+<span id="cb36-6">  <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># order of features based on importance</span></span>
-<span id="cb33-5">  </span>
-<span id="cb33-6">  order_features <span class="ot" style="color: #003B4F;
+<span id="cb36-7">  </span>
+<span id="cb36-8">  order_features <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> importance<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>results<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>feature</span>
-<span id="cb33-7">  </span>
-<span id="cb33-8">  ale_plot <span class="ot" style="color: #003B4F;
+<span id="cb36-9">  </span>
+<span id="cb36-10">  ale_plot <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">plot</span>(ale, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">features =</span> order_features)</span>
-<span id="cb33-9">  <span class="co" style="color: #5E5E5E;
+<span id="cb36-11">  <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#min max of ale values</span></span>
-<span id="cb33-10">  ales <span class="ot" style="color: #003B4F;
+<span id="cb36-12">  ales <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3379,28 +3090,28 @@ font-style: inherit;">length</span>(ale_plot), <span class="cf" style="color: #0
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span>(x)</span>
-<span id="cb33-11">    ale_plot[[x]]<span class="sc" style="color: #5E5E5E;
+<span id="cb36-13">    ale_plot[[x]]<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>data) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span> bind_rows</span>
-<span id="cb33-12">  <span class="fu" style="color: #4758AB;
+<span id="cb36-14">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">min</span>(ales<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>.value)</span>
-<span id="cb33-13">  <span class="fu" style="color: #4758AB;
+<span id="cb36-15">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">max</span>(ales<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>.value)</span>
-<span id="cb33-14">  adj_ale_plots <span class="ot" style="color: #003B4F;
+<span id="cb36-16">  adj_ale_plots <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> ale_plot</span>
-<span id="cb33-15">  <span class="co" style="color: #5E5E5E;
+<span id="cb36-17">  <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># change plot x axis to pretty names</span></span>
-<span id="cb33-16">  <span class="cf" style="color: #003B4F;
+<span id="cb36-18">  <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">if</span> (model <span class="sc" style="color: #5E5E5E;
@@ -3408,7 +3119,7 @@ background-color: null;
 font-style: inherit;">==</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"rf"</span>) {</span>
-<span id="cb33-17">    <span class="cf" style="color: #003B4F;
+<span id="cb36-19">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
@@ -3421,12 +3132,12 @@ background-color: null;
 font-style: inherit;">:</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">length</span>(order_features)) {</span>
-<span id="cb33-18">      adj_ale_plots[[i]] <span class="ot" style="color: #003B4F;
+<span id="cb36-20">      adj_ale_plots[[i]] <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> ale_plot[[i]] <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb33-19">        <span class="fu" style="color: #4758AB;
+<span id="cb36-21">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -3439,15 +3150,15 @@ background-color: null;
 font-style: inherit;">""</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb33-20">        <span class="fu" style="color: #4758AB;
+<span id="cb36-22">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_plots</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb33-21">        <span class="co" style="color: #5E5E5E;
+<span id="cb36-23">        <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#scale_y_continuous(name="ALE of SWB")+</span></span>
-<span id="cb33-22">        <span class="fu" style="color: #4758AB;
+<span id="cb36-24">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -3458,12 +3169,12 @@ background-color: null;
 font-style: inherit;">axis.title.x =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_markdown</span>())</span>
-<span id="cb33-23">    }</span>
-<span id="cb33-24">  } <span class="cf" style="color: #003B4F;
+<span id="cb36-25">    }</span>
+<span id="cb36-26">  } <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">else</span>{</span>
-<span id="cb33-25">    <span class="cf" style="color: #003B4F;
+<span id="cb36-27">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
@@ -3476,12 +3187,12 @@ background-color: null;
 font-style: inherit;">:</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">length</span>(order_features)) {</span>
-<span id="cb33-26">      adj_ale_plots[[i]] <span class="ot" style="color: #003B4F;
+<span id="cb36-28">      adj_ale_plots[[i]] <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> ale_plot[[i]] <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb33-27">        <span class="fu" style="color: #4758AB;
+<span id="cb36-29">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -3494,15 +3205,15 @@ background-color: null;
 font-style: inherit;">""</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb33-28">        <span class="fu" style="color: #4758AB;
+<span id="cb36-30">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_plots</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb33-29">        <span class="co" style="color: #5E5E5E;
+<span id="cb36-31">        <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#scale_y_continuous(name="ALE of SWB")+</span></span>
-<span id="cb33-30">        <span class="fu" style="color: #4758AB;
+<span id="cb36-32">        <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -3513,14 +3224,14 @@ background-color: null;
 font-style: inherit;">axis.title.x =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_markdown</span>())</span>
-<span id="cb33-31">    }</span>
-<span id="cb33-32">  }</span>
-<span id="cb33-33">  adj_ale_plots <span class="ot" style="color: #003B4F;
+<span id="cb36-33">    }</span>
+<span id="cb36-34">  }</span>
+<span id="cb36-35">  adj_ale_plots <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> adj_ale_plots <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb33-34">    patchwork<span class="sc" style="color: #5E5E5E;
+<span id="cb36-36">    patchwork<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3529,7 +3240,7 @@ background-color: null;
 font-style: inherit;">""</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&amp;</span></span>
-<span id="cb33-35">    <span class="fu" style="color: #4758AB;
+<span id="cb36-37">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -3540,14 +3251,14 @@ background-color: null;
 font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">10</span>))</span>
-<span id="cb33-36">  </span>
-<span id="cb33-37">  <span class="fu" style="color: #4758AB;
+<span id="cb36-38">  </span>
+<span id="cb36-39">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">return</span>(adj_ale_plots)</span>
-<span id="cb33-38">  </span>
-<span id="cb33-39">}</span>
-<span id="cb33-40"></span>
-<span id="cb33-41">ale_rf <span class="ot" style="color: #003B4F;
+<span id="cb36-40">  </span>
+<span id="cb36-41">}</span>
+<span id="cb36-42"></span>
+<span id="cb36-43">ale_rf <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3558,7 +3269,7 @@ background-color: null;
 font-style: inherit;">model =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"rf"</span>)</span>
-<span id="cb33-42">ale_xgb <span class="ot" style="color: #003B4F;
+<span id="cb36-44">ale_xgb <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3569,90 +3280,97 @@ background-color: null;
 font-style: inherit;">model =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"xgb"</span>)</span>
-<span id="cb33-43"></span>
-<span id="cb33-44"></span>
-<span id="cb33-45"><span class="co" style="color: #5E5E5E;
+<span id="cb36-45"></span>
+<span id="cb36-46"></span>
+<span id="cb36-47"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># save plot, need to adjust titel, etc. ----</span></span>
-<span id="cb33-46">ale_rf</span></code></pre></div></div>
+<span id="cb36-48">ale_rf</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="792"></p>
+<p><img src="https://lsmantiz.github.io/posts/wellbeing-ml/index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="792"></p>
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggsave</span>(</span>
-<span id="cb34-2">  <span class="st" style="color: #20794D;
+<span id="cb37-2">  <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"plots/ale_plot.pdf"</span>,</span>
-<span id="cb34-3">  ale_rf,</span>
-<span id="cb34-4">  <span class="at" style="color: #657422;
+<span id="cb37-3">  ale_rf,</span>
+<span id="cb37-4">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">scale =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1.75</span>,</span>
-<span id="cb34-5">  <span class="at" style="color: #657422;
+<span id="cb37-5">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">13</span>,</span>
-<span id="cb34-6">  <span class="at" style="color: #657422;
+<span id="cb37-6">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">units =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"cm"</span></span>
-<span id="cb34-7">)</span>
-<span id="cb34-8"></span>
-<span id="cb34-9">ale_xgb</span></code></pre></div></div>
+<span id="cb37-7">)</span>
+<span id="cb37-8"></span>
+<span id="cb37-9">ale_xgb</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index_files/figure-html/unnamed-chunk-9-2.png" class="img-fluid figure-img" width="792"></p>
+<p><img src="https://lsmantiz.github.io/posts/wellbeing-ml/index_files/figure-html/unnamed-chunk-9-2.png" class="img-fluid figure-img" width="792"></p>
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggsave</span>(</span>
-<span id="cb35-2">  <span class="st" style="color: #20794D;
+<span id="cb38-2">  <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"plots/robustness/ale_plot_xgb.pdf"</span>,</span>
-<span id="cb35-3">  ale_xgb,</span>
-<span id="cb35-4">  <span class="at" style="color: #657422;
+<span id="cb38-3">  ale_xgb,</span>
+<span id="cb38-4">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">scale =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1.75</span>,</span>
-<span id="cb35-5">  <span class="at" style="color: #657422;
+<span id="cb38-5">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">13</span>,</span>
-<span id="cb35-6">  <span class="at" style="color: #657422;
+<span id="cb38-6">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">units =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"cm"</span></span>
-<span id="cb35-7">)</span></code></pre></div></div>
+<span id="cb38-7">)</span></code></pre></div></div>
 </div>
 </section>
 <section id="interactions" class="level4">
 <h4 class="anchored" data-anchor-id="interactions">Interactions</h4>
 <p>In the following code, the interactions of all predictors are computed.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><span class="do" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">require</span>(future)</span>
+<span id="cb39-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">require</span>(future.callr)</span>
+<span id="cb39-3"></span>
+<span id="cb39-4"><span class="do" style="color: #5E5E5E;
 background-color: null;
 font-style: italic;">## interactions</span></span>
-<span id="cb36-2">interaction_plot <span class="ot" style="color: #003B4F;
+<span id="cb39-5">interaction_plot <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span>(predictor) {</span>
-<span id="cb36-3">  <span class="fu" style="color: #4758AB;
+<span id="cb39-6">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">plan</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -3661,14 +3379,14 @@ background-color: null;
 font-style: inherit;">workers =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span>)</span>
-<span id="cb36-4">  interact <span class="ot" style="color: #003B4F;
+<span id="cb39-7">  interact <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> Interaction<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">new</span>(predictor)</span>
-<span id="cb36-5">  pretty_sorted_interact <span class="ot" style="color: #003B4F;
+<span id="cb39-8">  pretty_sorted_interact <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> interact<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -3695,7 +3413,7 @@ background-color: null;
 font-style: inherit;">%&gt;%</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">pull</span>(pretty_short)</span>
-<span id="cb36-6">  adj_interact_plot <span class="ot" style="color: #003B4F;
+<span id="cb39-9">  adj_interact_plot <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3708,53 +3426,53 @@ background-color: null;
 font-style: inherit;">labels =</span> pretty_sorted_interact) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb36-7">    <span class="fu" style="color: #4758AB;
+<span id="cb39-10">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ylab</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">""</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb36-8">    <span class="fu" style="color: #4758AB;
+<span id="cb39-11">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_plots</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb36-9">    <span class="fu" style="color: #4758AB;
+<span id="cb39-12">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.text.y =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_markdown</span>())</span>
-<span id="cb36-10">  <span class="fu" style="color: #4758AB;
+<span id="cb39-13">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">return</span>(adj_interact_plot)</span>
-<span id="cb36-11">}</span>
-<span id="cb36-12"></span>
-<span id="cb36-13">int_plot_rf <span class="ot" style="color: #003B4F;
+<span id="cb39-14">}</span>
+<span id="cb39-15"></span>
+<span id="cb39-16">int_plot_rf <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">interaction_plot</span>(predictor.rf)</span>
-<span id="cb36-14"><span class="fu" style="color: #4758AB;
+<span id="cb39-17"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggsave</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"plots/interactions_plot.pdf"</span>,</span>
-<span id="cb36-15">       int_plot_rf,</span>
-<span id="cb36-16">       <span class="at" style="color: #657422;
+<span id="cb39-18">       int_plot_rf,</span>
+<span id="cb39-19">       <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">13</span>,</span>
-<span id="cb36-17">       <span class="at" style="color: #657422;
+<span id="cb39-20">       <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">units =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"cm"</span>)</span>
-<span id="cb36-18"></span>
-<span id="cb36-19">int_plot_xgb <span class="ot" style="color: #003B4F;
+<span id="cb39-21"></span>
+<span id="cb39-22">int_plot_xgb <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3765,8 +3483,8 @@ background-color: null;
 font-style: inherit;">ggtitle</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"XGBoost"</span>)</span>
-<span id="cb36-20"></span>
-<span id="cb36-21">interaction_robustness <span class="ot" style="color: #003B4F;
+<span id="cb39-23"></span>
+<span id="cb39-24">interaction_robustness <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> int_plot_rf <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -3777,33 +3495,33 @@ background-color: null;
 font-style: inherit;">"Random Forest"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span>  int_plot_xgb</span>
-<span id="cb36-22"></span>
-<span id="cb36-23">interaction_robustness</span></code></pre></div></div>
+<span id="cb39-25"></span>
+<span id="cb39-26">interaction_robustness</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="864"></p>
+<p><img src="https://lsmantiz.github.io/posts/wellbeing-ml/index_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="864"></p>
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggsave</span>(</span>
-<span id="cb37-2">  <span class="st" style="color: #20794D;
+<span id="cb40-2">  <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"plots/robustness/interactions_plot.pdf"</span>,</span>
-<span id="cb37-3">  interaction_robustness,</span>
-<span id="cb37-4">  <span class="at" style="color: #657422;
+<span id="cb40-3">  interaction_robustness,</span>
+<span id="cb40-4">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">25</span>,</span>
-<span id="cb37-5">  <span class="at" style="color: #657422;
+<span id="cb40-5">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">units =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"cm"</span></span>
-<span id="cb37-6">)</span></code></pre></div></div>
+<span id="cb40-6">)</span></code></pre></div></div>
 </div>
 <p>The employment rate shows the strongest interaction among all the predictors. So we investigate it further.</p>
 </section>
@@ -3811,13 +3529,13 @@ font-style: inherit;">"cm"</span></span>
 <h4 class="anchored" data-anchor-id="interactions-with-employment-rate">Interactions with employment rate</h4>
 <p>Now, which predictors interaction the strongest with the employment rate.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1">interaction_plot <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1">interaction_plot <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">function</span>(variable, model) {</span>
-<span id="cb38-2">  <span class="fu" style="color: #4758AB;
+<span id="cb41-2">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">plan</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -3826,7 +3544,7 @@ background-color: null;
 font-style: inherit;">workers =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span>)</span>
-<span id="cb38-3">  interactions <span class="ot" style="color: #003B4F;
+<span id="cb41-3">  interactions <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> Interaction<span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -3835,27 +3553,27 @@ background-color: null;
 font-style: inherit;">new</span>(model, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">feature =</span> variable)</span>
-<span id="cb38-4">  </span>
-<span id="cb38-5">  pretty_short_emp_ra <span class="ot" style="color: #003B4F;
+<span id="cb41-4">  </span>
+<span id="cb41-5">  pretty_short_emp_ra <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> interactions<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span>results <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb38-6">    <span class="fu" style="color: #4758AB;
+<span id="cb41-6">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">as_tibble</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb38-7">    <span class="fu" style="color: #4758AB;
+<span id="cb41-7">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">arrange</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">".interaction"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb38-8">    <span class="fu" style="color: #4758AB;
+<span id="cb41-8">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">separate</span>(.feature, <span class="at" style="color: #657422;
 background-color: null;
@@ -3872,7 +3590,7 @@ background-color: null;
 font-style: inherit;">":"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb38-9">    <span class="fu" style="color: #4758AB;
+<span id="cb41-9">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">left_join</span>(pretty_names_dat, <span class="at" style="color: #657422;
 background-color: null;
@@ -3883,25 +3601,25 @@ background-color: null;
 font-style: inherit;">"var"</span>)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">%&gt;%</span></span>
-<span id="cb38-10">    <span class="fu" style="color: #4758AB;
+<span id="cb41-10">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">pull</span>(pretty_short)</span>
-<span id="cb38-11">  </span>
-<span id="cb38-12">  plot_emp_ra <span class="ot" style="color: #003B4F;
+<span id="cb41-11">  </span>
+<span id="cb41-12">  plot_emp_ra <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">plot</span>(interactions) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb38-13">    <span class="fu" style="color: #4758AB;
+<span id="cb41-13">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ylab</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">""</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb38-14">    <span class="fu" style="color: #4758AB;
+<span id="cb41-14">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">scale_y_discrete</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -3910,7 +3628,7 @@ background-color: null;
 font-style: inherit;">rev</span>(pretty_short_emp_ra)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb38-15">    <span class="fu" style="color: #4758AB;
+<span id="cb41-15">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">scale_x_continuous</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -3919,69 +3637,69 @@ background-color: null;
 font-style: inherit;">"Interaction strength with *Employment rate*"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb38-16">    <span class="fu" style="color: #4758AB;
+<span id="cb41-16">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_plots</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb38-17">    <span class="fu" style="color: #4758AB;
+<span id="cb41-17">    <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(</span>
-<span id="cb38-18">      <span class="at" style="color: #657422;
+<span id="cb41-18">      <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.text.y =</span> ggtext<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_markdown</span>(),</span>
-<span id="cb38-19">      <span class="at" style="color: #657422;
+<span id="cb41-19">      <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.title.x =</span> ggtext<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_markdown</span>()</span>
-<span id="cb38-20">    )</span>
-<span id="cb38-21">  <span class="fu" style="color: #4758AB;
+<span id="cb41-20">    )</span>
+<span id="cb41-21">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">return</span>(plot_emp_ra)</span>
-<span id="cb38-22">}</span>
-<span id="cb38-23"></span>
-<span id="cb38-24">plot_int_emp_rf <span class="ot" style="color: #003B4F;
+<span id="cb41-22">}</span>
+<span id="cb41-23"></span>
+<span id="cb41-24">plot_int_emp_rf <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">interaction_plot</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"EMP_RA"</span>, predictor.rf)</span>
-<span id="cb38-25">plot_int_emp_rf</span></code></pre></div></div>
+<span id="cb41-25">plot_int_emp_rf</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="864"></p>
+<p><img src="https://lsmantiz.github.io/posts/wellbeing-ml/index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="864"></p>
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggsave</span>(</span>
-<span id="cb39-2">  <span class="st" style="color: #20794D;
+<span id="cb42-2">  <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"plots/interactions_emp_ra_plot.pdf"</span>,</span>
-<span id="cb39-3">  plot_int_emp_rf,</span>
-<span id="cb39-4">  <span class="at" style="color: #657422;
+<span id="cb42-3">  plot_int_emp_rf,</span>
+<span id="cb42-4">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">13</span>,</span>
-<span id="cb39-5">  <span class="at" style="color: #657422;
+<span id="cb42-5">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">units =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"cm"</span></span>
-<span id="cb39-6">)</span>
-<span id="cb39-7"></span>
-<span id="cb39-8">plot_int_emp_xgb <span class="ot" style="color: #003B4F;
+<span id="cb42-6">)</span>
+<span id="cb42-7"></span>
+<span id="cb42-8">plot_int_emp_xgb <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -3994,7 +3712,7 @@ background-color: null;
 font-style: inherit;">ggtitle</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"XGBoost"</span>)</span>
-<span id="cb39-9">int_emp_robustness <span class="ot" style="color: #003B4F;
+<span id="cb42-9">int_emp_robustness <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span>  plot_int_emp_rf <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -4005,51 +3723,51 @@ background-color: null;
 font-style: inherit;">"Random Forest"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span> plot_int_emp_xgb</span>
-<span id="cb39-10"></span>
-<span id="cb39-11"></span>
-<span id="cb39-12">int_emp_robustness</span></code></pre></div></div>
+<span id="cb42-10"></span>
+<span id="cb42-11"></span>
+<span id="cb42-12">int_emp_robustness</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index_files/figure-html/unnamed-chunk-11-2.png" class="img-fluid figure-img" width="864"></p>
+<p><img src="https://lsmantiz.github.io/posts/wellbeing-ml/index_files/figure-html/unnamed-chunk-11-2.png" class="img-fluid figure-img" width="864"></p>
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggsave</span>(</span>
-<span id="cb40-2">  <span class="st" style="color: #20794D;
+<span id="cb43-2">  <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"plots/robustness/interactions_emp_ra_plot_robustness.pdf"</span>,</span>
-<span id="cb40-3">  int_emp_robustness,</span>
-<span id="cb40-4">  <span class="at" style="color: #657422;
+<span id="cb43-3">  int_emp_robustness,</span>
+<span id="cb43-4">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">13</span>,</span>
-<span id="cb40-5">  <span class="at" style="color: #657422;
+<span id="cb43-5">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">units =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"cm"</span>,</span>
-<span id="cb40-6">  <span class="at" style="color: #657422;
+<span id="cb43-6">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">height =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">9</span>,</span>
-<span id="cb40-7">  <span class="at" style="color: #657422;
+<span id="cb43-7">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">scale =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2.4</span></span>
-<span id="cb40-8">)</span></code></pre></div></div>
+<span id="cb43-8">)</span></code></pre></div></div>
 </div>
 </section>
 <section id="interaction-plot-from-manuscript" class="level4">
 <h4 class="anchored" data-anchor-id="interaction-plot-from-manuscript">Interaction plot from manuscript</h4>
 <p>Finally, the functional form of the interaction of the employment rate and the sex ratio of the elderly is computed and plotted. The final plot from the manuscript in which the different interactions are depicted is compiled below.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">plan</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -4058,19 +3776,19 @@ background-color: null;
 font-style: inherit;">workers =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span>)</span>
-<span id="cb41-2">ale_interactions <span class="ot" style="color: #003B4F;
+<span id="cb44-2">ale_interactions <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> FeatureEffect<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">new</span>(predictor.rf,</span>
-<span id="cb41-3">                                      <span class="at" style="color: #657422;
+<span id="cb44-3">                                      <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"ale"</span>,</span>
-<span id="cb41-4">                                      <span class="at" style="color: #657422;
+<span id="cb44-4">                                      <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">feature =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -4079,38 +3797,38 @@ background-color: null;
 font-style: inherit;">"EMP_RA"</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"SR_ELD_RA_T"</span>))</span>
-<span id="cb41-5"></span>
-<span id="cb41-6"></span>
-<span id="cb41-7">interaction_ale_one <span class="ot" style="color: #003B4F;
+<span id="cb44-5"></span>
+<span id="cb44-6"></span>
+<span id="cb44-7">interaction_ale_one <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">plot</span>(ale_interactions) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb41-8">  <span class="fu" style="color: #4758AB;
+<span id="cb44-8">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">scale_fill_distiller</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"seq"</span>,</span>
-<span id="cb41-9">                       <span class="at" style="color: #657422;
+<span id="cb44-9">                       <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">direction =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>,</span>
-<span id="cb41-10">                       <span class="at" style="color: #657422;
+<span id="cb44-10">                       <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">palette =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Greys"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb41-11">  <span class="co" style="color: #5E5E5E;
+<span id="cb44-11">  <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># this is the only way to change the ylab and xlab</span></span>
-<span id="cb41-12">  <span class="fu" style="color: #4758AB;
+<span id="cb44-12">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">scale_y_continuous</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -4119,7 +3837,7 @@ background-color: null;
 font-style: inherit;">16</span>]) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb41-13">  <span class="fu" style="color: #4758AB;
+<span id="cb44-13">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">scale_x_continuous</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -4128,12 +3846,12 @@ background-color: null;
 font-style: inherit;">15</span>]) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb41-14">  <span class="fu" style="color: #4758AB;
+<span id="cb44-14">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_plots</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb41-15">  <span class="fu" style="color: #4758AB;
+<span id="cb44-15">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -4142,7 +3860,7 @@ background-color: null;
 font-style: inherit;">"ALE"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb41-16">  <span class="fu" style="color: #4758AB;
+<span id="cb44-16">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -4157,24 +3875,24 @@ background-color: null;
 font-style: inherit;">5</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span>))</span>
-<span id="cb41-17"></span>
-<span id="cb41-18">interaction_ale_rf <span class="ot" style="color: #003B4F;
+<span id="cb44-17"></span>
+<span id="cb44-18">interaction_ale_rf <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span>  interaction_ale_one <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb41-19">  <span class="fu" style="color: #4758AB;
+<span id="cb44-19">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(</span>
-<span id="cb41-20">    <span class="co" style="color: #5E5E5E;
+<span id="cb44-20">    <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#axis.title.y = element_text(vjust = -40),</span></span>
-<span id="cb41-21">    <span class="at" style="color: #657422;
+<span id="cb44-21">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.title.x =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_markdown</span>(),</span>
-<span id="cb41-22">    <span class="at" style="color: #657422;
+<span id="cb44-22">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">plot.margin =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -4187,53 +3905,53 @@ background-color: null;
 font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>)</span>
-<span id="cb41-23">  )</span>
-<span id="cb41-24"></span>
-<span id="cb41-25">interaction_ale_rf</span></code></pre></div></div>
+<span id="cb44-23">  )</span>
+<span id="cb44-24"></span>
+<span id="cb44-25">interaction_ale_rf</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="504"></p>
+<p><img src="https://lsmantiz.github.io/posts/wellbeing-ml/index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="504"></p>
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggsave</span>(</span>
-<span id="cb42-2">  <span class="st" style="color: #20794D;
+<span id="cb45-2">  <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"plots/robustness/interactions_ale_rf.pdf"</span>,</span>
-<span id="cb42-3">  interaction_ale_rf,</span>
-<span id="cb42-4">  <span class="at" style="color: #657422;
+<span id="cb45-3">  interaction_ale_rf,</span>
+<span id="cb45-4">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">15</span>,</span>
-<span id="cb42-5">  <span class="at" style="color: #657422;
+<span id="cb45-5">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">units =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"cm"</span>,</span>
-<span id="cb42-6">  <span class="at" style="color: #657422;
+<span id="cb45-6">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">scale =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1.8</span></span>
-<span id="cb42-7">)</span></code></pre></div></div>
+<span id="cb45-7">)</span></code></pre></div></div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># plot for publication</span></span>
-<span id="cb43-2"></span>
-<span id="cb43-3"><span class="fu" style="color: #4758AB;
+<span id="cb46-2"></span>
+<span id="cb46-3"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">require</span>(patchwork)</span>
-<span id="cb43-4"></span>
-<span id="cb43-5"><span class="co" style="color: #5E5E5E;
+<span id="cb46-4"></span>
+<span id="cb46-5"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#  define plot layout</span></span>
-<span id="cb43-6">layout <span class="ot" style="color: #003B4F;
+<span id="cb46-6">layout <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -4246,7 +3964,7 @@ background-color: null;
 font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>),</span>
-<span id="cb43-7">            patchwork<span class="sc" style="color: #5E5E5E;
+<span id="cb46-7">            patchwork<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -4255,7 +3973,7 @@ background-color: null;
 font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>),</span>
-<span id="cb43-8">            patchwork<span class="sc" style="color: #5E5E5E;
+<span id="cb46-8">            patchwork<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
@@ -4268,9 +3986,9 @@ background-color: null;
 font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>))</span>
-<span id="cb43-9"></span>
-<span id="cb43-10"></span>
-<span id="cb43-11">interaction_plots <span class="ot" style="color: #003B4F;
+<span id="cb46-9"></span>
+<span id="cb46-10"></span>
+<span id="cb46-11">interaction_plots <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> int_plot_rf <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -4279,10 +3997,10 @@ background-color: null;
 font-style: inherit;">+</span> interaction_ale_one <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb43-12">  <span class="fu" style="color: #4758AB;
+<span id="cb46-12">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(</span>
-<span id="cb43-13">    <span class="at" style="color: #657422;
+<span id="cb46-13">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.title.y =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -4293,12 +4011,12 @@ background-color: null;
 font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">40</span>),</span>
-<span id="cb43-14">    <span class="at" style="color: #657422;
+<span id="cb46-14">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.title.x =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_markdown</span>(),</span>
-<span id="cb43-15">    <span class="at" style="color: #657422;
+<span id="cb46-15">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">plot.margin =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -4311,10 +4029,10 @@ background-color: null;
 font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>)</span>
-<span id="cb43-16">  ) <span class="sc" style="color: #5E5E5E;
+<span id="cb46-16">  ) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb43-17">  <span class="fu" style="color: #4758AB;
+<span id="cb46-17">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">plot_annotation</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -4323,14 +4041,14 @@ background-color: null;
 font-style: inherit;">"A"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb43-18">  <span class="fu" style="color: #4758AB;
+<span id="cb46-18">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">plot_layout</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">design =</span> layout) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&amp;</span></span>
-<span id="cb43-19">  <span class="fu" style="color: #4758AB;
+<span id="cb46-19">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -4341,78 +4059,78 @@ background-color: null;
 font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"grey10"</span>))</span>
-<span id="cb43-20"></span>
-<span id="cb43-21">interaction_plots</span></code></pre></div></div>
+<span id="cb46-20"></span>
+<span id="cb46-21">interaction_plots</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="720"></p>
+<p><img src="https://lsmantiz.github.io/posts/wellbeing-ml/index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="720"></p>
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggsave</span>(</span>
-<span id="cb44-2">  <span class="st" style="color: #20794D;
+<span id="cb47-2">  <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"plots/interactions_all.pdf"</span>,</span>
-<span id="cb44-3">  interaction_plots,</span>
-<span id="cb44-4">  <span class="at" style="color: #657422;
+<span id="cb47-3">  interaction_plots,</span>
+<span id="cb47-4">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">15.92</span>,</span>
-<span id="cb44-5">  <span class="at" style="color: #657422;
+<span id="cb47-5">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">height =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">20.62</span>,</span>
-<span id="cb44-6">  <span class="at" style="color: #657422;
+<span id="cb47-6">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">units =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"cm"</span>,</span>
-<span id="cb44-7">  <span class="at" style="color: #657422;
+<span id="cb47-7">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">scale =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1.8</span></span>
-<span id="cb44-8">)</span>
-<span id="cb44-9"><span class="fu" style="color: #4758AB;
+<span id="cb47-8">)</span>
+<span id="cb47-9"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggsave</span>(</span>
-<span id="cb44-10">  <span class="st" style="color: #20794D;
+<span id="cb47-10">  <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"plots/interactions_all.png"</span>,</span>
-<span id="cb44-11">  interaction_plots,</span>
-<span id="cb44-12">  <span class="at" style="color: #657422;
+<span id="cb47-11">  interaction_plots,</span>
+<span id="cb47-12">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">15.92</span>,</span>
-<span id="cb44-13">  <span class="at" style="color: #657422;
+<span id="cb47-13">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">height =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">20.62</span>,</span>
-<span id="cb44-14">  <span class="at" style="color: #657422;
+<span id="cb47-14">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">units =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"cm"</span>,</span>
-<span id="cb44-15">  <span class="at" style="color: #657422;
+<span id="cb47-15">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">scale =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1.8</span></span>
-<span id="cb44-16">)</span></code></pre></div></div>
+<span id="cb47-16">)</span></code></pre></div></div>
 </div>
 </section>
 </section>
 <section id="interaction-robustness-plot" class="level3">
 <h3 class="anchored" data-anchor-id="interaction-robustness-plot">Interaction robustness plot</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">plan</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -4421,19 +4139,19 @@ background-color: null;
 font-style: inherit;">workers =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">4</span>)</span>
-<span id="cb45-2">ale_interactions_robustness <span class="ot" style="color: #003B4F;
+<span id="cb48-2">ale_interactions_robustness <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> FeatureEffect<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">$</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">new</span>(predictor.xgb,</span>
-<span id="cb45-3">                                                 <span class="at" style="color: #657422;
+<span id="cb48-3">                                                 <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"ale"</span>,</span>
-<span id="cb45-4">                                                 <span class="at" style="color: #657422;
+<span id="cb48-4">                                                 <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">feature =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -4443,46 +4161,46 @@ font-style: inherit;">"EMP_RA"</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"SR_ELD_RA_T"</span>))</span></code></pre></div></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning in merge.data.table(deltas, interval_grid, on = c(".interval1", :
-Unknown argument 'on' has been passed.</code></pre>
+<pre><code>Warning in .maybe_warn_merge_dots(...): merge.data.table() received 1 unknown
+keyword argument which will be ignored: [on]</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Loading required namespace: yaImpute</code></pre>
+<pre><code>Lade nötigen Namensraum: yaImpute</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning in merge.data.table(ale, cell.counts.m, on = c(".interval1",
-".interval2"), : Unknown argument 'on' has been passed.</code></pre>
+<pre><code>Warning in .maybe_warn_merge_dots(...): merge.data.table() received 1 unknown
+keyword argument which will be ignored: [on]</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1">interaction_ale_two <span class="ot" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1">interaction_ale_two <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">plot</span>(ale_interactions_robustness) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb49-2">  <span class="fu" style="color: #4758AB;
+<span id="cb52-2">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">scale_fill_distiller</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"seq"</span>,</span>
-<span id="cb49-3">                       <span class="at" style="color: #657422;
+<span id="cb52-3">                       <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">direction =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>,</span>
-<span id="cb49-4">                       <span class="at" style="color: #657422;
+<span id="cb52-4">                       <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">palette =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Greys"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb49-5">  <span class="co" style="color: #5E5E5E;
+<span id="cb52-5">  <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># this is the only way to change the ylab and xlab</span></span>
-<span id="cb49-6">  <span class="fu" style="color: #4758AB;
+<span id="cb52-6">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">scale_y_continuous</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -4491,7 +4209,7 @@ background-color: null;
 font-style: inherit;">16</span>]) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb49-7">  <span class="fu" style="color: #4758AB;
+<span id="cb52-7">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">scale_x_continuous</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -4500,12 +4218,12 @@ background-color: null;
 font-style: inherit;">15</span>]) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb49-8">  <span class="fu" style="color: #4758AB;
+<span id="cb52-8">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_plots</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb49-9">  <span class="fu" style="color: #4758AB;
+<span id="cb52-9">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -4514,21 +4232,21 @@ background-color: null;
 font-style: inherit;">"ALE"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb49-10">  <span class="co" style="color: #5E5E5E;
+<span id="cb52-10">  <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#theme(plot.margin = margin(5,5,5,5))+</span></span>
-<span id="cb49-11">  <span class="fu" style="color: #4758AB;
+<span id="cb52-11">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(</span>
-<span id="cb49-12">    <span class="co" style="color: #5E5E5E;
+<span id="cb52-12">    <span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#axis.title.y = element_text(vjust = -40),</span></span>
-<span id="cb49-13">    <span class="at" style="color: #657422;
+<span id="cb52-13">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.title.x =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">element_markdown</span>(),</span>
-<span id="cb49-14">    <span class="at" style="color: #657422;
+<span id="cb52-14">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">plot.margin =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -4541,7 +4259,7 @@ background-color: null;
 font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>)</span>
-<span id="cb49-15">  )</span></code></pre></div></div>
+<span id="cb52-15">  )</span></code></pre></div></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Scale for fill is already present.
 Adding another scale for fill, which will replace the existing scale.</code></pre>
@@ -4552,37 +4270,37 @@ Adding another scale for y, which will replace the existing scale.
 Scale for x is already present.
 Adding another scale for x, which will replace the existing scale.</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1">interaction_ale_two</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1">interaction_ale_two</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/index_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="504"></p>
+<p><img src="https://lsmantiz.github.io/posts/wellbeing-ml/index_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="504"></p>
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggsave</span>(</span>
-<span id="cb53-2">  <span class="st" style="color: #20794D;
+<span id="cb56-2">  <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"plots/robustness/interactions_ale_xgb.pdf"</span>,</span>
-<span id="cb53-3">  interaction_ale_two,</span>
-<span id="cb53-4">  <span class="at" style="color: #657422;
+<span id="cb56-3">  interaction_ale_two,</span>
+<span id="cb56-4">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">15</span>,</span>
-<span id="cb53-5">  <span class="at" style="color: #657422;
+<span id="cb56-5">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">units =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"cm"</span>,</span>
-<span id="cb53-6">  <span class="at" style="color: #657422;
+<span id="cb56-6">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">scale =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1.8</span></span>
-<span id="cb53-7">)</span></code></pre></div></div>
+<span id="cb56-7">)</span></code></pre></div></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Saving 27 x 22.9 cm image</code></pre>
 </div>
@@ -4601,6 +4319,7 @@ font-style: inherit;">1.8</span></span>
 </div>
 
 
+</section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{samartzidis2025,
@@ -4623,9 +4342,9 @@ learning methods</a>. <em>Social Indicators Research</em>
 <strong>179</strong>, 955–978 (2025).</div>
 </div></div></section></div> ]]></description>
   <category>paper</category>
-  <guid>https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/</guid>
+  <guid>https://lsmantiz.github.io/posts/wellbeing-ml/</guid>
   <pubDate>Mon, 16 Jun 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://lsmantiz.github.io/posts/Gender and age matter! Identifying important predictors for subjective well-being using machine learning methods/overview.png" medium="image" type="image/png" height="187" width="144"/>
+  <media:content url="https://lsmantiz.github.io/posts/wellbeing-ml/overview.png" medium="image" type="image/png" height="187" width="144"/>
 </item>
 </channel>
 </rss>
