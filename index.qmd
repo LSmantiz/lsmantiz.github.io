@@ -57,7 +57,7 @@ I enjoy tackling complex questions with code, but what excites me most is making
 
 Most of my day-to-day work happens in R (tidyverse, ggplot2, Shiny), though I also use Python when it fits the task. Over time, I’ve built automated pipelines, developed reproducible workflows, and experimented with new methods — always curious about what the latest tools can bring to research.
 
-Beyond the technical side, I love sharing ideas, collaborating across disciplines, and presenting my work. I’ve spoken at 18 international and national conferences and workshops and worked with teams at Leibniz, WIG2, and Fraunhofer. These experiences have shown me how important clear communication and openness are in making research impactful. Have a look into my [research](publications.qmd) and drop me an [email](mailto:l.samartzidis@ioer.de). I'm always happy to collaborate.
+Beyond the technical side, I love sharing ideas, collaborating across disciplines, and presenting my work. I’ve spoken at 18 international and national conferences and workshops and worked with teams at Leibniz, WIG2, and Fraunhofer. These experiences have shown me how important clear communication and openness are in making research impactful. Have a look into my [research](publications.qmd) and drop me an [email](mailto:lasare@web.de). I'm always happy to collaborate.
 
 ## Experience
 
