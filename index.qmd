@@ -35,6 +35,7 @@ listing:   # Comment the listing section and delete corresponding lines in the i
     contents: 
       - posts
       - posts/post-links.yml
+      - gallery
     exclude:
       title: ""
     type: grid
@@ -53,7 +54,7 @@ listing:   # Comment the listing section and delete corresponding lines in the i
 
 Hi, I’m Lasare — a researcher in Complexity and Ecological Economics, currently finishing my PhD, with a passion for working with data and turning it into clear, meaningful, and reproducible insights. Also eager to try out new things, my work brings together data science, visualization, machine learning, and large language models (LLMs) to economic questions.
 
-I enjoy tackling complex questions with code, but what excites me most is making the results easy to understand and useful for others. Whether it’s through interactive dashboards, geospatial analysis, a insightful chart, or simply a well documented code, I aim to create tools and visuals that speak to both technical and non-technical audiences.
+I enjoy tackling complex questions with code, but what excites me most is making the results easy to understand and useful for others. Whether it’s through interactive dashboards, geospatial analysis, an insightful chart, or simply well documented code, I aim to create tools and visuals that speak to both technical and non-technical audiences.
 
 Most of my day-to-day work happens in R (tidyverse, ggplot2, Shiny), though I also use Python when it fits the task. Over time, I’ve built automated pipelines, developed reproducible workflows, and experimented with new methods — always curious about what the latest tools can bring to research.
 

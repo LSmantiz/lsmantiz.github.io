@@ -14,46 +14,137 @@
     "text": "Selected Work\nEinstein, A., Podolsky, B., & Rosen, N. (1935). Can quantum-mechanical description of physical reality be considered complete?. Physical review, 47(10), 777. [pdf] [code and data]   \n\n\n\n\n\n\nEinstein, A. (1965). Concerning an heuristic point of view toward the emission and transformation of light. American Journal of Physics, 33(5), 367. [pdf]"
   },
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
     "section": "",
-    "text": "Quarto Academic\nSchool\nCollege\nUniversity\nAddress:\nPhone:\nE-mail:"
+    "text": "Fall 2024,   Fall 2023\nClass 1 introduction."
   },
   {
-    "objectID": "posts/llm-systematic-review/index.html#what-i-built",
-    "href": "posts/llm-systematic-review/index.html#what-i-built",
-    "title": "Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models",
-    "section": "What I built",
-    "text": "What I built\nA four-stage, human-in-the-loop LLM pipeline (R + Python) that turns a raw literature search into a structured, machine-readable database of model features — replacing the manual coding of ~40 features across 60+ full papers (≈2,500 data points) that a classical systematic review would require.\n\nRetrieval & screening — Scopus API query (rscopus); an LLM scores each abstract’s relevance (1–10, temperature 0, single-number output); borderline scores are routed to manual review before inclusion.\nFull-text processing — PDF text extraction with PyMuPDF (Python via reticulate), cleaning, and chunking into 1,000-word segments.\nChunk classification — an LLM rates every chunk (1–5) on whether it actually describes the model rather than merely mentioning it; only method-dense chunks pass on, cutting noise and token cost.\nStructured extraction — an LLM extracts 41 predefined model elements per paper as validated JSON (presence score, supporting excerpt, section reference), parsed into tidy data frames for analysis and visualization.\n\nTech stack: R (tidyverse, httr2, reticulate) · Python (PyMuPDF) · open-weight LLMs (Llama 3.1, Mistral Large, GPT-OSS-120B) served via the GWDG Academic Cloud’s OpenAI-compatible API · deterministic settings (temperature 0), automated retries, timeouts and rate limiting, response validation, and human review at defined checkpoints. Fully scripted end to end for reproducibility."
+    "objectID": "teaching.html#class-1",
+    "href": "teaching.html#class-1",
+    "title": "Teaching",
+    "section": "",
+    "text": "Fall 2024,   Fall 2023\nClass 1 introduction."
   },
   {
-    "objectID": "posts/llm-systematic-review/index.html#abstract",
-    "href": "posts/llm-systematic-review/index.html#abstract",
-    "title": "Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models",
+    "objectID": "teaching.html#class-2",
+    "href": "teaching.html#class-2",
+    "title": "Teaching",
+    "section": "Class 2",
+    "text": "Class 2\n\n\n\n\n\nSpring 2025,   Fall 2023\nClass 2 introduction."
+  },
+  {
+    "objectID": "teaching.html#class-3",
+    "href": "teaching.html#class-3",
+    "title": "Teaching",
+    "section": "Class 3",
+    "text": "Class 3\n\n\n\n\n\nSpring 2025,   Spring 2024\nClass 3 introduction."
+  },
+  {
+    "objectID": "posts_history/news-title/index.html",
+    "href": "posts_history/news-title/index.html",
+    "title": "News item",
+    "section": "",
+    "text": "About the news"
+  },
+  {
+    "objectID": "posts_history/news-title/index.html#summary",
+    "href": "posts_history/news-title/index.html#summary",
+    "title": "News item",
+    "section": "",
+    "text": "About the news"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Research & Projects",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nSustainable regional development - A complexity economics analysis\n\n\nPhD overview article\n\n\n\npaper\n\n\n\nHow to address sustainability transformation research with complexity economics?\n\n\n\n\n\nOct 14, 2025\n\n\nLasare Samartzidis\n\n\n\n\n\n\n\n\n\n\n\n\nAre Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models\n\n\nManuscript currently prepared\n\n\n\npaper\n\n\n\nHow can we leverage LLMs for systematic model reviews?\n\n\n\n\n\nOct 8, 2025\n\n\nLasare Samartzidis, Rob van Eynde\n\n\n\n\n\n\n\n\n\n\n\n\nProduction networks, input specificity, and the labor share\n\n\nUnder Review\n\n\n\npaper\n\n\n\nWhat can we learn from production networks for regional inequality?\n\n\n\n\n\nAug 8, 2025\n\n\nLasare Samartzidis\n\n\n\n\n\n\n\n\n\n\n\n\nSynchronisation of regional development - the role of clusters in the regional production network\n\n\nSpatial Economic Analysis\n\n\n\npaper\n\n\n\nDo we need to adjust our understanding of regional development?\n\n\n\n\n\nAug 8, 2025\n\n\nLasare Samartzidis\n\n\n\n\n\n\n\n\n\n\n\n\nGender and age matter! Identifying important predictors for subjective well-being using machine learning methods\n\n\nSocial Indicators Research\n\n\n\npaper\n\n\n\nHow can we derive hypotheses for complex adaptive systems?\n\n\n\n\n\nJun 17, 2025\n\n\nLasare Samartzidis\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Order By\n      Default\n      \n      \n      \n        Title\n      \n      \n        Team\n      \n      \n        Funder\n      \n      \n        Description\n      \n      \n        Start\n      \n      \n        End\n      \n      \n        Funding\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n \n\n\n\nTitle\n\n\n\nTeam\n\n\n\nFunder\n\n\n\nDescription\n\n\n\nFunding\n\n\n\nStart\n\n\n\nEnd\n\n\n\n\n\n\n\n\n\n\n\nExploring \n\n\nAcademic Website\n\n\nFunder\n\n\nThe goal of this project is to investigate .\n\n\n$0\n\n\n2024\n\n\n2025\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/regional-synchronisation/index.html#abstract",
+    "href": "posts/regional-synchronisation/index.html#abstract",
+    "title": "Synchronisation of regional development - the role of clusters in the regional production network",
     "section": "Abstract",
-    "text": "Abstract\nThe intertwined crises of climate change, biodiversity loss, and unmet social needs have intensified calls to shift economic priorities from growth to well-being within planetary boundaries. Post-growth scholarship has developed a range of transformative policy proposals, but quantitative modeling of such structural changes remains limited. This study provides the first systematic review of ecological macroeconomic agent-based models (ABMs) and their capacity to represent post-growth scenarios. We identify 62 publications forming this emerging landscape, which is growing rapidly but remains heavily concentrated in Europe, particularly Italy. Using a novel workflow that leverages large language models (LLMs) for automated text analysis, we assess the presence of post-growth-relevant model elements. Our findings reveal uneven coverage: while traditional actors such as firms, households, and the financial sector are well represented, critical elements for post-growth analysis—including not-for-profit organizations, non-institutional provisioning, time use, international interactions, and needs satisfaction—are largely absent. Although some elements show increasing uptake, others remain persistently underrepresented. We conclude that ecological macroeconomic ABMs are not yet fully equipped to model post-growth transformations. Strengthening this modeling landscape requires both extending existing models with underrepresented elements and introducing entirely new thematic groups. Beyond the substantive contributions, our automated review workflow demonstrates how LLMs can streamline systematic reviews in fast-moving fields, offering a scalable and adaptable monitoring tool."
+    "text": "Abstract\nThis study examines the impact of production network clusters (PNCs), derived through network science methods, on German counties’ economic development using a complex systems approach, conceptualising trade as information flows that guide economic agents’ decisions. Employing spatial econometrics, it finds that PNC trade flows predict regional economic synchronisation, though effects are not always positive. While results indicate that PNCs synchronise agents’ decisions within the same cluster, they may desynchronise their decisions with agents in spatially linked areas. These findings contribute to advancing a complexity economics framework for understanding regional development dynamics and disparities in Germany."
   },
   {
-    "objectID": "posts/llm-systematic-review/index.html#large-language-model-workflow",
-    "href": "posts/llm-systematic-review/index.html#large-language-model-workflow",
-    "title": "Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models",
-    "section": "Large Language Model Workflow",
-    "text": "Large Language Model Workflow\nIn this paper, we automate most of the labour intensive steps from a typical systematic literature review using LLMs:\n\ninclusion/exclusion of the literature received from the SCOPUS search string, based on scanning the abstracts,\nmarking each part of each article’s text if it describes the model,\nscanning the marked texts and rate the inclusion of a wide range of post-growth model elements.\n\nWe employ the API offered by GWDG for using different LLMs."
+    "objectID": "posts/regional-synchronisation/index.html#links",
+    "href": "posts/regional-synchronisation/index.html#links",
+    "title": "Synchronisation of regional development - the role of clusters in the regional production network",
+    "section": "Links",
+    "text": "Links\nPublished paper\nAvailable data & code"
   },
   {
-    "objectID": "posts/llm-systematic-review/index.html#results",
-    "href": "posts/llm-systematic-review/index.html#results",
-    "title": "Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models",
-    "section": "Results",
-    "text": "Results\nWe find a fast evolving, geographically concentrated modelling landscape that spans a wide range of academic journals, shown in Figure 1.\n\n\n\n\n\n\nFigure 1\n\n\n\nWe receive scores on a wide variety of post-growth model elements from an LLM. Results are shown in Figure 2.\n\n\n\n\n\n\nFigure 2"
-  },
-  {
-    "objectID": "posts/phd-overview/index.html#abstract",
-    "href": "posts/phd-overview/index.html#abstract",
-    "title": "Sustainable regional development - A complexity economics analysis",
+    "objectID": "posts/production-networks-labor-share/index.html#abstract",
+    "href": "posts/production-networks-labor-share/index.html#abstract",
+    "title": "Production networks, input specificity, and the labor share",
     "section": "Abstract",
-    "text": "Abstract\nThe modern world is a complex, interconnected system where traditional mono-causal explanations often fall short. This thesis explores how complexity economics can contribute to understanding and guiding sustainability transformations, focusing on the interconnected nature of social, economic, and ecological systems. The 21st-century sustainability crisis, characterized by breached planetary boundaries and persistent inequalities, underscores the urgency of adopting a complexity-based perspective.\nThe thesis is structured around three knowledge spheres of sustainability transformation research: system, target, and transformation knowledge. It employs complexity economics as a conceptual and methodological lens, treating the economy as a complex adaptive system. The research addresses regional development and inequality, income distribution, subjective well-being, and the modelling of post-growth policies using agent-based models.\nArticles 1 and 2 examine how production networks structure regional outcomes, highlighting the role of interregional connections and input specificity in shaping development trajectories and wage shares. Article 3 uses machine learning to explore the multidimensional nature of subjective well-being, demonstrating the importance of complex interactions among regional factors. Article 4 systematically reviews ecological macroeconomic agent-based models using large language models, assessing their capacity to represent post-growth policies and identifying areas for future development.\nCollectively, these studies show that complexity economics provides original insights across all three sustainability knowledge spheres, emphasizing the centrality of interdependencies in understanding the economy as a complex system. The thesis opens promising avenues for future research at the intersection of regional development, well-being, and complexity economics, and underscores the need for modelling and empirical approaches that capture the interactions and interdependencies characteristic of socio-economic systems."
+    "text": "Abstract\nBargaining power is a key determinant of workers’ share of aggregate income, yet difficult to measure empirically. This study proposes input specificity as an important determinant of bargaining power, arguing that the production of harder-to-substitute intermediates strengthens workers’ bargaining position. We develop a network-based measure of input specificity and apply it to regional input–output data for European economies. Our results suggest that input specificity varies systematically across regions and is positively associated with the labor share. We find evidence that the relationship between input specificity and the labor share is stronger under coordinated wage bargaining, indicating that institutional settings condition how structural positions in production networks translate into income for workers. From a policy perspective, upgrading strategies that increase input specificity may support higher labor shares, particularly in contexts where institutions enable workers to capture the associated rents."
+  },
+  {
+    "objectID": "posts/production-networks-labor-share/index.html#links",
+    "href": "posts/production-networks-labor-share/index.html#links",
+    "title": "Production networks, input specificity, and the labor share",
+    "section": "Links",
+    "text": "Links\nA preprint is available at SRRN\nAvailable data & code"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lasare Samartzidis",
+    "section": "",
+    "text": "Blue.Sky\n  \n  \n      0000-0001-5685-8485\n  \n  \n      Google Scholar\n  \n\n  \n  \nHi, I’m Lasare — a researcher in Complexity and Ecological Economics, currently finishing my PhD, with a passion for working with data and turning it into clear, meaningful, and reproducible insights. Also eager to try out new things, my work brings together data science, visualization, machine learning, and large language models (LLMs) to economic questions.\nI enjoy tackling complex questions with code, but what excites me most is making the results easy to understand and useful for others. Whether it’s through interactive dashboards, geospatial analysis, an insightful chart, or simply well documented code, I aim to create tools and visuals that speak to both technical and non-technical audiences.\nMost of my day-to-day work happens in R (tidyverse, ggplot2, Shiny), though I also use Python when it fits the task. Over time, I’ve built automated pipelines, developed reproducible workflows, and experimented with new methods — always curious about what the latest tools can bring to research.\nBeyond the technical side, I love sharing ideas, collaborating across disciplines, and presenting my work. I’ve spoken at 18 international and national conferences and workshops and worked with teams at Leibniz, WIG2, and Fraunhofer. These experiences have shown me how important clear communication and openness are in making research impactful. Have a look into my research and drop me an email (lasare at web dot de). I’m always happy to collaborate.\n\n\n\nLeibniz Institute of Ecological Urban & Regional Development, Dresden\nDoctoral Researcher, since 2020\nScientific Coordinator – Leibniz Lab Systemic Sustainability, since 2024\nScientific Coordinator – Leibniz Research Network Earth & Societies, 2023–2024\nWIG2 – Scientific Institute for Health Economics and Health System Research, Leipzig\nResearcher, 2022–2023\nFraunhofer Center for International Management and Knowledge Economy IMW – Center for Economics of Materials (CEM), Halle (Saale)\nResearcher, 2019–2021\n\n\n\n\n\nPhD, Economics, submitted January 2026\nTU Dresden & Leibniz Institute of Ecological Urban & Regional Development, Dresden\nMaster of Science, Economics, 2019\nKiel University\nErasmus Semester, 2017\nLisbon School of Economics & Management\nBachelor of Science, Business & Economics, 2014\nFriedrich Schiller University Jena"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Lasare Samartzidis",
+    "section": "",
+    "text": "Leibniz Institute of Ecological Urban & Regional Development, Dresden\nDoctoral Researcher, since 2020\nScientific Coordinator – Leibniz Lab Systemic Sustainability, since 2024\nScientific Coordinator – Leibniz Research Network Earth & Societies, 2023–2024\nWIG2 – Scientific Institute for Health Economics and Health System Research, Leipzig\nResearcher, 2022–2023\nFraunhofer Center for International Management and Knowledge Economy IMW – Center for Economics of Materials (CEM), Halle (Saale)\nResearcher, 2019–2021"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Lasare Samartzidis",
+    "section": "",
+    "text": "PhD, Economics, submitted January 2026\nTU Dresden & Leibniz Institute of Ecological Urban & Regional Development, Dresden\nMaster of Science, Economics, 2019\nKiel University\nErasmus Semester, 2017\nLisbon School of Economics & Management\nBachelor of Science, Business & Economics, 2014\nFriedrich Schiller University Jena"
+  },
+  {
+    "objectID": "index.html#recent-posts",
+    "href": "index.html#recent-posts",
+    "title": "Lasare Samartzidis",
+    "section": "Recent Posts",
+    "text": "Recent Posts\nCheck out the latest  Papers ,  News ,  Events , and  More »\n\n\n\n\n\n\n\n\n\n\nSustainable regional development - A complexity economics analysis\n\n\nPhD overview article\n\n\n\nOct 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nAre Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models\n\n\nManuscript currently prepared\n\n\n\nOct 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nProduction networks, input specificity, and the labor share\n\n\nUnder Review\n\n\n\nAug 8, 2025\n\n\n\n\n\n\nNo matching items\n\n\nAll Posts »"
+  },
+  {
+    "objectID": "people.html",
+    "href": "people.html",
+    "title": "People",
+    "section": "",
+    "text": "PhD Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nMasters Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nUndergraduate Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nPI\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "people.html#team",
+    "href": "people.html#team",
+    "title": "People",
+    "section": "",
+    "text": "PhD Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nMasters Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nUndergraduate Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nPI\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "people.html#alumni",
+    "href": "people.html#alumni",
+    "title": "People",
+    "section": "Alumni",
+    "text": "Alumni\n\n\n   \n    \n    \n      Order By\n      Default\n      \n      \n      \n        Name\n      \n      \n        Role\n      \n      \n        Started\n      \n      \n        Ended\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n \n\n\n\nName\n\n\n\nRole\n\n\n\nStarted\n\n\n\nEnded\n\n\n\n\n\n\n\n\n\n\n\nAlumni A\n\n\nPhD Alumni\n\n\n2024\n\n\n2025\n\n\n\n\n\n\n\n\n\nAlumni B\n\n\nMasters Alumni\n\n\n2024\n\n\n2025\n\n\n\n\n\n\n\n\n\nAlumni C\n\n\nUndergraduate Alumni\n\n\n2024\n\n\n2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/wellbeing-ml/index.html#what-i-built",
@@ -98,136 +189,52 @@
     "text": "References\n\n\n1. OECD. OECD regional statistics. (2019).\n\n\n2. Molnar, C. Interpretable machine learning. A Guide for Making Black Box Models Explainable. (2022)."
   },
   {
-    "objectID": "people.html",
-    "href": "people.html",
-    "title": "People",
-    "section": "",
-    "text": "PhD Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nMasters Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nUndergraduate Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nPI\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "people.html#team",
-    "href": "people.html#team",
-    "title": "People",
-    "section": "",
-    "text": "PhD Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nMasters Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nUndergraduate Student\n\n\n\n\n\n\n\n\n\n\n\n\n\nPI\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "people.html#alumni",
-    "href": "people.html#alumni",
-    "title": "People",
-    "section": "Alumni",
-    "text": "Alumni\n\n\n   \n    \n    \n      Order By\n      Default\n      \n      \n      \n        Name\n      \n      \n        Role\n      \n      \n        Started\n      \n      \n        Ended\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n \n\n\n\nName\n\n\n\nRole\n\n\n\nStarted\n\n\n\nEnded\n\n\n\n\n\n\n\n\n\n\n\nAlumni A\n\n\nPhD Alumni\n\n\n2024\n\n\n2025\n\n\n\n\n\n\n\n\n\nAlumni B\n\n\nMasters Alumni\n\n\n2024\n\n\n2025\n\n\n\n\n\n\n\n\n\nAlumni C\n\n\nUndergraduate Alumni\n\n\n2024\n\n\n2025\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Lasare Samartzidis",
-    "section": "",
-    "text": "Blue.Sky\n  \n  \n      0000-0001-5685-8485\n  \n  \n      Google Scholar\n  \n\n  \n  \nHi, I’m Lasare — a researcher in Complexity and Ecological Economics, currently finishing my PhD, with a passion for working with data and turning it into clear, meaningful, and reproducible insights. Also eager to try out new things, my work brings together data science, visualization, machine learning, and large language models (LLMs) to economic questions.\nI enjoy tackling complex questions with code, but what excites me most is making the results easy to understand and useful for others. Whether it’s through interactive dashboards, geospatial analysis, a insightful chart, or simply a well documented code, I aim to create tools and visuals that speak to both technical and non-technical audiences.\nMost of my day-to-day work happens in R (tidyverse, ggplot2, Shiny), though I also use Python when it fits the task. Over time, I’ve built automated pipelines, developed reproducible workflows, and experimented with new methods — always curious about what the latest tools can bring to research.\nBeyond the technical side, I love sharing ideas, collaborating across disciplines, and presenting my work. I’ve spoken at 18 international and national conferences and workshops and worked with teams at Leibniz, WIG2, and Fraunhofer. These experiences have shown me how important clear communication and openness are in making research impactful. Have a look into my research and drop me an email (lasare at web dot de). I’m always happy to collaborate.\n\n\n\nLeibniz Institute of Ecological Urban & Regional Development, Dresden\nDoctoral Researcher, since 2020\nScientific Coordinator – Leibniz Lab Systemic Sustainability, since 2024\nScientific Coordinator – Leibniz Research Network Earth & Societies, 2023–2024\nWIG2 – Scientific Institute for Health Economics and Health System Research, Leipzig\nResearcher, 2022–2023\nFraunhofer Center for International Management and Knowledge Economy IMW – Center for Economics of Materials (CEM), Halle (Saale)\nResearcher, 2019–2021\n\n\n\n\n\nPhD, Economics, submitted January 2026\nTU Dresden & Leibniz Institute of Ecological Urban & Regional Development, Dresden\nMaster of Science, Economics, 2019\nKiel University\nErasmus Semester, 2017\nLisbon School of Economics & Management\nBachelor of Science, Business & Economics, 2014\nFriedrich Schiller University Jena"
-  },
-  {
-    "objectID": "index.html#experience",
-    "href": "index.html#experience",
-    "title": "Lasare Samartzidis",
-    "section": "",
-    "text": "Leibniz Institute of Ecological Urban & Regional Development, Dresden\nDoctoral Researcher, since 2020\nScientific Coordinator – Leibniz Lab Systemic Sustainability, since 2024\nScientific Coordinator – Leibniz Research Network Earth & Societies, 2023–2024\nWIG2 – Scientific Institute for Health Economics and Health System Research, Leipzig\nResearcher, 2022–2023\nFraunhofer Center for International Management and Knowledge Economy IMW – Center for Economics of Materials (CEM), Halle (Saale)\nResearcher, 2019–2021"
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Lasare Samartzidis",
-    "section": "",
-    "text": "PhD, Economics, submitted January 2026\nTU Dresden & Leibniz Institute of Ecological Urban & Regional Development, Dresden\nMaster of Science, Economics, 2019\nKiel University\nErasmus Semester, 2017\nLisbon School of Economics & Management\nBachelor of Science, Business & Economics, 2014\nFriedrich Schiller University Jena"
-  },
-  {
-    "objectID": "index.html#recent-posts",
-    "href": "index.html#recent-posts",
-    "title": "Lasare Samartzidis",
-    "section": "Recent Posts",
-    "text": "Recent Posts\nCheck out the latest  Papers ,  News ,  Events , and  More »\n\n\n\n\n\n\n\n\n\n\nSustainable regional development - A complexity economics analysis\n\n\nPhD overview article\n\n\n\nOct 14, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nAre Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models\n\n\nManuscript currently prepared\n\n\n\nOct 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nProduction networks, input specificity, and the labor share\n\n\nUnder Review\n\n\n\nAug 8, 2025\n\n\n\n\n\n\nNo matching items\n\n\nAll Posts »"
-  },
-  {
-    "objectID": "posts/production-networks-labor-share/index.html#abstract",
-    "href": "posts/production-networks-labor-share/index.html#abstract",
-    "title": "Production networks, input specificity, and the labor share",
+    "objectID": "posts/phd-overview/index.html#abstract",
+    "href": "posts/phd-overview/index.html#abstract",
+    "title": "Sustainable regional development - A complexity economics analysis",
     "section": "Abstract",
-    "text": "Abstract\nBargaining power is a key determinant of workers’ share of aggregate income, yet difficult to measure empirically. This study proposes input specificity as an important determinant of bargaining power, arguing that the production of harder-to-substitute intermediates strengthens workers’ bargaining position. We develop a network-based measure of input specificity and apply it to regional input–output data for European economies. Our results suggest that input specificity varies systematically across regions and is positively associated with the labor share. We find evidence that the relationship between input specificity and the labor share is stronger under coordinated wage bargaining, indicating that institutional settings condition how structural positions in production networks translate into income for workers. From a policy perspective, upgrading strategies that increase input specificity may support higher labor shares, particularly in contexts where institutions enable workers to capture the associated rents."
+    "text": "Abstract\nThe modern world is a complex, interconnected system where traditional mono-causal explanations often fall short. This thesis explores how complexity economics can contribute to understanding and guiding sustainability transformations, focusing on the interconnected nature of social, economic, and ecological systems. The 21st-century sustainability crisis, characterized by breached planetary boundaries and persistent inequalities, underscores the urgency of adopting a complexity-based perspective.\nThe thesis is structured around three knowledge spheres of sustainability transformation research: system, target, and transformation knowledge. It employs complexity economics as a conceptual and methodological lens, treating the economy as a complex adaptive system. The research addresses regional development and inequality, income distribution, subjective well-being, and the modelling of post-growth policies using agent-based models.\nArticles 1 and 2 examine how production networks structure regional outcomes, highlighting the role of interregional connections and input specificity in shaping development trajectories and wage shares. Article 3 uses machine learning to explore the multidimensional nature of subjective well-being, demonstrating the importance of complex interactions among regional factors. Article 4 systematically reviews ecological macroeconomic agent-based models using large language models, assessing their capacity to represent post-growth policies and identifying areas for future development.\nCollectively, these studies show that complexity economics provides original insights across all three sustainability knowledge spheres, emphasizing the centrality of interdependencies in understanding the economy as a complex system. The thesis opens promising avenues for future research at the intersection of regional development, well-being, and complexity economics, and underscores the need for modelling and empirical approaches that capture the interactions and interdependencies characteristic of socio-economic systems."
   },
   {
-    "objectID": "posts/production-networks-labor-share/index.html#links",
-    "href": "posts/production-networks-labor-share/index.html#links",
-    "title": "Production networks, input specificity, and the labor share",
-    "section": "Links",
-    "text": "Links\nA preprint is available at SRRN\nAvailable data & code"
+    "objectID": "posts/llm-systematic-review/index.html#what-i-built",
+    "href": "posts/llm-systematic-review/index.html#what-i-built",
+    "title": "Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models",
+    "section": "What I built",
+    "text": "What I built\nA four-stage, human-in-the-loop LLM pipeline (R + Python) that turns a raw literature search into a structured, machine-readable database of model features — replacing the manual coding of ~40 features across 60+ full papers (≈2,500 data points) that a classical systematic review would require.\n\nRetrieval & screening — Scopus API query (rscopus); an LLM scores each abstract’s relevance (1–10, temperature 0, single-number output); borderline scores are routed to manual review before inclusion.\nFull-text processing — PDF text extraction with PyMuPDF (Python via reticulate), cleaning, and chunking into 1,000-word segments.\nChunk classification — an LLM rates every chunk (1–5) on whether it actually describes the model rather than merely mentioning it; only method-dense chunks pass on, cutting noise and token cost.\nStructured extraction — an LLM extracts 41 predefined model elements per paper as validated JSON (presence score, supporting excerpt, section reference), parsed into tidy data frames for analysis and visualization.\n\nTech stack: R (tidyverse, httr2, reticulate) · Python (PyMuPDF) · open-weight LLMs (Llama 3.1, Mistral Large, GPT-OSS-120B) served via the GWDG Academic Cloud’s OpenAI-compatible API · deterministic settings (temperature 0), automated retries, timeouts and rate limiting, response validation, and human review at defined checkpoints. Fully scripted end to end for reproducibility."
   },
   {
-    "objectID": "posts/regional-synchronisation/index.html#abstract",
-    "href": "posts/regional-synchronisation/index.html#abstract",
-    "title": "Synchronisation of regional development - the role of clusters in the regional production network",
+    "objectID": "posts/llm-systematic-review/index.html#abstract",
+    "href": "posts/llm-systematic-review/index.html#abstract",
+    "title": "Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models",
     "section": "Abstract",
-    "text": "Abstract\nThis study examines the impact of production network clusters (PNCs), derived through network science methods, on German counties’ economic development using a complex systems approach, conceptualising trade as information flows that guide economic agents’ decisions. Employing spatial econometrics, it finds that PNC trade flows predict regional economic synchronisation, though effects are not always positive. While results indicate that PNCs synchronise agents’ decisions within the same cluster, they may desynchronise their decisions with agents in spatially linked areas. These findings contribute to advancing a complexity economics framework for understanding regional development dynamics and disparities in Germany."
+    "text": "Abstract\nThe intertwined crises of climate change, biodiversity loss, and unmet social needs have intensified calls to shift economic priorities from growth to well-being within planetary boundaries. Post-growth scholarship has developed a range of transformative policy proposals, but quantitative modeling of such structural changes remains limited. This study provides the first systematic review of ecological macroeconomic agent-based models (ABMs) and their capacity to represent post-growth scenarios. We identify 62 publications forming this emerging landscape, which is growing rapidly but remains heavily concentrated in Europe, particularly Italy. Using a novel workflow that leverages large language models (LLMs) for automated text analysis, we assess the presence of post-growth-relevant model elements. Our findings reveal uneven coverage: while traditional actors such as firms, households, and the financial sector are well represented, critical elements for post-growth analysis—including not-for-profit organizations, non-institutional provisioning, time use, international interactions, and needs satisfaction—are largely absent. Although some elements show increasing uptake, others remain persistently underrepresented. We conclude that ecological macroeconomic ABMs are not yet fully equipped to model post-growth transformations. Strengthening this modeling landscape requires both extending existing models with underrepresented elements and introducing entirely new thematic groups. Beyond the substantive contributions, our automated review workflow demonstrates how LLMs can streamline systematic reviews in fast-moving fields, offering a scalable and adaptable monitoring tool."
   },
   {
-    "objectID": "posts/regional-synchronisation/index.html#links",
-    "href": "posts/regional-synchronisation/index.html#links",
-    "title": "Synchronisation of regional development - the role of clusters in the regional production network",
-    "section": "Links",
-    "text": "Links\nPublished paper\nAvailable data & code"
+    "objectID": "posts/llm-systematic-review/index.html#large-language-model-workflow",
+    "href": "posts/llm-systematic-review/index.html#large-language-model-workflow",
+    "title": "Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models",
+    "section": "Large Language Model Workflow",
+    "text": "Large Language Model Workflow\nIn this paper, we automate most of the labour intensive steps from a typical systematic literature review using LLMs:\n\ninclusion/exclusion of the literature received from the SCOPUS search string, based on scanning the abstracts,\nmarking each part of each article’s text if it describes the model,\nscanning the marked texts and rate the inclusion of a wide range of post-growth model elements.\n\nWe employ the API offered by GWDG for using different LLMs."
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
+    "objectID": "posts/llm-systematic-review/index.html#results",
+    "href": "posts/llm-systematic-review/index.html#results",
+    "title": "Are Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models",
+    "section": "Results",
+    "text": "Results\nWe find a fast evolving, geographically concentrated modelling landscape that spans a wide range of academic journals, shown in Figure 1.\n\n\n\n\n\n\nFigure 1\n\n\n\nWe receive scores on a wide variety of post-growth model elements from an LLM. Results are shown in Figure 2.\n\n\n\n\n\n\nFigure 2"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
     "section": "",
-    "text": "Order By\n      Default\n      \n      \n      \n        Title\n      \n      \n        Team\n      \n      \n        Funder\n      \n      \n        Description\n      \n      \n        Start\n      \n      \n        End\n      \n      \n        Funding\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n \n\n\n\nTitle\n\n\n\nTeam\n\n\n\nFunder\n\n\n\nDescription\n\n\n\nFunding\n\n\n\nStart\n\n\n\nEnd\n\n\n\n\n\n\n\n\n\n\n\nExploring \n\n\nAcademic Website\n\n\nFunder\n\n\nThe goal of this project is to investigate .\n\n\n$0\n\n\n2024\n\n\n2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Quarto Academic\nSchool\nCollege\nUniversity\nAddress:\nPhone:\nE-mail:"
   },
   {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "Research & Projects",
+    "objectID": "gallery.html",
+    "href": "gallery.html",
+    "title": "Gallery",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nSustainable regional development - A complexity economics analysis\n\n\nPhD overview article\n\n\n\npaper\n\n\n\nHow to address sustainability transformation research with complexity economics?\n\n\n\n\n\nOct 14, 2025\n\n\nLasare Samartzidis\n\n\n\n\n\n\n\n\n\n\n\n\nAre Macroeconomic Agent-Based Models ready for post-growth policies? - A systematic review with large language models\n\n\nManuscript currently prepared\n\n\n\npaper\n\n\n\nHow can we leverage LLMs for systematic model reviews?\n\n\n\n\n\nOct 8, 2025\n\n\nLasare Samartzidis, Rob van Eynde\n\n\n\n\n\n\n\n\n\n\n\n\nProduction networks, input specificity, and the labor share\n\n\nUnder Review\n\n\n\npaper\n\n\n\nWhat can we learn from production networks for regional inequality?\n\n\n\n\n\nAug 8, 2025\n\n\nLasare Samartzidis\n\n\n\n\n\n\n\n\n\n\n\n\nSynchronisation of regional development - the role of clusters in the regional production network\n\n\nSpatial Economic Analysis\n\n\n\npaper\n\n\n\nDo we need to adjust our understanding of regional development?\n\n\n\n\n\nAug 8, 2025\n\n\nLasare Samartzidis\n\n\n\n\n\n\n\n\n\n\n\n\nGender and age matter! Identifying important predictors for subjective well-being using machine learning methods\n\n\nSocial Indicators Research\n\n\n\npaper\n\n\n\nHow can we derive hypotheses for complex adaptive systems?\n\n\n\n\n\nJun 17, 2025\n\n\nLasare Samartzidis\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts_history/news-title/index.html",
-    "href": "posts_history/news-title/index.html",
-    "title": "News item",
-    "section": "",
-    "text": "About the news"
-  },
-  {
-    "objectID": "posts_history/news-title/index.html#summary",
-    "href": "posts_history/news-title/index.html#summary",
-    "title": "News item",
-    "section": "",
-    "text": "About the news"
-  },
-  {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "Fall 2024,   Fall 2023\nClass 1 introduction."
-  },
-  {
-    "objectID": "teaching.html#class-1",
-    "href": "teaching.html#class-1",
-    "title": "Teaching",
-    "section": "",
-    "text": "Fall 2024,   Fall 2023\nClass 1 introduction."
-  },
-  {
-    "objectID": "teaching.html#class-2",
-    "href": "teaching.html#class-2",
-    "title": "Teaching",
-    "section": "Class 2",
-    "text": "Class 2\n\n\n\n\n\nSpring 2025,   Fall 2023\nClass 2 introduction."
-  },
-  {
-    "objectID": "teaching.html#class-3",
-    "href": "teaching.html#class-3",
-    "title": "Teaching",
-    "section": "Class 3",
-    "text": "Class 3\n\n\n\n\n\nSpring 2025,   Spring 2024\nClass 3 introduction."
+    "text": "Each figure links to the research post it comes from.\n\n\n\nSustainable regional development - A complexity economics analysis How to address sustainability transformation research with complexity economics?\n\n\n\nSynchronisation of regional development Do we need to adjust our understanding of regional development?\n\n\n\nLLM-assisted systematic review A four-stage LLM pipeline that screens, classifies and extracts structured model features from 62 publications.\n\n\n\nProduction networks and the labor share How to turn complex networkd data into labor’s bargaining power insights.\n\n\n\nPredicting regional well-being with interpretable ML Random forests + ALE plots reveal non-linear drivers of subjective well-being across 388 OECD regions."
   }
 ]

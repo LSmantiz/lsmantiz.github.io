@@ -23,9 +23,11 @@ website:
       #     - text: Events
       #       href: posts.qmd#category=event      
       #     - text: Contact
-      #       href: contact.qmd             
+      #       href: contact.qmd       
       - text: Research
         href: posts.qmd#category=paper
+      - text: Data Vis Gallery
+        href: gallery.qmd
 #        menu:
           # - text: List of Publications
           #   href: publications.qmd
