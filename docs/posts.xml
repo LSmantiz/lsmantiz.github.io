@@ -43,7 +43,7 @@ https://badge.dimensions.ai/
 <section id="rebuilding-a-published-study-as-a-tested-data-pipeline" class="level2">
 <h2 class="anchored" data-anchor-id="rebuilding-a-published-study-as-a-tested-data-pipeline">Rebuilding a published study as a tested data pipeline</h2>
 <p><strong>OECD regional well-being — 388 regions, 135 indicators, one reproduction</strong></p>
-<p><a href="https://github.com/LSmantiz/oecd-wellbeing-pipeline">Repository</a> · <a href="docs/frontier_comparison.html">Read the analysis</a> · <a href="docs/python_ml_analysis.html">Read the robustness study</a></p>
+<p><a href="https://github.com/LSmantiz/oecd-wellbeing-pipeline">Repository</a> · <a href="docs/python_ml_analysis.html">Read the analysis</a> · <a href="docs/frontier_comparison.html">Read the robustness study</a></p>
 <p>I took the data preparation behind one of <a href="../../posts/wellbeing-ml/index.html">my published papers</a> — originally written in R, later ported to pandas — and rebuilt it as a version-controlled, tested pipeline: dbt over DuckDB for the transformations, scikit-learn for the analysis, GitHub Actions running the whole thing in a clean container on every commit.</p>
 <p>The output reproduces the published dataset exactly: 388 regions, 135 indicators, every value identical to floating-point precision.</p>
 <section id="what-the-tests-found" class="level3">
