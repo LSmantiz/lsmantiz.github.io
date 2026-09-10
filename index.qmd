@@ -51,13 +51,13 @@ listing:   # Comment the listing section and delete corresponding lines in the i
 :::{#hero-heading}
 
 
-Hi, I’m Lasare — a researcher in Complexity and Ecological Economics. I defended my PhD in July 2026 and have a passion for turning it into clear, meaningful, and reproducible insights. My research applies data science, visualization, machine learning, and large language models to economic questions, and I'm always interested in what new methods can add.
+Hi, I’m Lasare — a researcher in Complexity and Ecological Economics. I defended my PhD in July 2026 and have a passion clear, meaningful, and reproducible insights. My research applies data science, visualization, machine learning, and large language models to economic questions, and I'm always interested in what new methods can add.
 
 I enjoy tackling complex questions with code, but what excites me most is making the results easy to understand and useful for others. Whether it’s through interactive dashboards, geospatial analysis, an insightful chart, or simply well documented code, I aim to create tools and visuals that speak to both technical and non-technical audiences.
 
-I work across R and Python. Over time, I’ve built automated pipelines, developed reproducible workflows, and experimented with new methods — always curious about what the latest tools can bring to research.
+I work across R and Python, with SQL and dbt for data pipelines. I've built tested, version-controlled workflows where the reproducibility is enforced by the code rather than asserted in a README — most recently rebuilding the data preparation behind one of my papers as a pipeline that runs in CI on every commit.
 
-Beyond the technical side, I love sharing ideas, collaborating across disciplines, and presenting my work. I’ve spoken at 18 international and national conferences and workshops and worked with teams at Leibniz, WIG2, and Fraunhofer. These experiences have shown me how important clear communication and openness are in making research impactful. Have a look into my [research](posts.qmd) and drop me an [email](mailto:lasare@web.de). I'm always happy to collaborate.
+Beyond the technical side, I love sharing ideas, collaborating across disciplines, and presenting my work. I’ve spoken at 18 international and national conferences and workshops and worked with teams at Leibniz, WIG2, and Fraunhofer. These experiences have shown me how important clear communication and openness are in making research impactful. Have a look at my [research](posts.qmd) and drop me an [email](mailto:lasare@web.de). I'm always happy to collaborate.
 
 ## Experience
 
