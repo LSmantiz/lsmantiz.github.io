@@ -14,8 +14,115 @@
 <title>Lasare Samartzidis</title>
 <link>https://lsmantiz.github.io/posts.html</link>
 </image>
-<generator>quarto-1.8.27</generator>
-<lastBuildDate>Mon, 13 Oct 2025 22:00:00 GMT</lastBuildDate>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Wed, 09 Sep 2026 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Rebuilding a published study as a tested data pipeline</title>
+  <dc:creator>Lasare Samartzidis</dc:creator>
+  <link>https://lsmantiz.github.io/posts/wellbeing-pipeline/</link>
+  <description><![CDATA[ 
+
+
+
+
+<!--Include academic icons or bottons-->
+<!-- 
+Load Academicons v1: https://jpswalsh.github.io/academicons/
+-->
+<p><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"></p>
+<p><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"></p>
+<!---
+The following code are needed to show dimension citation and altmetrics.
+https://api.altmetric.com/embeds.html
+https://badge.dimensions.ai/
+--->
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+<script async="" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+<p><img src="https://lsmantiz.github.io/posts/wellbeing-pipeline/lineage.png" class="img-fluid"></p>
+<section id="rebuilding-a-published-study-as-a-tested-data-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="rebuilding-a-published-study-as-a-tested-data-pipeline">Rebuilding a published study as a tested data pipeline</h2>
+<p><strong>OECD regional well-being — 388 regions, 135 indicators, one reproduction</strong></p>
+<p><a href="https://github.com/LSmantiz/oecd-wellbeing-pipeline">Repository</a> · <a href="docs/frontier_comparison.html">Read the analysis</a> · <a href="docs/python_ml_analysis.html">Read the robustness study</a></p>
+<p>I took the data preparation behind one of <a href="../../posts/wellbeing-ml/index.html">my published papers</a> — originally written in R, later ported to pandas — and rebuilt it as a version-controlled, tested pipeline: dbt over DuckDB for the transformations, scikit-learn for the analysis, GitHub Actions running the whole thing in a clean container on every commit.</p>
+<p>The output reproduces the published dataset exactly: 388 regions, 135 indicators, every value identical to floating-point precision.</p>
+<section id="what-the-tests-found" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-tests-found">What the tests found</h3>
+<p>Writing the transformations as tested SQL rather than scripts surfaced four things the original pipeline had resolved silently.</p>
+<p>The OECD publishes each series at several territorial levels, and the same region code can carry different values at different levels. Zeeland appears twice with two different waste figures — 71 and 78 — describing genuinely different areas. The original code deduplicated on identifiers while ignoring the values, so which figure survived depended on row order in the source file.</p>
+<p>The obvious fix — keep only the larger territorial level — would have silently removed five Estonian regions from the analysis, because Estonia publishes them only at the finer level. No error would have been raised. The rule the pipeline uses now is a preference with a documented fallback.</p>
+<p>The list of country codes to exclude turned out to be missing Latvia and Lithuania, which had joined the OECD around the time the data was compiled.</p>
+<p>None of this changed the published results. It was found because declarative tests ask precise questions that scripts do not.</p>
+</section>
+<section id="making-an-implicit-design-choice-explicit" class="level3">
+<h3 class="anchored" data-anchor-id="making-an-implicit-design-choice-explicit">Making an implicit design choice explicit</h3>
+<p>The analysis requires every indicator to be observed for every region, so a single poorly-covered region removes that indicator for all of them. That rule is standard and was applied without examining what it cost.</p>
+<p>Sweeping the trade-off shows the cost was substantial and the remedy cheap: dropping the ten worst-covered regions out of 388 — 2.6% of the sample — would have made 44 additional indicators available, a third more than the published analysis used. Almost none of the remaining regions buy anything: the next seventy dropped gain one indicator between them.</p>
+<p>Whether that changes any conclusion is the subject of the second document, which runs the full analysis at several points along the trade-off and compares which predictors survive.</p>
+</section>
+<section id="two-methods-implemented-from-source" class="level3">
+<h3 class="anchored" data-anchor-id="two-methods-implemented-from-source">Two methods implemented from source</h3>
+<p>Accumulated Local Effects and Friedman’s H-statistic exist in R’s <code>iml</code> package but have no scikit-learn equivalent. Rather than approximate them, I worked from the R source so the numerical procedure matches — including the parts that are easy to get wrong, such as how empty cells in a two-dimensional grid are filled and how main effects are removed from an interaction surface.</p>
+<p>Both are verified against structures with known answers: the interaction surface of an exactly additive model comes out as zero to machine precision, and the surface for a known product recovers that product.</p>
+<p>Those checks produced an incidental result worth carrying into the interpretation. A random forest fitted on data with <em>no</em> interaction still reports a substantial one — tree ensembles manufacture structure that is not in the data. This is why the analysis carries two model families through in parallel: agreement between them is what separates a finding from an artefact.</p>
+</section>
+<section id="stack" class="level3">
+<h3 class="anchored" data-anchor-id="stack">Stack</h3>
+<p>dbt · DuckDB · SQL · Python · scikit-learn · XGBoost · pandas · pytest · GitHub Actions · Quarto</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>project</category>
+  <category>code</category>
+  <guid>https://lsmantiz.github.io/posts/wellbeing-pipeline/</guid>
+  <pubDate>Wed, 09 Sep 2026 22:00:00 GMT</pubDate>
+  <media:content url="https://lsmantiz.github.io/posts/wellbeing-pipeline/lineage.png" medium="image" type="image/png" height="76" width="144"/>
+</item>
+<item>
+  <title>Interactive teaching tool: Efficiency wages, markets &amp; tax incidence</title>
+  <dc:creator>Lasare Samartzidis</dc:creator>
+  <link>https://lsmantiz.github.io/posts/econ-interactive-tool/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>An interactive tool I built for one-on-one economics teaching, covering the labor-discipline / efficiency-wage model, supply &amp; demand, and tax incidence. Drag the sliders, switch scenarios, and watch the equilibria move. <em>(Interface in German.)</em></p>
+<p>I built it using generative AI (LLM-assisted coding) — from concept and model specification through to the finished single-file application. It’s a small, concrete example of the AI-assisted development workflow I use in my research.</p>
+<p><a href="einheit6_8_tool.html.html" class="btn btn-primary" target="_blank"><strong>Open the tool full screen →</strong></a></p>
+<iframe src="einheit6_8_tool.html" width="100%" height="660" style="border:1px solid #d4c9a8; border-radius:6px;">
+</iframe>
+<section id="how-i-built-it" class="level2">
+<h2 class="anchored" data-anchor-id="how-i-built-it">How I built it</h2>
+<p>Developed with generative AI as a coding collaborator: I specified the economic models, the interaction design, and the didactic flow, then worked iteratively with an LLM to produce a single-file HTML application — no frameworks, no dependencies. Hand-tuned canvas rendering for the model curves, reactive sliders driving live recomputation of equilibria, scenario walkthroughs, and a tabbed interface covering three textbook models. Built to run anywhere a browser opens, including offline in a tutoring session.</p>
+<p>The point isn’t just the tool — it’s the workflow: translating domain knowledge into a working, interactive artifact quickly by directing generative AI, the same approach I apply to research pipelines.</p>
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{samartzidis2026,
+  author = {Samartzidis, Lasare},
+  title = {Interactive Teaching Tool: {Efficiency} Wages, Markets \&amp; Tax
+    Incidence},
+  journal = {In preparation},
+  date = {2026-07-11},
+  url = {https://lsmantiz.github.io/posts/econ-interactive-tool/},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-samartzidis2026" class="csl-entry quarto-appendix-citeas">
+Samartzidis, Lasare. 2026. <span>“Interactive Teaching Tool: Efficiency
+Wages, Markets &amp; Tax Incidence.”</span> <em>In Preparation</em>,
+accepted, July 11. <a href="https://lsmantiz.github.io/posts/econ-interactive-tool/">https://lsmantiz.github.io/posts/econ-interactive-tool/</a>.
+</div></div></section></div> ]]></description>
+  <category>teaching</category>
+  <category>interactive</category>
+  <guid>https://lsmantiz.github.io/posts/econ-interactive-tool/</guid>
+  <pubDate>Fri, 10 Jul 2026 22:00:00 GMT</pubDate>
+  <media:content url="https://lsmantiz.github.io/posts/econ-interactive-tool/overview.png" medium="image" type="image/png" height="140" width="144"/>
+</item>
 <item>
   <title>Sustainable regional development - A complexity economics analysis</title>
   <dc:creator>Lasare Samartzidis</dc:creator>
@@ -60,7 +167,7 @@ https://badge.dimensions.ai/
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-samartzidis2025" class="csl-entry quarto-appendix-citeas">
 Samartzidis, Lasare. 2025. <em>Sustainable Regional Development - A
-Complexity Economics Analysis</em>. <em>PhD Thesis</em>. <a href="https://lsmantiz.github.io/posts/phd-overview/">https://lsmantiz.github.io/posts/phd-overview/</a>.
+Complexity Economics Analysis</em>. In <em>PhD Thesis</em>. <a href="https://lsmantiz.github.io/posts/phd-overview/">https://lsmantiz.github.io/posts/phd-overview/</a>.
 </div></div></section></div> ]]></description>
   <category>paper</category>
   <guid>https://lsmantiz.github.io/posts/phd-overview/</guid>
@@ -158,7 +265,8 @@ Figure&nbsp;2
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-samartzidis2025" class="csl-entry quarto-appendix-citeas">
 Samartzidis, Lasare, and Rob van Eynde. 2025. <span>“Are Macroeconomic
 Agent-Based Models Ready for Post-Growth Policies? - A Systematic Review
-with Large Language Models.”</span> <em>In Preparation</em>, October. <a href="https://lsmantiz.github.io/posts/llm-systematic-review/">https://lsmantiz.github.io/posts/llm-systematic-review/</a>.
+with Large Language Models.”</span> <em>In Preparation</em>, accepted,
+October 8. <a href="https://lsmantiz.github.io/posts/llm-systematic-review/">https://lsmantiz.github.io/posts/llm-systematic-review/</a>.
 </div></div></section></div> ]]></description>
   <category>paper</category>
   <guid>https://lsmantiz.github.io/posts/llm-systematic-review/</guid>
@@ -213,7 +321,7 @@ https://badge.dimensions.ai/
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-samartzidis2025" class="csl-entry quarto-appendix-citeas">
 Samartzidis, Lasare. 2025. <span>“Production Networks, Input
 Specificity, and the Labor Share.”</span> <em>Under Review at Economic
-Modelling</em>, January. <a href="https://doi.org/10.2139/ssrn.5349214">https://doi.org/10.2139/ssrn.5349214</a>.
+Modelling</em>, accepted, January 1. <a href="https://doi.org/10.2139/ssrn.5349214">https://doi.org/10.2139/ssrn.5349214</a>.
 </div></div></section></div> ]]></description>
   <category>paper</category>
   <guid>https://lsmantiz.github.io/posts/production-networks-labor-share/</guid>
@@ -270,7 +378,7 @@ https://badge.dimensions.ai/
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-samartzidis2025" class="csl-entry quarto-appendix-citeas">
 Samartzidis, Lasare. 2025. <span>“Synchronisation of Regional
 Development - the Role of Clusters in the Regional Production
-Network.”</span> <em>Spatial Economic Analysis</em>, January, 1–24. <a href="https://doi.org/10.1080/17421772.2025.2532609">https://doi.org/10.1080/17421772.2025.2532609</a>.
+Network.”</span> <em>Spatial Economic Analysis</em>, January 1, 1–24. <a href="https://doi.org/10.1080/17421772.2025.2532609">https://doi.org/10.1080/17421772.2025.2532609</a>.
 </div></div></section></div> ]]></description>
   <category>paper</category>
   <guid>https://lsmantiz.github.io/posts/regional-synchronisation/</guid>

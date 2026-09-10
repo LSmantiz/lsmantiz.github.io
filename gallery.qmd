@@ -1,5 +1,5 @@
 ---
-title: "Gallery"
+title: "Data Vis Gallery"
 description: "Key figures from my research — click any image to read the corresponding post."
 toc: false
 page-layout: full
@@ -44,6 +44,13 @@ How to turn complex networkd data into labor's bargaining power insights.](posts
 [**Predicting regional well-being with interpretable ML**<br>
 Random forests + ALE plots reveal non-linear drivers of subjective
 well-being across 388 OECD regions.](posts/wellbeing-ml/index.qmd){.gallery-caption}
+:::
+
+::: {.g-col-12 .g-col-md-6 .gallery-card}
+[![](posts/econ-interactive-tool/overview.png)](posts/econ-interactive-tool/index.qmd)
+
+[**Interactive teaching tool: Efficiency wages, markets & tax incidence**<br>
+A self-contained interactive economics visualization (vanilla JS + canvas), built with generative AI for introductory economics teaching — explore the model with sliders, no installation needed.](posts/econ-interactive-tool/index.qmd){.gallery-caption}
 :::
 
 

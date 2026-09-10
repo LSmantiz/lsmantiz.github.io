@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lasare Samartzidis">
-<meta name="dcterms.date" content="2025-08-08">
-<meta name="description" content="Quarto Academic Website Template adapted by Dr.&nbsp;Gang He">
+<meta name="dcterms.date" content="2026-09-10">
+<meta name="description" content="OECD regional well-being: dbt, DuckDB and scikit-learn, with the test suite finding four data errors the original resolved silently">
 
-<title>Synchronisation of regional development - the role of clusters in the regional production network – Lasare Samartzidis</title>
+<title>Rebuilding a published study as a tested data pipeline – Lasare Samartzidis</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -109,30 +109,18 @@ https://badge.dimensions.ai/
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Synchronisation of regional development - the role of clusters in the regional production network – Lasare Samartzidis">
-<meta property="og:description" content="Do we need to adjust our understanding of regional development?">
-<meta property="og:image" content="https://lsmantiz.github.io/posts/regional-synchronisation/overview.png">
+<meta property="og:title" content="Rebuilding a published study as a tested data pipeline – Lasare Samartzidis">
+<meta property="og:description" content="OECD regional well-being: dbt, DuckDB and scikit-learn, with the test suite finding four data errors the original resolved silently">
+<meta property="og:image" content="https://lsmantiz.github.io/posts/wellbeing-pipeline/lineage.png">
 <meta property="og:site_name" content="Lasare Samartzidis">
-<meta property="og:image:height" content="1665">
-<meta property="og:image:width" content="2142">
-<meta name="twitter:title" content="Synchronisation of regional development - the role of clusters in the regional production network – Lasare Samartzidis">
-<meta name="twitter:description" content="Do we need to adjust our understanding of regional development?">
-<meta name="twitter:image" content="https://lsmantiz.github.io/posts/regional-synchronisation/overview.png">
-<meta name="twitter:image-height" content="1665">
-<meta name="twitter:image-width" content="2142">
+<meta property="og:image:height" content="962">
+<meta property="og:image:width" content="1820">
+<meta name="twitter:title" content="Rebuilding a published study as a tested data pipeline – Lasare Samartzidis">
+<meta name="twitter:description" content="OECD regional well-being: dbt, DuckDB and scikit-learn, with the test suite finding four data errors the original resolved silently">
+<meta name="twitter:image" content="https://lsmantiz.github.io/posts/wellbeing-pipeline/lineage.png">
+<meta name="twitter:image-height" content="962">
+<meta name="twitter:image-width" content="1820">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="citation_title" content="Synchronisation of regional development - the role of clusters in the regional production network">
-<meta name="citation_author" content="Lasare Samartzidis">
-<meta name="citation_publication_date" content="2025-01-01">
-<meta name="citation_cover_date" content="2025-01-01">
-<meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-08-08">
-<meta name="citation_fulltext_html_url" content="https://doi.org/10.1080/17421772.2025.2532609">
-<meta name="citation_doi" content="10.1080/17421772.2025.2532609">
-<meta name="citation_language" content="en">
-<meta name="citation_firstpage" content="1">
-<meta name="citation_lastpage" content="24">
-<meta name="citation_journal_title" content="Spatial Economic Analysis">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -201,8 +189,13 @@ https://badge.dimensions.ai/
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
-  <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links">Links</a></li>
+  <li><a href="#rebuilding-a-published-study-as-a-tested-data-pipeline" id="toc-rebuilding-a-published-study-as-a-tested-data-pipeline" class="nav-link active" data-scroll-target="#rebuilding-a-published-study-as-a-tested-data-pipeline">Rebuilding a published study as a tested data pipeline</a>
+  <ul class="collapse">
+  <li><a href="#what-the-tests-found" id="toc-what-the-tests-found" class="nav-link" data-scroll-target="#what-the-tests-found">What the tests found</a></li>
+  <li><a href="#making-an-implicit-design-choice-explicit" id="toc-making-an-implicit-design-choice-explicit" class="nav-link" data-scroll-target="#making-an-implicit-design-choice-explicit">Making an implicit design choice explicit</a></li>
+  <li><a href="#two-methods-implemented-from-source" id="toc-two-methods-implemented-from-source" class="nav-link" data-scroll-target="#two-methods-implemented-from-source">Two methods implemented from source</a></li>
+  <li><a href="#stack" id="toc-stack" class="nav-link" data-scroll-target="#stack">Stack</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -211,16 +204,16 @@ https://badge.dimensions.ai/
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Synchronisation of regional development - the role of clusters in the regional production network</h1>
-<p class="subtitle lead"><em>Spatial Economic Analysis</em></p>
+<h1 class="title">Rebuilding a published study as a tested data pipeline</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">paper</div>
+    <div class="quarto-category">project</div>
+    <div class="quarto-category">code</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Do we need to adjust our understanding of regional development?
+    OECD regional well-being: dbt, DuckDB and scikit-learn, with the test suite finding four data errors the original resolved silently
   </div>
 </div>
 
@@ -237,7 +230,7 @@ https://badge.dimensions.ai/
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 8, 2025</p>
+      <p class="date">September 10, 2026</p>
     </div>
   </div>
   
@@ -263,35 +256,42 @@ https://badge.dimensions.ai/
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 <script async="" src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
 <script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
-<p><img src="overview.png" class="img-fluid"></p>
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>This study examines the impact of production network clusters (PNCs), derived through network science methods, on German counties’ economic development using a complex systems approach, conceptualising trade as information flows that guide economic agents’ decisions. Employing spatial econometrics, it finds that PNC trade flows predict regional economic synchronisation, though effects are not always positive. While results indicate that PNCs synchronise agents’ decisions within the same cluster, they may desynchronise their decisions with agents in spatially linked areas. These findings contribute to advancing a complexity economics framework for understanding regional development dynamics and disparities in Germany.</p>
+<p><img src="lineage.png" class="img-fluid"></p>
+<section id="rebuilding-a-published-study-as-a-tested-data-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="rebuilding-a-published-study-as-a-tested-data-pipeline">Rebuilding a published study as a tested data pipeline</h2>
+<p><strong>OECD regional well-being — 388 regions, 135 indicators, one reproduction</strong></p>
+<p><a href="https://github.com/LSmantiz/oecd-wellbeing-pipeline">Repository</a> · <a href="docs/frontier_comparison.html">Read the analysis</a> · <a href="docs/python_ml_analysis.html">Read the robustness study</a></p>
+<p>I took the data preparation behind one of <a href="../../posts/wellbeing-ml/index.html">my published papers</a> — originally written in R, later ported to pandas — and rebuilt it as a version-controlled, tested pipeline: dbt over DuckDB for the transformations, scikit-learn for the analysis, GitHub Actions running the whole thing in a clean container on every commit.</p>
+<p>The output reproduces the published dataset exactly: 388 regions, 135 indicators, every value identical to floating-point precision.</p>
+<section id="what-the-tests-found" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-tests-found">What the tests found</h3>
+<p>Writing the transformations as tested SQL rather than scripts surfaced four things the original pipeline had resolved silently.</p>
+<p>The OECD publishes each series at several territorial levels, and the same region code can carry different values at different levels. Zeeland appears twice with two different waste figures — 71 and 78 — describing genuinely different areas. The original code deduplicated on identifiers while ignoring the values, so which figure survived depended on row order in the source file.</p>
+<p>The obvious fix — keep only the larger territorial level — would have silently removed five Estonian regions from the analysis, because Estonia publishes them only at the finer level. No error would have been raised. The rule the pipeline uses now is a preference with a documented fallback.</p>
+<p>The list of country codes to exclude turned out to be missing Latvia and Lithuania, which had joined the OECD around the time the data was compiled.</p>
+<p>None of this changed the published results. It was found because declarative tests ask precise questions that scripts do not.</p>
 </section>
-<section id="links" class="level2">
-<h2 class="anchored" data-anchor-id="links">Links</h2>
-<p>Published <a href="https://www.tandfonline.com/doi/full/10.1080/17421772.2025.2532609">paper</a></p>
-<p>Available <a href="https://zenodo.org/records/15547542">data &amp; code</a></p>
+<section id="making-an-implicit-design-choice-explicit" class="level3">
+<h3 class="anchored" data-anchor-id="making-an-implicit-design-choice-explicit">Making an implicit design choice explicit</h3>
+<p>The analysis requires every indicator to be observed for every region, so a single poorly-covered region removes that indicator for all of them. That rule is standard and was applied without examining what it cost.</p>
+<p>Sweeping the trade-off shows the cost was substantial and the remedy cheap: dropping the ten worst-covered regions out of 388 — 2.6% of the sample — would have made 44 additional indicators available, a third more than the published analysis used. Almost none of the remaining regions buy anything: the next seventy dropped gain one indicator between them.</p>
+<p>Whether that changes any conclusion is the subject of the second document, which runs the full analysis at several points along the trade-off and compares which predictors survive.</p>
+</section>
+<section id="two-methods-implemented-from-source" class="level3">
+<h3 class="anchored" data-anchor-id="two-methods-implemented-from-source">Two methods implemented from source</h3>
+<p>Accumulated Local Effects and Friedman’s H-statistic exist in R’s <code>iml</code> package but have no scikit-learn equivalent. Rather than approximate them, I worked from the R source so the numerical procedure matches — including the parts that are easy to get wrong, such as how empty cells in a two-dimensional grid are filled and how main effects are removed from an interaction surface.</p>
+<p>Both are verified against structures with known answers: the interaction surface of an exactly additive model comes out as zero to machine precision, and the surface for a known product recovers that product.</p>
+<p>Those checks produced an incidental result worth carrying into the interpretation. A random forest fitted on data with <em>no</em> interaction still reports a substantial one — tree ensembles manufacture structure that is not in the data. This is why the analysis carries two model families through in parallel: agreement between them is what separates a finding from an artefact.</p>
+</section>
+<section id="stack" class="level3">
+<h3 class="anchored" data-anchor-id="stack">Stack</h3>
+<p>dbt · DuckDB · SQL · Python · scikit-learn · XGBoost · pandas · pytest · GitHub Actions · Quarto</p>
 
 
 </section>
+</section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{samartzidis2025,
-  author = {Samartzidis, Lasare},
-  title = {Synchronisation of Regional Development - the Role of
-    Clusters in the Regional Production Network},
-  journal = {Spatial Economic Analysis},
-  pages = {1-24},
-  date = {2025-01-01},
-  url = {https://doi.org/10.1080/17421772.2025.2532609},
-  doi = {10.1080/17421772.2025.2532609},
-  langid = {en}
-}
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-samartzidis2025" class="csl-entry quarto-appendix-citeas" role="listitem">
-Samartzidis, Lasare. 2025. <span>“Synchronisation of Regional
-Development - the Role of Clusters in the Regional Production
-Network.”</span> <em>Spatial Economic Analysis</em>, January 1, 1–24. <a href="https://doi.org/10.1080/17421772.2025.2532609">https://doi.org/10.1080/17421772.2025.2532609</a>.
-</div></div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

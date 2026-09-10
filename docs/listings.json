@@ -2,6 +2,8 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/wellbeing-pipeline/index.html",
+      "/posts/econ-interactive-tool/index.html",
       "/posts/phd-overview/index.html",
       "/posts/llm-systematic-review/index.html",
       "/posts/production-networks-labor-share/index.html",
@@ -16,6 +18,8 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/wellbeing-pipeline/index.html",
+      "/posts/econ-interactive-tool/index.html",
       "/posts/phd-overview/index.html",
       "/posts/llm-systematic-review/index.html",
       "/posts/production-networks-labor-share/index.html",

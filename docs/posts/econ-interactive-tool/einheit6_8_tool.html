@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Effizienzlohn & Wettbewerbsmarkt — Einheit 6 & 8</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fdf6e3;--bghl:#eee8d5;--dark:#073642;--body:#586e75;
+  --muted:#657b83;--comment:#93a1a1;
+  --blue:#268bd2;--cyan:#2aa198;--yellow:#b58900;
+  --orange:#cb4b16;--green:#859900;--red:#dc322f;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;overflow:hidden;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--body);font-size:13px;display:flex;flex-direction:column;}
+.hdr{background:var(--dark);color:var(--bg);padding:7px 18px;display:flex;align-items:center;flex-shrink:0;}
+.hdr-title{font-family:'DM Serif Display',serif;font-size:1.15rem;}
+.hdr-sub{font-size:.68rem;color:var(--comment);margin-top:2px;}
+.tabbar{display:flex;background:var(--dark);padding:0 16px;border-bottom:2px solid rgba(42,161,152,.35);flex-shrink:0;}
+.tab{padding:6px 14px 5px;color:var(--comment);cursor:pointer;font-size:.7rem;font-weight:600;letter-spacing:.03em;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all .15s;white-space:nowrap;}
+.tab:hover{color:var(--bg);}
+.tab.active{color:var(--cyan);border-bottom-color:var(--cyan);}
+.tab-n{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:var(--muted);color:var(--bg);font-size:9px;margin-right:5px;transition:background .15s;vertical-align:middle;}
+.tab.active .tab-n{background:var(--cyan);}
+.main{display:flex;flex:1;overflow:hidden;}
+.sidebar{width:210px;flex-shrink:0;background:var(--bghl);border-right:1px solid #c9bda0;padding:7px;display:flex;flex-direction:column;gap:5px;overflow-y:auto;}
+.cc{background:white;border-radius:5px;padding:7px 9px;border:1px solid #d4c9a8;}
+.cc+.cc{margin-top:4px;}
+.cc-title{font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:2px;}
+.cc-val{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--dark);line-height:1;margin-bottom:2px;}
+input[type=range]{width:100%;-webkit-appearance:none;height:4px;border-radius:2px;background:var(--bghl);outline:none;margin:2px 0;cursor:pointer;}
+input[type=range].sl-bl::-webkit-slider-thumb{-webkit-appearance:none;width:13px;height:13px;border-radius:50%;background:var(--blue);cursor:pointer;}
+input[type=range].sl-gn::-webkit-slider-thumb{-webkit-appearance:none;width:13px;height:13px;border-radius:50%;background:var(--green);cursor:pointer;}
+input[type=range].sl-or::-webkit-slider-thumb{-webkit-appearance:none;width:13px;height:13px;border-radius:50%;background:var(--orange);cursor:pointer;}
+input[type=range].sl-cy::-webkit-slider-thumb{-webkit-appearance:none;width:13px;height:13px;border-radius:50%;background:var(--cyan);cursor:pointer;}
+input[type=range].sl-yw::-webkit-slider-thumb{-webkit-appearance:none;width:13px;height:13px;border-radius:50%;background:var(--yellow);cursor:pointer;}
+input[type=range].sl-rd::-webkit-slider-thumb{-webkit-appearance:none;width:13px;height:13px;border-radius:50%;background:var(--red);cursor:pointer;}
+input[type=range].sl-bl::-moz-range-thumb{width:13px;height:13px;border-radius:50%;background:var(--blue);border:none;}
+input[type=range].sl-gn::-moz-range-thumb{width:13px;height:13px;border-radius:50%;background:var(--green);border:none;}
+input[type=range].sl-or::-moz-range-thumb{width:13px;height:13px;border-radius:50%;background:var(--orange);border:none;}
+input[type=range].sl-cy::-moz-range-thumb{width:13px;height:13px;border-radius:50%;background:var(--cyan);border:none;}
+input[type=range].sl-yw::-moz-range-thumb{width:13px;height:13px;border-radius:50%;background:var(--yellow);border:none;}
+input[type=range].sl-rd::-moz-range-thumb{width:13px;height:13px;border-radius:50%;background:var(--red);border:none;}
+.leg-card{background:white;border-radius:5px;padding:7px 9px;border:1px solid #d4c9a8;}
+.leg-ttl{font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:5px;}
+.leg-row{display:flex;align-items:center;gap:6px;font-size:9px;color:var(--body);margin-bottom:3px;}
+.leg-line{width:20px;height:3px;border-radius:1px;flex-shrink:0;}
+.leg-dash{width:20px;height:0;border-top:2px dashed;flex-shrink:0;}
+.leg-area{width:12px;height:12px;border-radius:2px;flex-shrink:0;opacity:.5;}
+.leg-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.insight{background:white;border-radius:5px;padding:8px 9px;border-left:3px solid var(--cyan);font-size:9.5px;line-height:1.55;color:var(--dark);flex-shrink:0;}
+.insight strong{color:var(--dark);}
+.story-btn{background:var(--cyan);color:white;border:none;border-radius:4px;padding:5px 8px;font-size:9px;cursor:pointer;width:100%;font-family:'DM Sans',sans-serif;transition:background .18s;}
+.story-btn:hover{background:var(--blue);}
+.story-btn.on{background:var(--green);}
+.plot-area{flex:1;display:flex;align-items:stretch;justify-content:stretch;padding:10px;overflow:hidden;}
+canvas{background:white;border:1px solid #d4c9a8;border-radius:4px;display:block;flex:1;}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div>
+    <div class="hdr-title">Effizienzlohn &amp; Wettbewerbsmarkt — Einheit 6 &amp; 8</div>
+    <div class="hdr-sub">Arbeitsanreizmodell · Beschäftigungsrente · Angebot &amp; Nachfrage · Steuerinzidenz</div>
+  </div>
+</header>
+
+<nav class="tabbar">
+  <div class="tab active" data-tab="effizienz"><span class="tab-n">1</span>Effizienzlohn</div>
+  <div class="tab"        data-tab="markt">    <span class="tab-n">2</span>Wettbewerbsmarkt</div>
+  <div class="tab"        data-tab="steuern">  <span class="tab-n">3</span>Steuern &amp; Inzidenz</div>
+</nav>
+
+<div class="main">
+  <aside class="sidebar" id="sidebar">
+
+    <!-- Tab 1: Reservationslohn -->
+    <div id="sect-wr">
+      <div class="cc">
+        <div class="cc-title">Reservationslohn (w<sub>R</sub>) USD</div>
+        <div class="cc-val" id="v-wr">6.0</div>
+        <input type="range" id="s-wr" class="sl-or" min="3" max="12" step="0.5" value="6">
+      </div>
+    </div>
+
+    <!-- Tab 1: Aufwandsunlust -->
+    <div id="sect-aufwand">
+      <div class="cc">
+        <div class="cc-title">Aufwandsunlust (d)</div>
+        <div class="cc-val" id="v-d">1.0</div>
+        <input type="range" id="s-d" class="sl-cy" min="0.5" max="3.0" step="0.1" value="1.0">
+        <div style="display:flex;justify-content:space-between;font-size:8px;color:var(--comment);margin-top:2px">
+          <span>gering</span><span>hoch</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs 2+3: Elastizitäten -->
+    <div id="sect-elast">
+      <div class="cc">
+        <div class="cc-title">Preiselastizität Nachfrage (ε<sub>D</sub>)</div>
+        <div style="display:flex;align-items:baseline;gap:6px">
+          <div class="cc-val" id="v-epsD">2.0</div>
+        </div>
+        <input type="range" id="s-epsD" class="sl-bl" min="0.5" max="8" step="0.1" value="2.0">
+        <div style="display:flex;justify-content:space-between;font-size:8px;color:var(--comment);margin-top:2px">
+          <span>unelastisch</span><span>elastisch</span>
+        </div>
+      </div>
+      <div class="cc">
+        <div class="cc-title">Preiselastizität Angebot (ε<sub>S</sub>)</div>
+        <div class="cc-val" id="v-epsS">2.0</div>
+        <input type="range" id="s-epsS" class="sl-gn" min="0.3" max="8" step="0.1" value="2.0">
+        <div style="display:flex;justify-content:space-between;font-size:8px;color:var(--comment);margin-top:2px">
+          <span>unelastisch</span><span>elastisch</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2 only: Schocks -->
+    <div id="sect-shocks">
+      <div class="cc">
+        <div class="cc-title">Angebotsschock (δ<sub>S</sub>)</div>
+        <div class="cc-val" id="v-shockS">0.0</div>
+        <input type="range" id="s-shockS" class="sl-or" min="-4" max="4" step="0.25" value="0">
+        <div style="display:flex;justify-content:space-between;font-size:8px;color:var(--comment);margin-top:2px">
+          <span>Boom (+)</span><span>Einbruch (−)</span>
+        </div>
+      </div>
+      <div class="cc">
+        <div class="cc-title">Nachfrageschock (δ<sub>D</sub>)</div>
+        <div class="cc-val" id="v-shockD">0.0</div>
+        <input type="range" id="s-shockD" class="sl-cy" min="-4" max="4" step="0.25" value="0">
+        <div style="display:flex;justify-content:space-between;font-size:8px;color:var(--comment);margin-top:2px">
+          <span>Rückgang (−)</span><span>Boom (+)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3 only: Steuer -->
+    <div id="sect-tax">
+      <div class="cc">
+        <div class="cc-title">Mengensteuer / Subvention (t)</div>
+        <div class="cc-val" id="v-t">0.0</div>
+        <input type="range" id="s-t" class="sl-rd" min="-3" max="5" step="0.1" value="0">
+        <div style="display:flex;justify-content:space-between;font-size:8px;color:var(--comment);margin-top:2px">
+          <span>Subvention (−)</span><span>Steuer (+)</span>
+        </div>
+      </div>
+      <div class="cc">
+        <div class="cc-title">Prozentuale Steuer / Subvention (τ %)</div>
+        <div class="cc-val" id="v-pct">0</div>
+        <input type="range" id="s-pct" class="sl-yw" min="-30" max="50" step="1" value="0">
+        <div style="display:flex;justify-content:space-between;font-size:8px;color:var(--comment);margin-top:2px">
+          <span>Subvention (−)</span><span>Steuer (+)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="leg-card"><div class="leg-ttl">Legende</div><div id="leg-body"></div></div>
+    <div class="insight" id="insight">…</div>
+    <button class="story-btn" id="story-btn" style="display:none">📖 Story Mode</button>
+  </aside>
+
+  <div class="plot-area" id="plot-area">
+    <canvas id="cv"></canvas>
+  </div>
+</div>
+
+<script>
+/* ── COLOURS ── */
+const C={
+  dark:'#073642',body:'#586e75',muted:'#657b83',comment:'#93a1a1',
+  blue:'#268bd2',cyan:'#2aa198',yellow:'#b58900',
+  orange:'#cb4b16',green:'#859900',red:'#dc322f',
+  bg:'#fdf6e3',bghl:'#eee8d5'
+};
+
+/* ── STATE ──
+   E8 demand/supply parametrized by elasticities at fixed reference point (Pref,Qref).
+   Demand:  P = A(ε_D) − B(ε_D)·Q   where B = Pref/(ε_D·Qref), A = Pref·(1+1/ε_D)
+   Supply:  P = es(ε_S) + ss(ε_S)·Q  where ss = Pref/(ε_S·Qref), es = Pref·(1−1/ε_S)
+   Both curves always pass through (Qref, Pref) in the no-shock case.
+*/
+const S={
+  tab:'effizienz', story:false,
+  wr:6, d:1.0,          // E6: Reservationslohn, Aufwandsunlust
+  // E8: reference equilibrium (fixed)
+  Pref:8, Qref:40,
+  // E8: elasticities at reference equilibrium
+  epsD:2.0, epsS:2.0,
+  // E8: shocks (price-equivalent vertical shift)
+  shockS:0, shockD:0,
+  t:0, pct:0   // t = unit tax/subsidy; pct = percentage tax/subsidy (%)
+};
+
+/* ── CANVAS ── */
+const cv=document.getElementById('cv');
+const ctx=cv.getContext('2d');
+let CW=0,CH=0;
+function resizeCanvas(){
+  const a=document.getElementById('plot-area');
+  CW=a.clientWidth-20; CH=a.clientHeight-20;
+  cv.width=CW; cv.height=CH; draw();
+}
+window.addEventListener('resize',resizeCanvas);
+
+/* ── COORDINATE MAP ── */
+function makeMap(xMin,xMax,yMin,yMax,pad){
+  const iW=CW-pad.l-pad.r, iH=CH-pad.t-pad.b;
+  return{
+    x:v=>pad.l+(v-xMin)/(xMax-xMin)*iW,
+    y:v=>CH-pad.b-(v-yMin)/(yMax-yMin)*iH,
+    xMin,xMax,yMin,yMax,pad
+  };
+}
+
+/* ── PRIMITIVES ── */
+function clip(m){ctx.beginPath();ctx.rect(0,0,CW,CH);ctx.clip();}
+
+function drawGrid(m,xStep,yStep){
+  ctx.save();clip(m);
+  ctx.strokeStyle='#ece6d4';ctx.lineWidth=0.8;ctx.setLineDash([]);
+  for(let v=m.xMin;v<=m.xMax+xStep*.01;v+=xStep){ctx.beginPath();ctx.moveTo(m.x(v),m.y(m.yMin));ctx.lineTo(m.x(v),m.y(m.yMax));ctx.stroke();}
+  for(let v=m.yMin;v<=m.yMax+yStep*.01;v+=yStep){ctx.beginPath();ctx.moveTo(m.x(m.xMin),m.y(v));ctx.lineTo(m.x(m.xMax),m.y(v));ctx.stroke();}
+  ctx.restore();
+}
+
+function drawAxes(m,xlabel,ylabel,xStep,yStep,xFmt,yFmt){
+  if(!xFmt)xFmt=v=>v.toFixed(0);
+  if(!yFmt)yFmt=v=>v.toFixed(0);
+  ctx.save();clip(m);
+  ctx.strokeStyle=C.dark;ctx.lineWidth=1.5;ctx.setLineDash([]);
+  ctx.beginPath();ctx.moveTo(m.x(m.xMin),m.y(m.yMin));ctx.lineTo(m.x(m.xMax),m.y(m.yMin));ctx.stroke();
+  ctx.beginPath();ctx.moveTo(m.x(m.xMin),m.y(m.yMin));ctx.lineTo(m.x(m.xMin),m.y(m.yMax));ctx.stroke();
+  ctx.fillStyle=C.muted;ctx.font='9.5px "DM Sans"';
+  for(let v=m.xMin+xStep;v<=m.xMax+xStep*.01;v+=xStep){
+    const px=m.x(v),py=m.y(m.yMin);
+    ctx.strokeStyle=C.comment;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(px,py);ctx.lineTo(px,py+3);ctx.stroke();
+    ctx.textAlign='center';ctx.fillText(xFmt(v),px,py+13);
+  }
+  for(let v=m.yMin+yStep;v<=m.yMax+yStep*.01;v+=yStep){
+    const px=m.x(m.xMin),py=m.y(v);
+    ctx.strokeStyle=C.comment;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(px,py);ctx.lineTo(px-3,py);ctx.stroke();
+    ctx.textAlign='right';ctx.fillText(yFmt(v),px-5,py+3.5);
+  }
+  ctx.fillStyle=C.dark;ctx.font='600 11px "DM Sans"';
+  ctx.textAlign='center';ctx.fillText(xlabel,m.x((m.xMin+m.xMax)/2),m.y(m.yMin)+28);
+  ctx.save();ctx.translate(12,m.y((m.yMin+m.yMax)/2));ctx.rotate(-Math.PI/2);
+  ctx.textAlign='center';ctx.fillText(ylabel,0,0);ctx.restore();
+  ctx.restore();
+}
+
+function drawCurve(fn,xLo,xHi,m,color,lw,steps){
+  if(!lw)lw=2;if(!steps)steps=300;
+  ctx.save();clip(m);
+  ctx.strokeStyle=color;ctx.lineWidth=lw;ctx.setLineDash([]);
+  ctx.beginPath();let pen=false;
+  const dx=(xHi-xLo)/steps;
+  for(let i=0;i<=steps;i++){
+    const xv=xLo+i*dx,yv=fn(xv);
+    if(!isFinite(yv)||yv>m.yMax*2.5||yv<m.yMin-(m.yMax-m.yMin)*.5){pen=false;continue;}
+    const px=m.x(xv),py=m.y(yv);
+    if(!pen){ctx.moveTo(px,py);pen=true;}else ctx.lineTo(px,py);
+  }
+  ctx.stroke();ctx.restore();
+}
+
+function drawCurveDash(fn,xLo,xHi,m,color,lw,dash){
+  if(!dash)dash=[5,3];
+  ctx.save();clip(m);
+  ctx.strokeStyle=color;ctx.lineWidth=lw||1.5;ctx.setLineDash(dash);
+  ctx.beginPath();let pen=false;
+  const dx=(xHi-xLo)/300;
+  for(let i=0;i<=300;i++){
+    const xv=xLo+i*dx,yv=fn(xv);
+    if(!isFinite(yv)||yv>m.yMax*2.5||yv<m.yMin-(m.yMax-m.yMin)*.5){pen=false;continue;}
+    const px=m.x(xv),py=m.y(yv);
+    if(!pen){ctx.moveTo(px,py);pen=true;}else ctx.lineTo(px,py);
+  }
+  ctx.stroke();ctx.setLineDash([]);ctx.restore();
+}
+
+function hline(yv,xLo,xHi,m,color,lw){
+  ctx.save();ctx.strokeStyle=color;ctx.lineWidth=lw||1.5;ctx.setLineDash([]);
+  ctx.beginPath();ctx.moveTo(m.x(xLo),m.y(yv));ctx.lineTo(m.x(xHi),m.y(yv));ctx.stroke();ctx.restore();
+}
+function vline(xv,yLo,yHi,m,color,lw){
+  ctx.save();ctx.strokeStyle=color;ctx.lineWidth=lw||1.5;ctx.setLineDash([]);
+  ctx.beginPath();ctx.moveTo(m.x(xv),m.y(yLo));ctx.lineTo(m.x(xv),m.y(yHi));ctx.stroke();ctx.restore();
+}
+function dropLines(xv,yv,m,color){
+  ctx.save();ctx.strokeStyle=color;ctx.lineWidth=1;ctx.setLineDash([2,3]);
+  ctx.beginPath();ctx.moveTo(m.x(xv),m.y(yv));ctx.lineTo(m.x(xv),m.y(m.yMin));ctx.stroke();
+  ctx.beginPath();ctx.moveTo(m.x(xv),m.y(yv));ctx.lineTo(m.x(m.xMin),m.y(yv));ctx.stroke();
+  ctx.setLineDash([]);ctx.restore();
+}
+function dot(xv,yv,m,r,fill,stroke){
+  ctx.beginPath();ctx.arc(m.x(xv),m.y(yv),r||6,0,2*Math.PI);
+  ctx.fillStyle=fill;ctx.fill();
+  if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=1.5;ctx.stroke();}
+}
+function txt(str,xv,yv,m,color,align,font){
+  ctx.save();ctx.fillStyle=color;ctx.font=font||'600 10px "DM Sans"';
+  ctx.textAlign=align||'left';ctx.fillText(str,m.x(xv),m.y(yv));ctx.restore();
+}
+function shadeArea(fnTop,fnBot,xLo,xHi,m,color,alpha){
+  if(alpha===undefined)alpha=0.22;
+  ctx.save();clip(m);ctx.globalAlpha=alpha;ctx.fillStyle=color;
+  const cl=v=>Math.max(m.yMin,Math.min(m.yMax,v));
+  const steps=200,dx=(xHi-xLo)/steps;
+  ctx.beginPath();let first=true;
+  for(let i=0;i<=steps;i++){
+    const xv=xLo+i*dx;
+    if(first){ctx.moveTo(m.x(xv),m.y(cl(fnTop(xv))));first=false;}
+    else ctx.lineTo(m.x(xv),m.y(cl(fnTop(xv))));
+  }
+  for(let i=steps;i>=0;i--){const xv=xLo+i*dx;ctx.lineTo(m.x(xv),m.y(cl(fnBot(xv))));}
+  ctx.closePath();ctx.fill();ctx.restore();
+}
+function shadePoly(pts,m,color,alpha){
+  if(alpha===undefined)alpha=0.28;
+  ctx.save();clip(m);ctx.globalAlpha=alpha;ctx.fillStyle=color;
+  ctx.beginPath();ctx.moveTo(m.x(pts[0][0]),m.y(pts[0][1]));
+  for(let i=1;i<pts.length;i++)ctx.lineTo(m.x(pts[i][0]),m.y(pts[i][1]));
+  ctx.closePath();ctx.fill();ctx.restore();
+}
+function shadeRect(x1,y1,x2,y2,m,color,alpha){
+  if(alpha===undefined)alpha=0.28;
+  ctx.save();clip(m);ctx.globalAlpha=alpha;ctx.fillStyle=color;
+  ctx.fillRect(m.x(Math.min(x1,x2)),m.y(Math.max(y1,y2)),
+    Math.abs(m.x(x2)-m.x(x1)),Math.abs(m.y(y2)-m.y(y1)));
+  ctx.restore();
+}
+function fmt(v,d){return isFinite(v)?v.toFixed(d!==undefined?d:2):'—';}
+function setLegend(items){
+  document.getElementById('leg-body').innerHTML=items.map(([type,color,label])=>{
+    let sw;
+    if(type==='line')sw=`<div class="leg-line" style="background:${color}"></div>`;
+    else if(type==='dash')sw=`<div class="leg-dash" style="border-color:${color}"></div>`;
+    else if(type==='area')sw=`<div class="leg-area" style="background:${color}"></div>`;
+    else sw=`<div class="leg-dot" style="background:${color}"></div>`;
+    return`<div class="leg-row">${sw}<span>${label}</span></div>`;
+  }).join('');
+}
+function setInsight(html){document.getElementById('insight').innerHTML=html;}
+
+/* ══════════════════════════════════════════════════════
+   EINHEIT 6 — EFFIZIENZLOHN
+   Best-response: e(w) = 1 − w_R/w  →  w_br(e) = w_R/(1−e)
+   Optimum always at: e* = 0.5, w* = 2·w_R
+══════════════════════════════════════════════════════ */
+const w_br = e => (e>0&&e<1)?S.d*S.wr/(1-e):Infinity;
+
+/* ══════════════════════════════════════════════════════
+   EINHEIT 8 — MARKET ECONOMICS
+   Demand and supply parametrized so curves cross at (Qref,Pref)
+   with the chosen elasticities.
+══════════════════════════════════════════════════════ */
+// Derived curve parameters
+function Bd(){ return S.Pref/(S.epsD*S.Qref); }   // demand slope
+function Ad(){ return S.Pref*(1+1/S.epsD); }        // demand intercept
+function Ss(){ return S.Pref/(S.epsS*S.Qref); }    // supply slope
+function Es(){ return S.Pref*(1-1/S.epsS); }        // supply intercept
+
+// Demand: P = Ad + dShock - Bd·Q   (dShock shifts curve up)
+// Supply: P = Es + sShock + Ss·Q   (sShock shifts curve up = Einbruch)
+const demCurve = (q,dSh)=> Ad()+(dSh||0)-Bd()*q;
+const supCurve = (q,sSh)=> Es()+(sSh||0)+Ss()*q;
+// With intervention: τ rotates supply (steeper), t shifts it vertically.
+// Buyer-price supply: Pb = Es*(1+τ)+t + Ss*(1+τ)*Q
+const supCurveTax = (q,sSh)=>{
+  const tau=S.pct/100;
+  return (Es()+(sSh||0))*(1+tau)+S.t+Ss()*(1+tau)*q;
+};
+
+// Equilibrium given shocks
+function mktEq(dSh,sSh){
+  const Q=Math.max(0,(Ad()+(dSh||0)-Es()-(sSh||0))/(Bd()+Ss()));
+  return{Q, P:Ad()+(dSh||0)-Bd()*Q};
+}
+// Equilibrium with tax/subsidy (no shocks in tax tab)
+// Seller gets: Ps = (Pb − t)/(1+τ)
+function mktEqTax(){
+  const tau=S.pct/100;
+  const A=Ad(),B=Bd(),es=Es(),ss=Ss();
+  const Q=Math.max(0,(A-S.t-es*(1+tau))/(B+ss*(1+tau)));
+  const Pb=A-B*Q;
+  const Ps=(1+tau)>0.001?(Pb-S.t)/(1+tau):0;
+  return{Q,Pb,Ps};
+}
+
+/* ── SIDEBAR ── */
+function showEl(id,vis){document.getElementById(id).style.display=vis?'block':'none';}
+function updateSidebar(){
+  const t=S.tab;
+  showEl('sect-wr',     t==='effizienz');
+  showEl('sect-aufwand',t==='effizienz');
+  showEl('sect-elast',  t==='markt'||t==='steuern');
+  showEl('sect-shocks', t==='markt');
+  showEl('sect-tax',    t==='steuern');
+  showEl('story-btn',   t==='steuern');
+}
+
+/* ══════════════════════════════════════════════════════
+   TAB 1 — EFFIZIENZLOHN
+   Axes: x = Lohn w,  y = Arbeitseinsatz e   (standard CORE orientation)
+   Best-response: e(w) = 1 − d·w_R/w   → concave, bowing outward (convex to viewer)
+   Isocost:       e = w/c               → rays from origin, slope 1/c
+   Optimum A: tangency at (w*, e*) = (2·d·w_R, 0.5)
+══════════════════════════════════════════════════════ */
+function drawEffizienz(){
+  ctx.clearRect(0,0,CW,CH);
+  const pad={l:54,r:22,t:22,b:50};
+
+  const dwr   = S.d*S.wr;         // d·w_R — curve start (min wage for any effort)
+  const wstar = 2*dwr;             // w* = 2·d·w_R
+  const eopt  = 0.5;               // e* always 0.5
+  const cstar = wstar/eopt;        // optimal cost per effort unit = 4·d·w_R
+
+  // X-axis: wage.  Y-axis: effort [0,1]
+  const WMAX = 80;   // fixed — students see curves shift as w_R and d change
+  const wStep = 5;
+  const m = makeMap(0, WMAX, 0, 1.05, pad);
+
+  drawGrid(m, wStep, 0.1);
+  drawAxes(m,'Lohn w (USD)','Arbeitseinsatz (e)', wStep, 0.1,
+    v=>v.toFixed(0), v=>v.toFixed(1));
+
+  // ── Isocost lines: e = w/c  (rays from origin, slope 1/c) ──
+  // Higher slope (lower c) = better for firm; optimal line is STEEPEST that still touches curve.
+  // Sub-optimal lines (flatter) cross the curve at two points.
+  [
+    [cstar*0.6, false],   // steeper than optimal — unachievable (above best-response)
+    [cstar,     true ],   // optimal — tangent at A
+    [cstar*1.6, false],   // flatter — achievable but sub-optimal
+    [cstar*2.6, false],   // even flatter
+  ].forEach(([c,isOpt])=>{
+    // Line e=w/c hits e=1 at w=c; clip to [0, min(c, WMAX)]
+    const wEnd = Math.min(c*1.02, WMAX);
+    if(wEnd < 0.5) return;
+    const fn = w => w/c;
+    if(isOpt){
+      drawCurve(fn, 0, wEnd, m, C.green, 2);
+      // Label near 55% of the way along the line
+      const wL = Math.min(wEnd*0.55, WMAX*0.6);
+      if(wL/c < 1.02)
+        txt('c*='+fmt(c,0)+' (optimal)', wL, fn(wL), m, C.green, 'left', '600 8.5px "DM Sans"');
+    } else {
+      drawCurveDash(fn, 0, wEnd, m, C.comment+'99', 1.2, [3,3]);
+      const wL = Math.min(wEnd*0.45, WMAX*0.55);
+      if(wL/c < 1.02)
+        txt('c='+fmt(c,0), wL, fn(wL), m, C.comment, 'left', '8px "DM Sans"');
+    }
+  });
+
+  // ── Best-response curve: e(w) = 1 − d·w_R/w ──
+  // Flat segment at e=0 for w_R ≤ w < d·w_R (worker employed but no effort yet)
+  if(S.d>1.05 && S.wr<WMAX){
+    ctx.save();ctx.strokeStyle=C.blue;ctx.lineWidth=2.5;ctx.setLineDash([]);
+    ctx.beginPath();ctx.moveTo(m.x(S.wr),m.y(0));ctx.lineTo(m.x(Math.min(dwr,WMAX)),m.y(0));
+    ctx.stroke();ctx.restore();
+  }
+  // Rising concave section for w ≥ d·w_R
+  drawCurve(w => Math.max(0, 1 - dwr/w), Math.max(dwr*1.001, S.wr*0.5, 0.1), WMAX, m, C.blue, 2.5);
+
+  // ── Reference lines ──
+  vline(S.wr,  0, 1.05, m, C.red+'88',    1.5);  // w_R
+  if(S.d>1.05 && dwr<WMAX)
+    vline(dwr, 0, 1.05, m, C.cyan+'99',   1.5);  // d·w_R (only when d≠1)
+  vline(wstar, 0, 1.05, m, C.orange+'bb', 1.5);  // w*
+  hline(eopt,  0, WMAX, m, C.red+'33',    1);     // e* = 0.5
+
+  // ── Drop lines to A ──
+  ctx.save();ctx.strokeStyle=C.red+'44';ctx.lineWidth=1;ctx.setLineDash([2,3]);
+  ctx.beginPath();ctx.moveTo(m.x(wstar),m.y(eopt));ctx.lineTo(m.x(wstar),m.y(0));ctx.stroke();
+  ctx.beginPath();ctx.moveTo(m.x(wstar),m.y(eopt));ctx.lineTo(m.x(0),m.y(eopt));ctx.stroke();
+  ctx.setLineDash([]);ctx.restore();
+
+  // ── Optimal point A ──
+  dot(wstar, eopt, m, 7, C.red, 'white');
+  ctx.save();ctx.fillStyle=C.red;ctx.font='700 11px "DM Sans"';ctx.textAlign='left';
+  ctx.fillText('A', m.x(wstar)+9, m.y(eopt)-4);ctx.restore();
+
+  // ── X-axis wage labels (below axis) ──
+  const axY = m.y(0);
+  ctx.save();ctx.font='600 8.5px "DM Sans"';ctx.textAlign='center';
+  ctx.fillStyle=C.red+'cc';
+  ctx.fillText('w_R='+fmt(S.wr,0), m.x(S.wr), axY+22);
+  if(S.d>1.05 && dwr<WMAX && Math.abs(dwr-S.wr)>2){
+    ctx.fillStyle=C.cyan+'cc';
+    ctx.fillText('d·w_R='+fmt(dwr,0), m.x(dwr), axY+22);
+  }
+  ctx.fillStyle=C.orange;
+  ctx.fillText('w*='+fmt(wstar,0), m.x(wstar), axY+22);
+  ctx.restore();
+
+  // ── Y-axis label for e* ──
+  ctx.save();ctx.fillStyle=C.red+'aa';ctx.font='600 8.5px "DM Sans"';ctx.textAlign='right';
+  ctx.fillText('e*=0,5', m.x(0)-3, m.y(eopt)+4);ctx.restore();
+
+  // ── Curve label ──
+  const wBR = Math.min(wstar*1.35, WMAX*0.78);
+  const eBR = Math.max(0, 1 - dwr/wBR);
+  if(eBR>0 && eBR<1)
+    txt('Beste-Antwort-Kurve', wBR, eBR, m, C.blue, 'left', '600 9px "DM Sans"');
+
+  // ── Horizontal rent bracket below curves, above x-axis ──
+  if(wstar < WMAX && wstar > S.wr+1){
+    const showTwo = S.d>1.05 && dwr>S.wr+0.5 && dwr<WMAX;
+    const py_br = axY - 14;   // just above the x-axis tick zone
+    ctx.save();
+    if(showTwo){
+      // Red bracket: w_R → d·w_R
+      ctx.strokeStyle=C.red+'aa'; ctx.lineWidth=1.5;
+      ctx.beginPath();
+      ctx.moveTo(m.x(S.wr),py_br+4);ctx.lineTo(m.x(S.wr),py_br);
+      ctx.lineTo(m.x(dwr),py_br);ctx.lineTo(m.x(dwr),py_br+4); ctx.stroke();
+      ctx.fillStyle=C.red+'bb';ctx.font='600 7px "DM Sans"';ctx.textAlign='center';
+      ctx.fillText('Aufwandsunlust',(m.x(S.wr)+m.x(dwr))/2, py_br-3);
+      // Orange bracket: d·w_R → w*
+      ctx.strokeStyle=C.orange; ctx.lineWidth=1.5;
+      ctx.beginPath();
+      ctx.moveTo(m.x(dwr),py_br+4);ctx.lineTo(m.x(dwr),py_br);
+      ctx.lineTo(m.x(wstar),py_br);ctx.lineTo(m.x(wstar),py_br+4); ctx.stroke();
+      ctx.fillStyle=C.orange;ctx.font='600 7px "DM Sans"';ctx.textAlign='center';
+      ctx.fillText('Beschäftigungsrente',(m.x(dwr)+m.x(wstar))/2, py_br-3);
+    } else {
+      // Single orange bracket: w_R → w*
+      ctx.strokeStyle=C.orange; ctx.lineWidth=1.5;
+      ctx.beginPath();
+      ctx.moveTo(m.x(S.wr),py_br+4);ctx.lineTo(m.x(S.wr),py_br);
+      ctx.lineTo(m.x(wstar),py_br);ctx.lineTo(m.x(wstar),py_br+4); ctx.stroke();
+      ctx.fillStyle=C.orange;ctx.font='600 7px "DM Sans"';ctx.textAlign='center';
+      ctx.fillText('Beschäftigungsrente = '+fmt(dwr,0)+' USD',
+        (m.x(S.wr)+m.x(wstar))/2, py_br-3);
+    }
+    ctx.restore();
+  }
+
+  // ── Legend ──
+  const legItems=[
+    ['line',C.blue,   'Beste-Antwort-Kurve e(w)'],
+    ['line',C.green,  'Optimale Isokostengerade (c*)'],
+    ['dash',C.comment,'Andere Isokostengeraden'],
+    ['dot', C.red,    'Optimum A: GRS = GRT'],
+  ];
+  setLegend(legItems);
+
+  // ── Insight ──
+  const rentNet  = dwr;
+  const auCost   = (S.d-1)*S.wr;
+  const dLabel   = S.d<1?'geringe':S.d<1.1?'neutrale':S.d<2?'mäßige':'hohe';
+  setInsight(`
+    <strong>Effizienzlohn-Modell (E6)</strong><br>
+    e(w) = 1 − d·w_R/w<br>
+    d = <strong>${fmt(S.d,1)}</strong>: ${dLabel} Aufwandsunlust<br><br>
+    <strong>Optimum A — Tangenz GRS = GRT:</strong><br>
+    w* = 2·d·w_R = <strong>${fmt(wstar,1)} USD</strong><br>
+    e* = <strong>0,5</strong> (immer!)<br>
+    c* = w*/e* = ${fmt(cstar,1)}<br><br>
+    <strong>Beschäftigungsrente:</strong><br>
+    Lohn − w_R − Aufwandsunlust<br>
+    = ${fmt(wstar,1)} − ${fmt(S.wr,1)} − ${fmt(auCost,1)}<br>
+    = <strong>${fmt(rentNet,1)} USD</strong> (= d·w_R)<br><br>
+    <em>Höheres d → w* steigt → stärkere<br>
+    Beschäftigungsrente → mehr<br>
+    unfreiwillige Arbeitslosigkeit</em>
+  `);
+}
+
+/* ══════════════════════════════════════════════════════
+   TAB 2 — WETTBEWERBSMARKT
+   Elasticity-parametrized curves, both pass through (Qref, Pref).
+   Shocks create a second (dashed) original curve + new equilibrium B.
+══════════════════════════════════════════════════════ */
+function drawMarkt(){
+  ctx.clearRect(0,0,CW,CH);
+  const pad={l:64,r:22,t:22,b:52};
+
+  const hasShockS=Math.abs(S.shockS)>0.05;
+  const hasShockD=Math.abs(S.shockD)>0.05;
+  const hasShock=hasShockS||hasShockD;
+
+  // Equilibria
+  const eqA={Q:S.Qref, P:S.Pref};            // original (no-shock) — always at reference point
+  const eqB=mktEq(S.shockD, S.shockS);       // post-shock equilibrium
+
+  // Axis bounds — accommodate both equilibria
+  const Amax=Ad()+Math.max(0,S.shockD);
+  const QMAX=Math.max(Math.ceil(Math.max(eqA.Q,eqB.Q)*2.4/10)*10,80);
+  const PMAX=Math.max(Math.ceil(Amax*1.15/4)*4,16);
+  const xStep=QMAX>=100?20:10, yStep=PMAX/5;
+  const m=makeMap(0,QMAX,0,PMAX,pad);
+
+  drawGrid(m,xStep,yStep);
+  drawAxes(m,'Menge Q','Preis P',xStep,yStep,v=>v.toFixed(0),v=>v.toFixed(0));
+
+  // Current curves (with shocks applied)
+  const dCurr=q=>demCurve(q,S.shockD);
+  const sCurr=q=>supCurve(q,S.shockS);
+  // Original curves (no shocks)
+  const dOrig=q=>demCurve(q,0);
+  const sOrig=q=>supCurve(q,0);
+
+  // KR + PR around post-shock equilibrium
+  const eqPlt=hasShock?eqB:eqA;
+  if(eqPlt.Q>1&&eqPlt.P>0){
+    shadeArea(dCurr,()=>eqPlt.P,0,Math.min(eqPlt.Q,QMAX),m,C.blue,0.18);
+    shadeArea(()=>eqPlt.P,sCurr,0,Math.min(eqPlt.Q,QMAX),m,C.green,0.18);
+  }
+
+  // Draw original curves dashed when shocked
+  if(hasShockS) drawCurveDash(sOrig,0,QMAX,m,C.green+'77',1.5,[4,3]);
+  if(hasShockD) drawCurveDash(dOrig,0,QMAX,m,C.blue+'77',1.5,[4,3]);
+
+  // Draw current solid curves
+  drawCurve(dCurr,0,QMAX,m,C.blue,2.5);
+  drawCurve(sCurr,0,QMAX,m,C.green,2.5);
+
+  // Mark equilibria
+  if(hasShock){
+    // A: original (dimmed)
+    dot(eqA.Q,eqA.P,m,5,C.comment,'white');
+    ctx.save();ctx.fillStyle=C.comment;ctx.font='600 10px "DM Sans"';ctx.textAlign='left';
+    ctx.fillText('A',m.x(eqA.Q)+7,m.y(eqA.P)-3);ctx.restore();
+    // B: new (prominent)
+    ctx.save();ctx.strokeStyle=C.red+'44';ctx.lineWidth=1;ctx.setLineDash([2,3]);
+    ctx.beginPath();ctx.moveTo(m.x(eqB.Q),m.y(eqB.P));ctx.lineTo(m.x(eqB.Q),m.y(0));ctx.stroke();
+    ctx.beginPath();ctx.moveTo(m.x(eqB.Q),m.y(eqB.P));ctx.lineTo(m.x(0),m.y(eqB.P));ctx.stroke();
+    ctx.setLineDash([]);ctx.restore();
+    dot(eqB.Q,eqB.P,m,7,C.red,'white');
+    ctx.save();ctx.fillStyle=C.red;ctx.font='700 11px "DM Sans"';ctx.textAlign='left';
+    ctx.fillText('B',m.x(eqB.Q)+9,m.y(eqB.P)-4);ctx.restore();
+  } else {
+    ctx.save();ctx.strokeStyle=C.comment+'55';ctx.lineWidth=1;ctx.setLineDash([2,3]);
+    ctx.beginPath();ctx.moveTo(m.x(eqA.Q),m.y(eqA.P));ctx.lineTo(m.x(eqA.Q),m.y(0));ctx.stroke();
+    ctx.beginPath();ctx.moveTo(m.x(eqA.Q),m.y(eqA.P));ctx.lineTo(m.x(0),m.y(eqA.P));ctx.stroke();
+    ctx.setLineDash([]);ctx.restore();
+    dot(eqA.Q,eqA.P,m,7,C.dark,'white');
+    ctx.save();ctx.fillStyle=C.dark;ctx.font='700 11px "DM Sans"';ctx.textAlign='left';
+    ctx.fillText('A',m.x(eqA.Q)+9,m.y(eqA.P)-4);ctx.restore();
+  }
+
+  // Area labels (KR / PR)
+  ctx.save();ctx.font='600 9px "DM Sans"';ctx.textAlign='center';
+  if(eqPlt.Q>5){
+    const midQ=eqPlt.Q/2;
+    ctx.fillStyle=C.blue;
+    ctx.fillText('KR',m.x(midQ),m.y((dCurr(midQ/2)+eqPlt.P)/2)+4);
+    ctx.fillStyle=C.green;
+    ctx.fillText('PR',m.x(midQ),m.y((eqPlt.P+Math.max(0,sCurr(midQ/2)))/2)+4);
+  }
+  ctx.restore();
+
+  // Curve labels
+  const dLblQ=QMAX*0.18;
+  if(dCurr(dLblQ)>0&&dCurr(dLblQ)<PMAX)
+    txt('Nachfrage (ZBS)',dLblQ,dCurr(dLblQ),m,C.blue,'left','600 9px "DM Sans"');
+  const sLblQ=eqPlt.Q*1.25;
+  if(sLblQ<QMAX&&sCurr(sLblQ)<PMAX&&sCurr(sLblQ)>0)
+    txt('Angebot (ABS)',sLblQ,sCurr(sLblQ),m,C.green,'left','600 9px "DM Sans"');
+  // Labels for dashed originals
+  if(hasShockD){
+    const dLbl2=QMAX*0.12;
+    if(dOrig(dLbl2)>0&&dOrig(dLbl2)<PMAX)
+      txt('Nachfrage₀',dLbl2,dOrig(dLbl2),m,C.blue+'88','left','italic 8.5px "DM Sans"');
+  }
+  if(hasShockS){
+    const sLbl2=eqA.Q*1.4;
+    if(sLbl2<QMAX&&sOrig(sLbl2)<PMAX&&sOrig(sLbl2)>0)
+      txt('Angebot₀',sLbl2,sOrig(sLbl2),m,C.green+'88','left','italic 8.5px "DM Sans"');
+  }
+
+  // Welfare numbers
+  const KR=0.5*Math.max(0,Amax-eqPlt.P)*eqPlt.Q;
+  const PR=0.5*Math.max(0,eqPlt.P-(Es()+S.shockS))*eqPlt.Q;
+  const dPfmt=v=>(v>0?'+':'')+v.toFixed(2);
+
+  const legItems=[
+    ['line',C.blue, 'Nachfragekurve (ZBS)'],
+    ['line',C.green,'Angebotskurve (ABS)'],
+  ];
+  if(hasShock){
+    if(hasShockD) legItems.push(['dash',C.blue+'88','Nachfrage₀ (original)']);
+    if(hasShockS) legItems.push(['dash',C.green+'88','Angebot₀ (original)']);
+    legItems.push(['dot',C.comment,'Gleichgewicht A (original)']);
+    legItems.push(['dot',C.red,   'Gleichgewicht B (nach Schock)']);
+  } else {
+    legItems.push(['dot',C.dark,'Gleichgewicht A']);
+  }
+  legItems.push(['area',C.blue, 'Konsumentenrente (KR)']);
+  legItems.push(['area',C.green,'Produzentenrente (PR)']);
+  setLegend(legItems);
+
+  const epsLabel=eps=>eps<1?'unelastisch':eps<2?'mäßig el.':'elastisch';
+  setInsight(hasShock?`
+    <strong>Marktreaktion auf Schock</strong><br>
+    ${hasShockD?'Nachfrageschock δ_D = '+fmt(S.shockD,2)+'<br>':''
+    }${hasShockS?'Angebotsschock δ_S = '+fmt(S.shockS,2)+'<br>':''}<br>
+    <strong>Gleichgewicht A → B:</strong><br>
+    P: ${fmt(eqA.P,2)} → <strong>${fmt(eqB.P,2)}</strong> (${dPfmt(eqB.P-eqA.P)})<br>
+    Q: ${fmt(eqA.Q,1)} → <strong>${fmt(eqB.Q,1)}</strong> (${dPfmt(eqB.Q-eqA.Q)})<br><br>
+    KR = ${fmt(KR,1)}, PR = ${fmt(PR,1)}<br><br>
+    <em>„Preise sind Botschaften" — der<br>
+    Preisanstieg koordiniert Reaktionen<br>
+    ohne zentrale Steuerung.</em>
+  `:`
+    <strong>Wettbewerbsmarkt (E8)</strong><br>
+    ε_D = ${fmt(S.epsD,1)} (${epsLabel(S.epsD)})<br>
+    ε_S = ${fmt(S.epsS,1)} (${epsLabel(S.epsS)})<br><br>
+    Gleichgewicht A:<br>
+    P* = ${fmt(eqA.P,2)},  Q* = ${fmt(eqA.Q,1)}<br>
+    KR = ${fmt(KR,1)},  PR = ${fmt(PR,1)}<br>
+    Gesamtrente = <strong>${fmt(KR+PR,1)}</strong><br><br>
+    <strong>P = GK → Pareto-effizient</strong><br>
+    <em>Schock-Schieber: zeigt wie Preise<br>
+    als Signal wirken (Lincoln-Baumwolle)</em>
+  `);
+}
+
+/* ══════════════════════════════════════════════════════
+   TAB 3 — STEUERN & INZIDENZ
+══════════════════════════════════════════════════════ */
+function drawSteuern(){
+  ctx.clearRect(0,0,CW,CH);
+  const pad={l:64,r:22,t:22,b:52};
+
+  const eqA={Q:S.Qref, P:S.Pref};
+  const eqT=mktEqTax();
+  const hasTax=Math.abs(S.t)>0.05||Math.abs(S.pct)>0.5;
+  // Subsidy: effective quantity rises (Pb < Pref, Ps > Pref)
+  const isSubsidy=hasTax&&eqT.Q>eqA.Q+0.2;
+  const intColor=isSubsidy?C.cyan:C.orange;
+
+  const Aval=Ad();
+  const QMAX=Math.max(Math.ceil(Math.max(eqA.Q,eqT.Q)*2.5/10)*10,80);
+  const PMAX=Math.max(Math.ceil(Math.max(Aval,eqT.Ps)*1.18/4)*4,16);
+  const xStep=QMAX>=100?20:10, yStep=PMAX/5;
+  const m=makeMap(0,QMAX,0,PMAX,pad);
+
+  drawGrid(m,xStep,yStep);
+  drawAxes(m,'Menge Q','Preis P',xStep,yStep,v=>v.toFixed(0),v=>v.toFixed(0));
+
+  const dFn=q=>demCurve(q,0);
+  const sFn=q=>supCurve(q,0);
+  const sTax=q=>supCurveTax(q,0);
+
+  if(!hasTax){
+    // No intervention: shade full KR and PR
+    shadeArea(dFn,()=>eqA.P,0,Math.min(eqA.Q,QMAX),m,C.blue,0.18);
+    shadeArea(()=>eqA.P,sFn,0,Math.min(eqA.Q,QMAX),m,C.green,0.18);
+  } else {
+    const Qplt=Math.min(eqT.Q,QMAX);
+    const wedge=eqT.Pb-eqT.Ps;   // >0 tax (Pb>Ps), <0 subsidy (Pb<Ps)
+    // Residual KR and PR at new prices
+    shadeArea(dFn,()=>eqT.Pb,0,Qplt,m,C.blue,0.18);
+    shadeArea(()=>eqT.Ps,sFn,0,Qplt,m,C.green,0.18);
+    // Government intervention rectangle (yellow=revenue, cyan=cost)
+    const loP=Math.min(eqT.Pb,eqT.Ps), hiP=Math.max(eqT.Pb,eqT.Ps);
+    if(hiP>loP&&Qplt>0)
+      shadeRect(0,loP,Qplt,hiP,m,isSubsidy?C.cyan:C.yellow,0.38);
+    // DWL triangle — same vertex formula for tax and subsidy (triangle between A and B)
+    if(Math.abs(eqT.Q-eqA.Q)>0.5)
+      shadePoly([[eqT.Q,eqT.Pb],[eqA.Q,eqA.P],[eqT.Q,eqT.Ps]],m,C.red,0.35);
+  }
+
+  // Curves
+  drawCurve(dFn,0,QMAX,m,C.blue,2.5);
+  drawCurve(sFn,0,QMAX,m,C.green,2.5);
+  if(hasTax) drawCurveDash(sTax,0,QMAX,m,intColor,2,[5,3]);
+
+  // Equilibrium A
+  ctx.save();ctx.strokeStyle=C.comment+'55';ctx.lineWidth=1;ctx.setLineDash([2,3]);
+  ctx.beginPath();ctx.moveTo(m.x(eqA.Q),m.y(eqA.P));ctx.lineTo(m.x(eqA.Q),m.y(0));ctx.stroke();
+  ctx.beginPath();ctx.moveTo(m.x(eqA.Q),m.y(eqA.P));ctx.lineTo(m.x(0),m.y(eqA.P));ctx.stroke();
+  ctx.setLineDash([]);ctx.restore();
+  dot(eqA.Q,eqA.P,m,hasTax?5:7,hasTax?C.comment:C.dark,'white');
+  ctx.save();ctx.fillStyle=hasTax?C.comment:C.dark;
+  ctx.font='700 10px "DM Sans"';ctx.textAlign='left';
+  ctx.fillText('A',m.x(eqA.Q)+8,m.y(eqA.P)-3);ctx.restore();
+
+  // Equilibrium B
+  if(hasTax&&eqT.Q>0){
+    dot(eqT.Q,eqT.Pb,m,6,intColor,'white');
+    ctx.save();ctx.fillStyle=intColor;ctx.font='700 10px "DM Sans"';ctx.textAlign='left';
+    ctx.fillText('B',m.x(eqT.Q)+8,m.y(eqT.Pb)-3);ctx.restore();
+    // Price bracket lines
+    hline(eqT.Pb,0,eqT.Q,m,C.blue+'77',1);
+    hline(eqT.Ps,0,eqT.Q,m,C.green+'77',1);
+    ctx.save();ctx.font='9px "DM Sans"';ctx.textAlign='right';
+    ctx.fillStyle=C.blue+'cc';
+    ctx.fillText('P_Käufer = '+fmt(eqT.Pb),m.x(eqT.Q)-3,m.y(eqT.Pb)-3);
+    ctx.fillStyle=C.green+'cc';
+    ctx.fillText('P_Verkäufer = '+fmt(eqT.Ps),m.x(eqT.Q)-3,m.y(eqT.Ps)+11);
+    ctx.restore();
+    // Shifted-curve label
+    const tLblQ=Math.min(eqA.Q*0.4, QMAX*0.35);
+    const intLbl=isSubsidy?'Subvention':'Steuer';
+    const tDesc=(Math.abs(S.t)>0.05?'t='+fmt(S.t,1):'')+(Math.abs(S.pct)>0.5?(Math.abs(S.t)>0.05?', ':'')+'τ='+S.pct.toFixed(0)+'%':'');
+    if(sTax(tLblQ)<PMAX)
+      txt('Angebot + '+intLbl+' ('+tDesc+')',tLblQ,sTax(tLblQ),m,intColor,'left','italic 9px "DM Sans"');
+  }
+
+  // Area labels
+  ctx.save();ctx.font='600 9px "DM Sans"';ctx.textAlign='center';
+  const pltQ=hasTax?eqT.Q:eqA.Q;
+  if(pltQ>5){
+    const mQ=pltQ/2, mPd=dFn(mQ/2), mPs=Math.max(0,sFn(mQ/2));
+    const mPtop=hasTax?eqT.Pb:eqA.P, mPbot=hasTax?eqT.Ps:eqA.P;
+    if(mPd>mPtop&&mQ>0){ctx.fillStyle=C.blue;ctx.fillText('KR',m.x(mQ),m.y((mPd+mPtop)/2)+4);}
+    if(mPbot>mPs&&mQ>0){ctx.fillStyle=C.green;ctx.fillText('PR',m.x(mQ),m.y((mPbot+mPs)/2)+4);}
+  }
+  if(hasTax&&eqT.Q>3){
+    const midQ=Math.min(eqT.Q/2,QMAX*0.4);
+    const midP=(eqT.Pb+eqT.Ps)/2;
+    ctx.fillStyle=isSubsidy?C.cyan+'cc':C.yellow+'cc';
+    ctx.fillText(isSubsidy?'Staats-\nkosten':'Steuer-\neinnahmen',m.x(midQ),m.y(midP)+4);
+    if(Math.abs(eqT.Q-eqA.Q)>4){
+      const dwlQ=(eqT.Q+eqA.Q)/2;
+      const dwlP=(eqT.Pb+eqA.P)/2;
+      ctx.fillStyle=C.red;
+      ctx.fillText('DWL',m.x(dwlQ),m.y(dwlP)+4);
+    }
+  }
+  ctx.restore();
+
+  // Curve labels
+  txt('Nachfrage (ZBS)',QMAX*.18,dFn(QMAX*.18),m,C.blue,'left','600 9px "DM Sans"');
+  const sLQ=eqA.Q*1.2; if(sLQ<QMAX&&sFn(sLQ)<PMAX&&sFn(sLQ)>0)
+    txt('Angebot (ABS)',sLQ,sFn(sLQ),m,C.green,'left','600 9px "DM Sans"');
+
+  // Welfare / incidence numbers
+  const wedge=hasTax?eqT.Pb-eqT.Ps:0;
+  const govAmount=wedge*eqT.Q;   // >0 = revenue (tax), <0 = cost (subsidy)
+  const DWL=0.5*Math.abs(wedge)*Math.abs(eqT.Q-eqA.Q);
+  const bShare=S.epsS/(S.epsD+S.epsS);
+  const sShare=S.epsD/(S.epsD+S.epsS);
+
+  const legItems=[
+    ['line',C.blue, 'Nachfragekurve (ZBS)'],
+    ['line',C.green,'Angebotskurve (ABS)'],
+    ['area',C.blue, 'Konsumentenrente (KR)'],
+    ['area',C.green,'Produzentenrente (PR)'],
+  ];
+  if(hasTax){
+    legItems.push(['dash',intColor,isSubsidy?'Angebot + Subvention':'Angebot + Steuer']);
+    legItems.push(['area',isSubsidy?C.cyan:C.yellow,isSubsidy?'Staatsausgaben (Subvention)':'Staatseinnahmen (Steuer)']);
+    legItems.push(['area',C.red,'Wohlfahrtsverlust (DWL)']);
+  }
+  setLegend(legItems);
+
+  if(S.story){
+    setInsight(`
+      <strong>📖 Dänemark: Buttersteuer 2011</strong><br>
+      Mengensteuer auf gesättigte Fette (~22 % des Butterpreises). Ziel: Volksgesundheit.<br><br>
+      <strong>Was passierte?</strong><br>
+      • Butterkonsum ↓ 15–20 %<br>
+      • Grenzeinkäufe in D + SE stiegen stark<br>
+      • Verwaltungsaufwand enorm<br>
+      • <em>Nov. 2012: Steuer abgeschafft</em><br><br>
+      Elastische Nachfrage → wenig Einnahmen,<br>viel DWL. Weniger elastische Seite trägt mehr.
+    `);
+  } else if(hasTax){
+    const dP_buyer=eqT.Pb-eqA.P, dP_seller=eqT.Ps-eqA.P;
+    const tDesc=[];
+    if(Math.abs(S.t)>0.05) tDesc.push('t = '+fmt(S.t,1)+' / Einheit');
+    if(Math.abs(S.pct)>0.5) tDesc.push('τ = '+S.pct.toFixed(0)+' %');
+    setInsight(`
+      <strong>${isSubsidy?'Subvention':'Steuer'}: ${tDesc.join(', ')}</strong><br><br>
+      P_Käufer  = ${fmt(eqT.Pb,2)} (${dP_buyer>=0?'+':''}${fmt(dP_buyer,2)})<br>
+      P_Verkäufer = ${fmt(eqT.Ps,2)} (${dP_seller>=0?'+':''}${fmt(dP_seller,2)})<br>
+      Q = ${fmt(eqT.Q,1)} (${eqT.Q>=eqA.Q?'+':''}${fmt(eqT.Q-eqA.Q,1)})<br><br>
+      <strong>Inzidenz:</strong><br>
+      Käufer:    <strong>${fmt(bShare*100,0)}%</strong> = ε_S / (ε_D + ε_S)<br>
+      Verkäufer: <strong>${fmt(sShare*100,0)}%</strong> = ε_D / (ε_D + ε_S)<br>
+      <em>Gilt für Mengen- und Prozentsteuer</em><br><br>
+      ${isSubsidy
+        ?`Staatsausgaben = ${fmt(Math.abs(govAmount),2)}`
+        :`Staatseinnahmen = ${fmt(govAmount,2)}`}<br>
+      <span style="color:${C.red}">DWL = ${fmt(DWL,2)}</span>
+    `);
+  } else {
+    setInsight(`
+      <strong>Steuern &amp; Inzidenz (E8)</strong><br>
+      Schieber aktivieren für Steuer (+) oder Subvention (−).<br><br>
+      <strong>Inzidenz-Formel:</strong><br>
+      Anteil Käufer   = ε_S / (ε_D + ε_S)<br>
+      Anteil Verkäufer = ε_D / (ε_D + ε_S)<br><br>
+      Bei ε_D = ${fmt(S.epsD,1)}, ε_S = ${fmt(S.epsS,1)}:<br>
+      Käufer: <strong>${fmt(bShare*100,0)}%</strong> / Verkäufer: <strong>${fmt(sShare*100,0)}%</strong><br><br>
+      <strong>Mengensteuer (t):</strong> verschiebt Angebot parallel<br>
+      <strong>Prozentsteuer (τ):</strong> dreht Angebotskurve steiler<br><br>
+      <em>Story Mode: Dänische Buttersteuer</em>
+    `);
+  }
+}
+
+
+/* ── DRAW DISPATCHER ── */
+function draw(){
+  if(!CW||!CH) return;
+  updateSidebar();
+  ({effizienz:drawEffizienz,markt:drawMarkt,steuern:drawSteuern})[S.tab]();
+}
+
+/* ── EVENT LISTENERS ── */
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    S.tab=t.dataset.tab; draw();
+  });
+});
+document.getElementById('story-btn').addEventListener('click',function(){
+  S.story=!S.story;
+  this.classList.toggle('on',S.story);
+  this.textContent=S.story?'📖 Text-Ansicht':'📖 Story Mode';
+  draw();
+});
+
+function bind(slid,key,dispId,dec){
+  const el=document.getElementById(slid);
+  if(!el) return;
+  el.addEventListener('input',()=>{
+    S[key]=parseFloat(el.value);
+    const d=document.getElementById(dispId);
+    if(d) d.textContent=S[key].toFixed(dec);
+    draw();
+  });
+}
+bind('s-wr',    'wr',    'v-wr',    1);
+bind('s-d',     'd',     'v-d',     1);
+bind('s-epsD',  'epsD',  'v-epsD',  1);
+bind('s-epsS',  'epsS',  'v-epsS',  1);
+bind('s-shockS','shockS','v-shockS',1);
+bind('s-shockD','shockD','v-shockD',1);
+bind('s-t',     't',     'v-t',     1);
+bind('s-pct',   'pct',   'v-pct',   0);
+
+/* ── INIT ── */
+resizeCanvas();
+</script>
+</body>
+</html>

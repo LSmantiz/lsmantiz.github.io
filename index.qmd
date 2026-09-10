@@ -1,7 +1,7 @@
 ---
 title: "Lasare Samartzidis"
-subtitle: "PhD Researcher in Economics, previously [IOER](https://www.ioer.de/) | Data Science • Data Visualization • Machine Learning • Large Language Models"
-description-meta: "Quarto Academic Website Template adapted by Dr. Gang He"
+subtitle: "Defended PhD in Economics, previously [IOER](https://www.ioer.de/) | Data Science • Data Visualization • Machine Learning • Large Language Models"
+description-meta: "Defended PhD in Economics — Data Science, Machine Learning, LLMs. Research projects, code, and interactive visualizations."
 image: "files/images/me.JPG"
 page-navigation: false
 toc: false
@@ -35,7 +35,6 @@ listing:   # Comment the listing section and delete corresponding lines in the i
     contents: 
       - posts
       - posts/post-links.yml
-      - gallery
     exclude:
       title: ""
     type: grid
@@ -52,19 +51,19 @@ listing:   # Comment the listing section and delete corresponding lines in the i
 :::{#hero-heading}
 
 
-Hi, I’m Lasare — a researcher in Complexity and Ecological Economics, currently finishing my PhD, with a passion for working with data and turning it into clear, meaningful, and reproducible insights. Also eager to try out new things, my work brings together data science, visualization, machine learning, and large language models (LLMs) to economic questions.
+Hi, I’m Lasare — a researcher in Complexity and Ecological Economics. I defended my PhD in July 2026 and have a passion for turning it into clear, meaningful, and reproducible insights. My research applies data science, visualization, machine learning, and large language models to economic questions, and I'm always interested in what new methods can add.
 
 I enjoy tackling complex questions with code, but what excites me most is making the results easy to understand and useful for others. Whether it’s through interactive dashboards, geospatial analysis, an insightful chart, or simply well documented code, I aim to create tools and visuals that speak to both technical and non-technical audiences.
 
-Most of my day-to-day work happens in R (tidyverse, ggplot2, Shiny), though I also use Python when it fits the task. Over time, I’ve built automated pipelines, developed reproducible workflows, and experimented with new methods — always curious about what the latest tools can bring to research.
+I work across R and Python. Over time, I’ve built automated pipelines, developed reproducible workflows, and experimented with new methods — always curious about what the latest tools can bring to research.
 
 Beyond the technical side, I love sharing ideas, collaborating across disciplines, and presenting my work. I’ve spoken at 18 international and national conferences and workshops and worked with teams at Leibniz, WIG2, and Fraunhofer. These experiences have shown me how important clear communication and openness are in making research impactful. Have a look into my [research](posts.qmd) and drop me an [email](mailto:lasare@web.de). I'm always happy to collaborate.
 
 ## Experience
 
 - **Leibniz Institute of Ecological Urban & Regional Development, Dresden**  
-Doctoral Researcher, since 2020  
-Scientific Coordinator – Leibniz Lab Systemic Sustainability, since 2024  
+Doctoral Researcher, 2020-2026  
+Scientific Coordinator – Leibniz Lab Systemic Sustainability, 2024-2026  
 Scientific Coordinator – Leibniz Research Network Earth & Societies, 2023–2024 
 
 - **WIG2 – Scientific Institute for Health Economics and Health System Research, Leipzig**  
@@ -75,7 +74,7 @@ Researcher, 2019–2021
 
 ## Education
 
-- **PhD, Economics, submitted January 2026**   
+- **PhD, Economics, defended July 2026, magna cum laude**   
 TU Dresden & Leibniz Institute of Ecological Urban & Regional Development, Dresden
 
 - **Master of Science, Economics, 2019**   
