@@ -92,7 +92,7 @@ https://badge.dimensions.ai/
 
 <p>An interactive tool I built for one-on-one economics teaching, covering the labor-discipline / efficiency-wage model, supply &amp; demand, and tax incidence. Drag the sliders, switch scenarios, and watch the equilibria move. <em>(Interface in German.)</em></p>
 <p>I built it using generative AI (LLM-assisted coding) — from concept and model specification through to the finished single-file application. It’s a small, concrete example of the AI-assisted development workflow I use in my research.</p>
-<p><a href="einheit6_8_tool.html.html" class="btn btn-primary" target="_blank"><strong>Open the tool full screen →</strong></a></p>
+<p><a href="einheit6_8_tool.html" class="btn btn-primary" target="_blank"><strong>Open the tool full screen →</strong></a></p>
 <iframe src="einheit6_8_tool.html" width="100%" height="660" style="border:1px solid #d4c9a8; border-radius:6px;">
 </iframe>
 <section id="how-i-built-it" class="level2">
