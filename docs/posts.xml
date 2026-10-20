@@ -8,7 +8,7 @@
 <title>Lasare Samartzidis</title>
 <link>https://lsmantiz.github.io/posts.html</link>
 <atom:link href="https://lsmantiz.github.io/posts.xml" rel="self" type="application/rss+xml"/>
-<description>Quarto Academic Website Template adapted by Dr. Gang He</description>
+<description>Quarto Academic Website for Lasare Samartzidis</description>
 <image>
 <url>https://lsmantiz.github.io/files/images/me.jpg</url>
 <title>Lasare Samartzidis</title>
@@ -103,22 +103,21 @@ https://badge.dimensions.ai/
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{samartzidis2026,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@software{samartzidis2026,
   author = {Samartzidis, Lasare},
   title = {Interactive Teaching Tool: {Efficiency} Wages, Markets \&amp; Tax
     Incidence},
-  journal = {In preparation},
   date = {2026-07-11},
   url = {https://lsmantiz.github.io/posts/econ-interactive-tool/},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-samartzidis2026" class="csl-entry quarto-appendix-citeas">
-Samartzidis, Lasare. 2026. <span>“Interactive Teaching Tool: Efficiency
-Wages, Markets &amp; Tax Incidence.”</span> <em>In Preparation</em>,
-accepted, July 11. <a href="https://lsmantiz.github.io/posts/econ-interactive-tool/">https://lsmantiz.github.io/posts/econ-interactive-tool/</a>.
+Samartzidis, Lasare. 2026. <em>Interactive Teaching Tool: Efficiency
+Wages, Markets &amp; Tax Incidence</em>. Released July 11. <a href="https://lsmantiz.github.io/posts/econ-interactive-tool/">https://lsmantiz.github.io/posts/econ-interactive-tool/</a>.
 </div></div></section></div> ]]></description>
   <category>teaching</category>
   <category>interactive</category>
+  <category>project</category>
   <guid>https://lsmantiz.github.io/posts/econ-interactive-tool/</guid>
   <pubDate>Fri, 10 Jul 2026 22:00:00 GMT</pubDate>
   <media:content url="https://lsmantiz.github.io/posts/econ-interactive-tool/overview.png" medium="image" type="image/png" height="140" width="144"/>
