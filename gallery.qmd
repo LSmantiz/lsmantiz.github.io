@@ -35,7 +35,7 @@ model features from 62 publications.](posts/llm-systematic-review/index.qmd){.ga
 [![](posts/production-networks-labor-share/overview.png)](posts/production-networks-labor-share/index.qmd)
 
 [**Production networks and the labor share**<br>
-How to turn complex networkd data into labor's bargaining power insights.](posts/production-networks-labor-share/index.qmd){.gallery-caption}
+How to turn complex networked data into labor's bargaining power insights.](posts/production-networks-labor-share/index.qmd){.gallery-caption}
 :::
 
 ::: {.g-col-12 .g-col-md-6 .gallery-card}

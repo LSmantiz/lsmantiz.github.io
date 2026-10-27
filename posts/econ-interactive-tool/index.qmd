@@ -1,0 +1,43 @@
+---
+title: "Interactive teaching tool: Efficiency wages, markets & tax incidence"
+description: "A self-contained interactive economics visualization (vanilla JS + canvas), built with generative AI for introductory economics teaching — explore the model with sliders, no installation needed."
+date: "2026-07-11"
+description-meta: "A self-contained interactive economics visualization (vanilla JS + canvas), built with generative AI for introductory economics teaching — explore the model with sliders, no installation needed."
+subtitle: "*Leveraging generative AI for teaching*"
+author: 
+  - name: Lasare Samartzidis
+categories: [teaching, interactive, project]
+image: "overview.png"
+citation:
+  type: software
+google-scholar: false
+---
+
+
+An interactive tool I built for one-on-one economics teaching, covering the
+labor-discipline / efficiency-wage model, supply & demand, and tax incidence.
+Drag the sliders, switch scenarios, and watch the equilibria move. *(Interface
+in German.)*
+
+I built it using generative AI (LLM-assisted coding) — from concept and model
+specification through to the finished single-file application. It's a small,
+concrete example of the AI-assisted development workflow I use in my research.
+
+[**Open the tool full screen →**](einheit6_8_tool.html){.btn .btn-primary target="_blank"}
+
+<iframe src="einheit6_8_tool.html" width="100%" height="660"
+        style="border:1px solid #d4c9a8; border-radius:6px;"></iframe>
+
+## How I built it
+
+Developed with generative AI as a coding collaborator: I specified the
+economic models, the interaction design, and the didactic flow, then worked
+iteratively with an LLM to produce a single-file HTML application — no
+frameworks, no dependencies. Hand-tuned canvas rendering for the model
+curves, reactive sliders driving live recomputation of equilibria, scenario
+walkthroughs, and a tabbed interface covering three textbook models. Built to
+run anywhere a browser opens, including offline in a tutoring session.
+
+The point isn't just the tool — it's the workflow: translating domain
+knowledge into a working, interactive artifact quickly by directing
+generative AI, the same approach I apply to research pipelines.
