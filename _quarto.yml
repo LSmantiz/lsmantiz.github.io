@@ -113,5 +113,5 @@ format:
     link-external-filter: '^(?:http:|https:)\/\/drganghe\.github\.io\/custom'
     include-in-header: 
       - "files/includes/_academic.qmd"
-      - "files/includes/_umami.html"
+      - "files/includes/_umami.qmd"
 
