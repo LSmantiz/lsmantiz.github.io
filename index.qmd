@@ -51,7 +51,7 @@ listing:   # Comment the listing section and delete corresponding lines in the i
 :::{#hero-heading}
 
 
-Hi, I’m Lasare — a researcher in Complexity and Ecological Economics. I defended my PhD in July 2026 and have a passion for clear, meaningful, and reproducible insights. My research applies data science, visualization, machine learning, and large language models to economic questions, and I'm always interested in what new methods can add.
+Hi, I’m Lasare — a researcher in Complexity and Ecological Economics with a PhD in Economics from TU Dresden. I have a passion for clear, meaningful, and reproducible insights. My research applies data science, visualization, machine learning, and large language models to economic questions, and I'm always interested in what new methods can add.
 
 I enjoy tackling complex questions with code, but what excites me most is making the results easy to understand and useful for others. Whether it’s through interactive dashboards, geospatial analysis, an insightful chart, or simply well documented code, I aim to create tools and visuals that speak to both technical and non-technical audiences.
 
