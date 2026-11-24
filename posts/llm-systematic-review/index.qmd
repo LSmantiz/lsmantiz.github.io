@@ -5,7 +5,7 @@ description-meta: "How can we leverage LLMs for systematic model reviews?"
 subtitle: "*Manuscript currently prepared*"
 author: 
   - name: Lasare Samartzidis
-  - name: Rob van Eynde
+  - name: Reo van Eynde
 date: "2025-10-08"
 categories: [paper]
 image: "llm_workflow.png"
